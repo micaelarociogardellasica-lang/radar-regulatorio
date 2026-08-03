@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar Regulatorio · Relevamiento diario</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --petroleo:#0637B5;
+  --petroleo-deep:#042A8C;
+  --papel:#F4F6F8;
+  --tinta:#131F33;
+  --gris:#5B6B80;
+  --linea:#D6DDE7;
+  --t1:#D93A26;
+  --t2:#F0A50A;
+  --t3:#7C8BA1;
+  --celeste:#1E6FE0;
+  --blanco:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+body{font-family:'IBM Plex Sans',sans-serif;background:var(--papel);color:var(--tinta);font-size:15px;line-height:1.55}
+a{color:var(--celeste)}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--celeste);outline-offset:2px}
+
+/* ===== Masthead ===== */
+.masthead{background:linear-gradient(135deg,#0A45D6 0%,#0637B5 55%,#042A8C 100%);color:#EDF2FB;padding:22px 20px 0}
+.mast-inner{max-width:880px;margin:0 auto}
+.mast-top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.brand-lockup{display:flex;align-items:center;gap:14px}
+.logo-ypf{height:40px;width:auto;display:block}
+.brand{font-family:'Archivo',sans-serif;font-weight:850;font-stretch:115%;font-size:clamp(1.5rem,4.5vw,2.1rem);letter-spacing:.01em;text-transform:uppercase;line-height:1}
+.brand .thin{font-weight:400;font-stretch:75%;color:#9DBBF2}
+.edicion{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:#9DBBF2;text-align:right;line-height:1.5}
+.edicion strong{color:#FFD24A;font-weight:600}
+.mast-sub{margin-top:8px;font-size:.82rem;color:#B8CCF5;max-width:60ch}
+.tabs{display:flex;gap:2px;margin-top:18px}
+.tab{background:transparent;border:none;color:#B8CCF5;font-family:'Archivo',sans-serif;font-weight:600;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;padding:10px 16px;border-radius:6px 6px 0 0;position:relative}
+.tab[aria-selected="true"]{background:var(--papel);color:var(--petroleo)}
+.tab:hover:not([aria-selected="true"]){color:#fff}
+
+/* ===== Resumen strip ===== */
+.strip{max-width:880px;margin:0 auto;padding:14px 20px 0;display:flex;gap:10px;flex-wrap:wrap}
+.pill{font-family:'IBM Plex Mono',monospace;font-size:.72rem;background:#fff;border:1px solid var(--linea);border-radius:999px;padding:5px 12px;color:var(--gris)}
+.pill b{color:var(--tinta);font-weight:600}
+.pill.alerta{border-color:var(--t1);color:var(--t1)}
+.pill.alerta b{color:var(--t1)}
+
+/* ===== Filtros ===== */
+.filtros{max-width:880px;margin:0 auto;padding:16px 20px 4px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chip{border:1px solid var(--linea);background:#fff;border-radius:999px;padding:6px 14px;font-size:.8rem;font-weight:500;color:var(--gris)}
+.chip[aria-pressed="true"]{background:var(--petroleo);border-color:var(--petroleo);color:#fff}
+.filtros .dl{margin-left:auto}
+
+/* ===== Fichas ===== */
+main{max-width:880px;margin:0 auto;padding:12px 20px 60px}
+.seccion-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gris);margin:22px 0 10px;display:flex;align-items:center;gap:10px}
+.seccion-label::after{content:"";flex:1;height:1px;background:var(--linea)}
+.ficha{background:#fff;border:1px solid var(--linea);border-radius:8px;margin-bottom:14px;display:grid;grid-template-columns:6px 1fr;overflow:hidden;transition:box-shadow .15s ease}
+.ficha:hover{box-shadow:0 3px 16px rgba(6,55,181,.14)}
+.ficha .espina{background:var(--t3)}
+.ficha.t1 .espina{background:var(--t1)}
+.ficha.t2 .espina{background:var(--t2)}
+.ficha-body{padding:16px 18px}
+.ficha-head{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.norma-id{font-family:'IBM Plex Mono',monospace;font-size:.74rem;font-weight:600;background:var(--petroleo);color:#FFD24A;padding:3px 9px;border-radius:4px;white-space:nowrap}
+.norma-id.noticia{background:#E5EDFA;color:var(--petroleo-deep)}
+.tier-tag{font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:600;padding:3px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.06em}
+.t1 .tier-tag{background:#FBEAE7;color:var(--t1)}
+.t2 .tier-tag{background:#FBF3DD;color:#A6720A}
+.t3 .tier-tag{background:#EEF1F3;color:var(--t3)}
+.ficha h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.02rem;line-height:1.35;margin:9px 0 4px;width:100%}
+.meta{font-size:.76rem;color:var(--gris);font-family:'IBM Plex Mono',monospace}
+.sintesis{margin:10px 0 12px;color:#2A3944}
+.campos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;border-top:1px dashed var(--linea);padding-top:12px}
+.campo dt{font-family:'IBM Plex Mono',monospace;font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gris);margin-bottom:3px}
+.campo dd{font-size:.84rem}
+.impacto-ypf{grid-column:1/-1;background:#EDF3FC;border-radius:6px;padding:10px 12px}
+.impacto-ypf dt{color:var(--celeste)}
+.ficha-foot{display:flex;gap:14px;margin-top:12px;font-size:.8rem}
+.ficha-foot a{text-decoration:none;font-weight:500}
+.ficha-foot a:hover{text-decoration:underline}
+
+/* ===== Botones ===== */
+.btn{display:inline-flex;align-items:center;gap:7px;border-radius:6px;padding:8px 14px;font-size:.82rem;font-weight:600;border:1px solid var(--petroleo);background:var(--petroleo);color:#fff}
+.btn:hover{background:var(--petroleo-deep)}
+.btn.sec{background:#fff;color:var(--petroleo)}
+.btn.sec:hover{background:#EEF3F7}
+.btn svg{width:14px;height:14px}
+
+/* ===== Histórico ===== */
+.hist-tabla{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--linea);border-radius:8px;overflow:hidden;font-size:.84rem}
+.hist-tabla th{font-family:'IBM Plex Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gris);text-align:left;padding:10px 12px;border-bottom:1px solid var(--linea);background:#FAFBFB}
+.hist-tabla td{padding:10px 12px;border-bottom:1px solid #EDF0F2;vertical-align:top}
+.hist-tabla tr:last-child td{border-bottom:none}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:baseline}
+.dot.d1{background:var(--t1)}.dot.d2{background:var(--t2)}.dot.d3{background:var(--t3)}
+.buscador{width:100%;max-width:420px;border:1px solid var(--linea);border-radius:6px;padding:9px 12px;font-family:inherit;font-size:.86rem;margin-bottom:14px;background:#fff}
+
+/* ===== Descargas ===== */
+.dl-item{background:#fff;border:1px solid var(--linea);border-radius:8px;padding:14px 18px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.dl-item .info b{font-family:'Archivo',sans-serif;font-weight:700;font-size:.94rem}
+.dl-item .info span{display:block;font-size:.76rem;color:var(--gris);font-family:'IBM Plex Mono',monospace;margin-top:2px}
+.dl-acciones{display:flex;gap:8px}
+
+/* ===== Congreso / timeline ===== */
+.ley-card{background:#fff;border:1px solid var(--linea);border-radius:8px;padding:16px 18px;margin-bottom:14px}
+.ley-head{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start}
+.ley-head h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:1rem;line-height:1.35;margin:8px 0 3px;width:100%}
+.estado-tag{font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:600;padding:3px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.05em}
+.estado-tag.activo{background:#FBF3DD;color:#A6720A}
+.estado-tag.frenado{background:#EEF1F3;color:var(--t3)}
+.estado-tag.previo{background:#E7F0F8;color:var(--celeste)}
+.timeline{display:flex;align-items:flex-start;margin:16px 0 6px;position:relative}
+.tl-etapa{flex:1;text-align:center;position:relative}
+.tl-etapa::before{content:"";position:absolute;top:7px;left:-50%;width:100%;height:2px;background:var(--linea)}
+.tl-etapa:first-child::before{display:none}
+.tl-etapa.hecha::before{background:var(--petroleo)}
+.tl-dot{width:16px;height:16px;border-radius:50%;border:2px solid var(--linea);background:#fff;margin:0 auto 6px;position:relative;z-index:1}
+.tl-etapa.hecha .tl-dot{background:var(--petroleo);border-color:var(--petroleo)}
+.tl-etapa.actual .tl-dot{border-color:var(--t2);background:#FBF3DD;box-shadow:0 0 0 4px rgba(222,154,16,.18)}
+.tl-nombre{font-family:'IBM Plex Mono',monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.05em;color:var(--gris);line-height:1.3}
+.tl-etapa.hecha .tl-nombre,.tl-etapa.actual .tl-nombre{color:var(--tinta);font-weight:600}
+.tl-fecha{font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--celeste);margin-top:2px}
+.giros{border-top:1px dashed var(--linea);margin-top:12px;padding-top:11px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.viabilidad{grid-column:1/-1;background:#EDF3FC;border-radius:6px;padding:10px 12px}
+.viabilidad dt{color:var(--celeste)}
+.seg-tag{font-family:'IBM Plex Mono',monospace;font-size:.66rem;font-weight:600;padding:3px 8px;border-radius:4px;background:#EDF3FC;color:var(--petroleo-deep);text-transform:uppercase;letter-spacing:.05em}
+.leg-vacio{background:#fff;border:1px dashed var(--linea);border-radius:8px;padding:26px 18px;text-align:center;color:var(--gris);font-size:.86rem;display:none}
+.leg-vacio b{display:block;font-family:'Archivo',sans-serif;color:var(--tinta);margin-bottom:4px}
+@media(max-width:560px){.tl-nombre{font-size:.55rem}}
+
+.vista{display:none}
+.vista.activa{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.nota-mock{max-width:880px;margin:0 auto;padding:0 20px;font-size:.72rem;color:var(--gris);font-family:'IBM Plex Mono',monospace;padding-top:10px}
+footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--linea);font-size:.72rem;color:var(--gris);font-family:'IBM Plex Mono',monospace}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="mast-inner">
+    <div class="mast-top">
+      <div class="brand-lockup">
+        <img class="logo-ypf" src="logo-ypf.png" alt="YPF" onerror="this.style.display='none'">
+        <div class="brand">Radar<span class="thin"> Regulatorio</span></div>
+      </div>
+      <div class="edicion">
+        LUNES 03.08.2026<br>
+        Relevamiento diario <strong>N° 001</strong> · BORA ed. 35.968
+      </div>
+    </div>
+    <p class="mast-sub">Monitoreo de normativa y noticias con impacto en la industria de petróleo y gas · Boletín Oficial · Secretaría de Energía · ENARGAS · ANPyN</p>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-vista="hoy">Hoy</button>
+      <button class="tab" role="tab" aria-selected="false" data-vista="congreso">Legislaturas</button>
+      <button class="tab" role="tab" aria-selected="false" data-vista="historico">Histórico</button>
+      <button class="tab" role="tab" aria-selected="false" data-vista="descargas">Descargas</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= VISTA HOY ================= -->
+<section class="vista activa" id="vista-hoy">
+  <div class="strip">
+    <span class="pill alerta"><b>1</b> tier 1</span>
+    <span class="pill"><b>3</b> tier 2</span>
+    <span class="pill"><b>2</b> tier 3</span>
+    <span class="pill">Emisores: <b>SE · ENARGAS · PEN</b></span>
+  </div>
+
+  <div class="filtros">
+    <button class="chip" aria-pressed="true" data-filtro="todos">Todos</button>
+    <button class="chip" aria-pressed="false" data-filtro="t1">Tier 1</button>
+    <button class="chip" aria-pressed="false" data-filtro="bora">BORA</button>
+    <button class="chip" aria-pressed="false" data-filtro="noticia">Noticias</button>
+    <button class="btn dl" id="btn-dl-hoy">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 20h16"/></svg>
+      Descargar informe de hoy
+    </button>
+  </div>
+
+  <main id="lista-fichas">
+    <div class="seccion-label">Boletín Oficial · Primera sección</div>
+
+    <!-- FICHA TIER 1 -->
+    <article class="ficha t1" data-tipo="bora" data-tier="t1">
+      <div class="espina"></div>
+      <div class="ficha-body">
+        <div class="ficha-head">
+          <span class="norma-id">RES SE 167/2026</span>
+          <span class="tier-tag">Tier 1 · Directo</span>
+          <h3>Nuevo mecanismo bimestral de actualización de las DDA en tarifas de gas residencial</h3>
+          <div class="meta">Emisor: Secretaría de Energía (MEC) · BO 24.07.2026 · Segmento: Downstream / Gas</div>
+        </div>
+        <p class="sintesis">Las Diferencias Diarias Acumuladas pasan de ajuste semestral a recálculo cada dos meses desde los cuadros de agosto. Busca eliminar el "doble efecto estacional" invernal: correcciones más frecuentes pero de menor magnitud.</p>
+        <dl class="campos">
+          <div class="campo"><dt>Vigencia / plazo</dt><dd>Desde cuadros tarifarios de agosto 2026 · mientras dure la emergencia energética (prorrogada al 31.12.2027)</dd></div>
+          <div class="campo"><dt>Beneficiarios</dt><dd>Distribuidoras (recupero más rápido del costo del gas) · usuarios (suavización de saltos)</dd></div>
+          <div class="campo"><dt>Afectados</dt><dd>Usuarios residenciales (ajustes más frecuentes) · cadena de facturación</dd></div>
+          <div class="campo impacto-ypf"><dt>Impacto YPF</dt><dd>Directo — Comercial Gas: cambia el flujo de cobro a distribuidoras desde los cuadros de agosto. Verificar impacto en proyecciones de cobranza y traslado a PIST antes del cierre mensual.</dd></div>
+        </dl>
+        <div class="ficha-foot"><a href="https://www.boletinoficial.gob.ar/" target="_blank" rel="noopener">Ver norma en BORA ↗</a><a href="#">Ficha completa</a></div>
+      </div>
+    </article>
+
+    <!-- FICHA TIER 2 -->
+    <article class="ficha t2" data-tipo="bora" data-tier="t2">
+      <div class="espina"></div>
+      <div class="ficha-body">
+        <div class="ficha-head">
+          <span class="norma-id">DEC 690/2026</span>
+          <span class="tier-tag">Tier 2 · Indirecto</span>
+          <h3>Nuevo reglamento de practicaje y pilotaje para ríos, puertos, pasos y canales</h3>
+          <div class="meta">Emisor: Poder Ejecutivo Nacional · BO 31.07.2026 · Segmento: Logística / Midstream</div>
+        </div>
+        <p class="sintesis">Reemplaza el régimen vigente desde 1991. ANPyN como autoridad de aplicación; el servicio se considera esencial y la Prefectura puede prestarlo directamente ante interrupciones, con colaboración de la Armada.</p>
+        <dl class="campos">
+          <div class="campo"><dt>Vigencia / plazo</dt><dd>Desde publicación · reglamentación operativa a cargo de ANPyN</dd></div>
+          <div class="campo"><dt>Beneficiarios</dt><dd>Armadores y cargadores (continuidad garantizada, potencial baja de costos)</dd></div>
+          <div class="campo"><dt>Afectados</dt><dd>Prácticos y sus asociaciones profesionales</dd></div>
+          <div class="campo impacto-ypf"><dt>Impacto YPF</dt><dd>Indirecto — Logística/Trading: revisar contratos de fletamento vigentes por cláusulas de practicaje; el carácter esencial reduce riesgo de paralización en terminales propias. Relevar posición de las cámaras (tema para mesa de Cámaras y Asociaciones).</dd></div>
+        </dl>
+        <div class="ficha-foot"><a href="https://www.boletinoficial.gob.ar/" target="_blank" rel="noopener">Ver norma en BORA ↗</a><a href="#">Ficha completa</a></div>
+      </div>
+    </article>
+
+    <article class="ficha t2" data-tipo="bora" data-tier="t2">
+      <div class="espina"></div>
+      <div class="ficha-body">
+        <div class="ficha-head">
+          <span class="norma-id">ENARGAS 360-374-375/2026</span>
+          <span class="tier-tag">Tier 2 · Directo</span>
+          <h3>Cuadros tarifarios de transición para transporte y distribución de gas desde el 1° de agosto</h3>
+          <div class="meta">Emisor: ENARGAS · BO 31.07.2026 · Segmento: Midstream / Gas</div>
+        </div>
+        <p class="sintesis">Actualización mensual de tarifas de TGN, TGS y distribuidoras conforme al criterio de prudencia comunicado por Economía; incluye el recargo FNEE de $2.508/MWh desde el 1.08.</p>
+        <dl class="campos">
+          <div class="campo"><dt>Vigencia / plazo</dt><dd>Desde 01.08.2026</dd></div>
+          <div class="campo"><dt>Beneficiarios</dt><dd>Transportistas y distribuidoras (actualización mensual)</dd></div>
+          <div class="campo"><dt>Afectados</dt><dd>Usuarios finales · grandes usuarios del MEM</dd></div>
+          <div class="campo impacto-ypf"><dt>Impacto YPF</dt><dd>Directo moderado: costo de transporte de gas propio y señal de sendero tarifario para proyecciones de demanda.</dd></div>
+        </dl>
+        <div class="ficha-foot"><a href="https://www.boletinoficial.gob.ar/" target="_blank" rel="noopener">Ver norma en BORA ↗</a><a href="#">Ficha completa</a></div>
+      </div>
+    </article>
+
+    <!-- FICHA TIER 3 -->
+    <article class="ficha t3" data-tipo="bora" data-tier="t3">
+      <div class="espina"></div>
+      <div class="ficha-body">
+        <div class="ficha-head">
+          <span class="norma-id">RES SE 180/2026</span>
+          <span class="tier-tag">Tier 3 · Contexto</span>
+          <h3>Simplificación registral para operadores de GLP automotor: declaración jurada reemplaza habilitación municipal</h3>
+          <div class="meta">Emisor: Secretaría de Energía (MEC) · BO 28.07.2026 · Segmento: Downstream / GLP</div>
+        </div>
+        <p class="sintesis">Elimina la exigencia de acreditar habilitaciones municipales ante la Subsecretaría de Hidrocarburos. Continúa la línea desregulatoria del Decreto 70/23 en trámites registrales.</p>
+        <dl class="campos">
+          <div class="campo"><dt>Vigencia / plazo</dt><dd>Desde publicación</dd></div>
+          <div class="campo"><dt>Beneficiarios</dt><dd>Operadores de GLP automotor (menos carga administrativa)</dd></div>
+          <div class="campo"><dt>Afectados</dt><dd>—</dd></div>
+          <div class="campo impacto-ypf"><dt>Impacto YPF</dt><dd>Bajo: relevante como patrón desregulatorio; sin efecto operativo inmediato.</dd></div>
+        </dl>
+        <div class="ficha-foot"><a href="https://www.boletinoficial.gob.ar/" target="_blank" rel="noopener">Ver norma en BORA ↗</a><a href="#">Ficha completa</a></div>
+      </div>
+    </article>
+
+    <div class="seccion-label">Noticias y proyectos en trámite</div>
+
+    <article class="ficha t2" data-tipo="noticia" data-tier="t2">
+      <div class="espina"></div>
+      <div class="ficha-body">
+        <div class="ficha-head">
+          <span class="norma-id noticia">PROYECTO · MARINA MERCANTE</span>
+          <span class="tier-tag">Tier 2 · Seguimiento</span>
+          <h3>Reforma del cabotaje: apertura a buques de bandera extranjera con aviso a ANPyN</h3>
+          <div class="meta">Impulsa: Min. Desregulación · Estado: borrador, ingreso previsto 2° semestre · Fuente: El Cronista, ArgenPorts</div>
+        </div>
+        <p class="sintesis">El proyecto habilitaría cabotaje para buques extranjeros con solo informar ingreso, seguros y documentación; tripulación local gradual (sin exigencia los primeros 90 días) y arancel cero para importar buques de hasta 20 años. Fuerte rechazo del sector naviero; antecedente adverso: el Congreso ya rechazó la desregulación por decreto.</p>
+        <dl class="campos">
+          <div class="campo"><dt>Próximos hitos</dt><dd>Ingreso al Congreso · dictamen de comisiones · posición de gremios marítimos</dd></div>
+          <div class="campo"><dt>Beneficiarios</dt><dd>Cargadores y dadores de carga (baja esperada de fletes)</dd></div>
+          <div class="campo"><dt>Afectados</dt><dd>Armadores nacionales · gremios marítimos (SOMU, prácticos, capitanes)</dd></div>
+          <div class="campo impacto-ypf"><dt>Impacto YPF</dt><dd>Potencial alto — Trading/Logística: baja esperada de fletes de cabotaje de crudo y derivados (Puerto Rosales–La Plata, tráficos patagónicos). Activar seguimiento legislativo (ver pestaña Legislaturas) y preparar posición institucional ante consulta de cámaras.</dd></div>
+        </dl>
+        <div class="ficha-foot"><a href="#" target="_blank" rel="noopener">Ver cobertura ↗</a><a href="#">Ficha completa</a></div>
+      </div>
+    </article>
+
+    <article class="ficha t3" data-tipo="noticia" data-tier="t3">
+      <div class="espina"></div>
+      <div class="ficha-body">
+        <div class="ficha-head">
+          <span class="norma-id noticia">COMPETENCIA · RIGI</span>
+          <span class="tier-tag">Tier 3 · Contexto</span>
+          <h3>Pampa Energía: adhesión al RIGI aprobada para Rincón de Aranda (USD 4.521 M)</h3>
+          <div class="meta">Res. MEC 1025/2026 · BO 21.07.2026 · Segmento: Upstream / Shale oil</div>
+        </div>
+        <p class="sintesis">Primer proyecto aprobado bajo la ampliación costa adentro del Decreto 105/2026: 259 pozos horizontales en Añelo, tres etapas hasta 2041, mínimo 20% de inversión en los primeros dos años.</p>
+        <dl class="campos">
+          <div class="campo"><dt>Vigencia / plazo</dt><dd>Plan de inversión en 3 etapas hasta 2041</dd></div>
+          <div class="campo"><dt>Beneficiarios</dt><dd>Pampa Energía · cadena de servicios de Añelo</dd></div>
+          <div class="campo"><dt>Afectados</dt><dd>—</dd></div>
+          <div class="campo impacto-ypf"><dt>Impacto YPF</dt><dd>Benchmarking: precedente administrativo útil para presentaciones RIGI propias bajo Decreto 105/2026.</dd></div>
+        </dl>
+        <div class="ficha-foot"><a href="https://www.boletinoficial.gob.ar/" target="_blank" rel="noopener">Ver norma en BORA ↗</a><a href="#">Ficha completa</a></div>
+      </div>
+    </article>
+  </main>
+</section>
+
+<!-- ================= VISTA LEGISLATURAS ================= -->
+<section class="vista" id="vista-congreso">
+  <div class="nota-mock">// Seguimiento legislativo nacional y provincial — HCDN, Senado y legislaturas provinciales · datos de ejemplo</div>
+  <div class="filtros">
+    <button class="chip leg-chip" aria-pressed="true" data-leg="todos">Todas</button>
+    <button class="chip leg-chip" aria-pressed="false" data-leg="diputados">Nación · Diputados</button>
+    <button class="chip leg-chip" aria-pressed="false" data-leg="senado">Nación · Senado</button>
+    <button class="chip leg-chip" aria-pressed="false" data-leg="neuquen">Neuquén</button>
+    <button class="chip leg-chip" aria-pressed="false" data-leg="rionegro">Río Negro</button>
+    <button class="chip leg-chip" aria-pressed="false" data-leg="buenosaires">Buenos Aires</button>
+    <button class="chip leg-chip" aria-pressed="false" data-leg="cordoba">Córdoba</button>
+    <button class="chip leg-chip" aria-pressed="false" data-leg="mendoza">Mendoza</button>
+    <button class="chip leg-chip" aria-pressed="false" data-leg="entrerios">Entre Ríos</button>
+  </div>
+  <main id="lista-leyes">
+    <div class="seccion-label">Congreso de la Nación</div>
+
+    <article class="ley-card" data-leg="diputados">
+      <div class="ley-head">
+        <span class="norma-id noticia">MARINA MERCANTE / CABOTAJE</span>
+        <span class="estado-tag previo">Pre-ingreso</span>
+        <span class="seg-tag">Midstream · Logística</span>
+        <h3>Reforma del régimen de cabotaje y Marina Mercante (deroga Dec-Ley 19.492/44)</h3>
+        <div class="meta">Impulsa: PEN (Min. Desregulación) · Cámara de origen: a confirmar · Última novedad: 28.07.2026</div>
+      </div>
+      <div class="timeline">
+        <div class="tl-etapa actual"><div class="tl-dot"></div><div class="tl-nombre">Borrador</div><div class="tl-fecha">jul 26</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Ingreso</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Giro a comisiones</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Dictamen</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Media sanción</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Sanción</div></div>
+      </div>
+      <dl class="giros">
+        <div class="campo"><dt>Giro esperado</dt><dd>Intereses Marítimos · Transportes · Legislación del Trabajo</dd></div>
+        <div class="campo"><dt>Actores clave</dt><dd>Sector naviero y gremios marítimos en contra · puertos privados y cargadores a favor</dd></div>
+        <div class="campo viabilidad"><dt>Lectura política</dt><dd>Antecedente adverso: el Congreso rechazó la vía por decreto (340/2025, observado). El oficialismo apuesta a la nueva composición post-diciembre. Probabilidad media; conflicto gremial garantizado.</dd></div>
+      </dl>
+    </article>
+
+    <article class="ley-card" data-leg="diputados">
+      <div class="ley-head">
+        <span class="norma-id noticia">EXP 3412-D-2026</span>
+        <span class="estado-tag frenado">Sin movimiento</span>
+        <span class="seg-tag">Upstream · Inversiones</span>
+        <h3>Reforma del RIGI: restricciones a beneficios para proyectos de exportación</h3>
+        <div class="meta">Autor: bloque opositor (Diputados) · Ingreso: jun 2026 · Última novedad: sin dictamen</div>
+      </div>
+      <div class="timeline">
+        <div class="tl-etapa hecha"><div class="tl-dot"></div><div class="tl-nombre">Borrador</div></div>
+        <div class="tl-etapa hecha"><div class="tl-dot"></div><div class="tl-nombre">Ingreso</div><div class="tl-fecha">jun 26</div></div>
+        <div class="tl-etapa actual"><div class="tl-dot"></div><div class="tl-nombre">Giro a comisiones</div><div class="tl-fecha">jun 26</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Dictamen</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Media sanción</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Sanción</div></div>
+      </div>
+      <dl class="giros">
+        <div class="campo"><dt>Comisiones</dt><dd>Presupuesto y Hacienda · Energía y Combustibles</dd></div>
+        <div class="campo"><dt>Actores clave</dt><dd>Sin acompañamiento del oficialismo ni de gobernadores con proyectos RIGI</dd></div>
+        <div class="campo viabilidad"><dt>Lectura política</dt><dd>Viabilidad casi nula (análisis propio jul 26): sin dictamen previsto, valor principalmente discursivo. Mantener en radar por si se reactiva post-electoral.</dd></div>
+      </dl>
+    </article>
+
+    <article class="ley-card" data-leg="senado">
+      <div class="ley-head">
+        <span class="norma-id noticia">SENADO · BIOCOMBUSTIBLES</span>
+        <span class="estado-tag activo">En comisiones</span>
+        <span class="seg-tag">Downstream · Refinación</span>
+        <h3>Reforma del marco de biocombustibles: corte obligatorio y esquema de precios (ejemplo de seguimiento)</h3>
+        <div class="meta">Cámara: Senado · Ficha demostrativa — en la versión final se carga desde el sistema de expedientes</div>
+      </div>
+      <div class="timeline">
+        <div class="tl-etapa hecha"><div class="tl-dot"></div><div class="tl-nombre">Borrador</div></div>
+        <div class="tl-etapa hecha"><div class="tl-dot"></div><div class="tl-nombre">Ingreso</div></div>
+        <div class="tl-etapa actual"><div class="tl-dot"></div><div class="tl-nombre">Giro a comisiones</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Dictamen</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Media sanción</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Sanción</div></div>
+      </div>
+      <dl class="giros">
+        <div class="campo"><dt>Comisiones</dt><dd>Minería, Energía y Combustibles · Presupuesto y Hacienda</dd></div>
+        <div class="campo"><dt>Actores clave</dt><dd>Refinadoras vs. productores de bioetanol/biodiésel · provincias productoras (Córdoba, Tucumán, Santa Fe)</dd></div>
+        <div class="campo viabilidad"><dt>Lectura política</dt><dd>Impacto directo en costos de refinación y logística de mezcla. Coordinar posición con Downstream antes de la ronda de cámaras.</dd></div>
+      </dl>
+    </article>
+
+    <div class="seccion-label">Legislaturas provinciales</div>
+
+    <article class="ley-card" data-leg="neuquen">
+      <div class="ley-head">
+        <span class="norma-id noticia">EXP 18167 · LEG. NEUQUÉN</span>
+        <span class="estado-tag activo">En comisiones</span>
+        <span class="seg-tag">Upstream · Costos</span>
+        <h3>Regalías sobre arenas silíceas para fractura (provincial)</h3>
+        <div class="meta">Ámbito: Legislatura de Neuquén · Última novedad: tratamiento en comisión, jul 2026</div>
+      </div>
+      <div class="timeline">
+        <div class="tl-etapa hecha"><div class="tl-dot"></div><div class="tl-nombre">Borrador</div></div>
+        <div class="tl-etapa hecha"><div class="tl-dot"></div><div class="tl-nombre">Ingreso</div></div>
+        <div class="tl-etapa actual"><div class="tl-dot"></div><div class="tl-nombre">Giro a comisiones</div><div class="tl-fecha">jul 26</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Dictamen</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Sanción</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Promulgación</div></div>
+      </div>
+      <dl class="giros">
+        <div class="campo"><dt>Comisiones</dt><dd>Hidrocarburos, Energía y Comunicaciones (J)</dd></div>
+        <div class="campo"><dt>Actores clave</dt><dd>Provincia (recaudación) vs. operadoras y areneras (costo de desarrollo)</dd></div>
+        <div class="campo viabilidad"><dt>Lectura política</dt><dd>Impacto directo en costos de completación en Vaca Muerta. Coordinar seguimiento con relaciones institucionales Neuquén.</dd></div>
+      </dl>
+    </article>
+
+    <article class="ley-card" data-leg="rionegro">
+      <div class="ley-head">
+        <span class="norma-id noticia">LEG. RÍO NEGRO</span>
+        <span class="estado-tag activo">En comisiones</span>
+        <span class="seg-tag">Midstream · Exportación</span>
+        <h3>Marco normativo costero para infraestructura de exportación en el Golfo San Matías (ejemplo)</h3>
+        <div class="meta">Ámbito: Legislatura de Río Negro · Ficha demostrativa — vinculada al corredor VMOS / Punta Colorada</div>
+      </div>
+      <div class="timeline">
+        <div class="tl-etapa hecha"><div class="tl-dot"></div><div class="tl-nombre">Borrador</div></div>
+        <div class="tl-etapa hecha"><div class="tl-dot"></div><div class="tl-nombre">Ingreso</div></div>
+        <div class="tl-etapa actual"><div class="tl-dot"></div><div class="tl-nombre">Giro a comisiones</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Dictamen</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Sanción</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Promulgación</div></div>
+      </div>
+      <dl class="giros">
+        <div class="campo"><dt>Comisiones</dt><dd>Planificación, Asuntos Económicos y Turismo</dd></div>
+        <div class="campo"><dt>Actores clave</dt><dd>Provincia y operadoras del corredor exportador · organizaciones ambientales costeras</dd></div>
+        <div class="campo viabilidad"><dt>Lectura política</dt><dd>Crítico para la ventana de exportación de crudo por el Atlántico. Seguimiento prioritario junto a relaciones institucionales Río Negro.</dd></div>
+      </dl>
+    </article>
+
+    <article class="ley-card" data-leg="buenosaires">
+      <div class="ley-head">
+        <span class="norma-id noticia">LEG. BUENOS AIRES</span>
+        <span class="estado-tag previo">En elaboración</span>
+        <span class="seg-tag">Downstream · Fiscal</span>
+        <h3>Presupuesto 2027: alícuotas de IIBB sobre refinación y comercialización de combustibles (ejemplo)</h3>
+        <div class="meta">Ámbito: Legislatura bonaerense · Ficha demostrativa — ingreso típico en octubre</div>
+      </div>
+      <div class="timeline">
+        <div class="tl-etapa actual"><div class="tl-dot"></div><div class="tl-nombre">Borrador</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Ingreso</div><div class="tl-fecha">oct 26</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Giro a comisiones</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Dictamen</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Sanción</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Promulgación</div></div>
+      </div>
+      <dl class="giros">
+        <div class="campo"><dt>Comisiones esperadas</dt><dd>Presupuesto e Impuestos (ambas cámaras)</dd></div>
+        <div class="campo"><dt>Actores clave</dt><dd>Provincia · refinadoras y cadena de comercialización (La Plata como activo central)</dd></div>
+        <div class="campo viabilidad"><dt>Lectura política</dt><dd>Impacto fiscal directo sobre la refinería de La Plata y red de estaciones. Anticipar escenario tarifario antes del debate presupuestario.</dd></div>
+      </dl>
+    </article>
+
+    <article class="ley-card" data-leg="entrerios">
+      <div class="ley-head">
+        <span class="norma-id noticia">LEG. ENTRE RÍOS</span>
+        <span class="estado-tag previo">En elaboración</span>
+        <span class="seg-tag">Upstream · Insumos</span>
+        <h3>Marco regulatorio para extracción de arenas silíceas (ejemplo)</h3>
+        <div class="meta">Ámbito: Legislatura de Entre Ríos · Ficha demostrativa — vinculada al acuerdo marco de extracción</div>
+      </div>
+      <div class="timeline">
+        <div class="tl-etapa actual"><div class="tl-dot"></div><div class="tl-nombre">Borrador</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Ingreso</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Giro a comisiones</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Dictamen</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Sanción</div></div>
+        <div class="tl-etapa"><div class="tl-dot"></div><div class="tl-nombre">Promulgación</div></div>
+      </div>
+      <dl class="giros">
+        <div class="campo"><dt>Comisiones esperadas</dt><dd>Recursos Naturales y Ambiente · Hacienda</dd></div>
+        <div class="campo"><dt>Actores clave</dt><dd>Provincia · areneras · municipios ribereños · operadoras demandantes</dd></div>
+        <div class="campo viabilidad"><dt>Lectura política</dt><dd>Segunda fuente de arenas para completación: definiciones de regalías y logística fluvial afectan el costo del abastecimiento alternativo a Neuquén.</dd></div>
+      </dl>
+    </article>
+
+    <div class="leg-vacio" id="leg-vacio"><b>Sin proyectos en seguimiento</b>Esta jurisdicción no tiene expedientes activos en el radar. El sistema la monitorea igual y alertará cuando ingrese algo relevante.</div>
+  </main>
+</section>
+<section class="vista" id="vista-historico">
+  <div class="nota-mock">// Vista de ejemplo — en la versión final se alimenta de la base histórica completa</div>
+  <main>
+    <div class="seccion-label">Archivo de relevamientos</div>
+    <input class="buscador" type="search" placeholder="Buscar por norma, tema o emisor… (ej: RIGI, cabotaje, ENARGAS)" aria-label="Buscar en el histórico">
+    <table class="hist-tabla">
+      <thead><tr><th>Fecha</th><th>Norma / tema</th><th>Emisor</th><th>Tier</th></tr></thead>
+      <tbody>
+        <tr><td>31.07.26</td><td>Dec 690/2026 · Practicaje y pilotaje</td><td>PEN</td><td><span class="dot d2"></span>2</td></tr>
+        <tr><td>31.07.26</td><td>ENARGAS 360-375/2026 · Cuadros de transición</td><td>ENARGAS</td><td><span class="dot d2"></span>2</td></tr>
+        <tr><td>28.07.26</td><td>Res SE 180/2026 · Registro GLP automotor</td><td>SE</td><td><span class="dot d3"></span>3</td></tr>
+        <tr><td>24.07.26</td><td>Res SE 167/2026 · DDA bimestral gas</td><td>SE</td><td><span class="dot d1"></span>1</td></tr>
+        <tr><td>22.07.26</td><td>Res SE 166/2026 · Registro de exportaciones</td><td>SE</td><td><span class="dot d1"></span>1</td></tr>
+        <tr><td>21.07.26</td><td>Res MEC 1025/2026 · RIGI Pampa Rincón de Aranda</td><td>MEC</td><td><span class="dot d3"></span>3</td></tr>
+        <tr><td>15.07.26</td><td>Dec 590/2026 · Concurso costa afuera</td><td>PEN</td><td><span class="dot d2"></span>2</td></tr>
+      </tbody>
+    </table>
+  </main>
+</section>
+
+<!-- ================= VISTA DESCARGAS ================= -->
+<section class="vista" id="vista-descargas">
+  <div class="nota-mock">// Los botones de esta vista son demostrativos — el informe de hoy sí descarga un archivo real</div>
+  <main>
+    <div class="seccion-label">Informes disponibles</div>
+    <div class="dl-item">
+      <div class="info"><b>Relevamiento diario — 03.08.2026</b><span>6 fichas · 1 tier 1 · generado 08:15</span></div>
+      <div class="dl-acciones"><button class="btn" id="btn-dl-md">Markdown</button><button class="btn sec">Word</button><button class="btn sec">PDF</button></div>
+    </div>
+    <div class="dl-item">
+      <div class="info"><b>Resumen semanal — 27.07 al 01.08</b><span>14 fichas · síntesis ejecutiva para reenvío</span></div>
+      <div class="dl-acciones"><button class="btn sec">Word</button><button class="btn sec">PDF</button></div>
+    </div>
+    <div class="dl-item">
+      <div class="info"><b>Dossier temático — RIGI (jul 2026)</b><span>Compilado por tema · 8 normas</span></div>
+      <div class="dl-acciones"><button class="btn sec">Word</button><button class="btn sec">PDF</button></div>
+    </div>
+  </main>
+</section>
+
+<footer>RADAR REGULATORIO · mockup v0.1 · fuentes: BORA, ENARGAS, prensa especializada · uso interno</footer>
+
+<script>
+// Tabs
+const tabs=document.querySelectorAll('.tab');
+const vistas={hoy:document.getElementById('vista-hoy'),congreso:document.getElementById('vista-congreso'),historico:document.getElementById('vista-historico'),descargas:document.getElementById('vista-descargas')};
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  tabs.forEach(x=>x.setAttribute('aria-selected','false'));
+  t.setAttribute('aria-selected','true');
+  Object.values(vistas).forEach(v=>v.classList.remove('activa'));
+  vistas[t.dataset.vista].classList.add('activa');
+}));
+
+// Filtros vista Hoy
+const chips=document.querySelectorAll('.chip[data-filtro]');
+const fichas=document.querySelectorAll('.ficha');
+chips.forEach(c=>c.addEventListener('click',()=>{
+  chips.forEach(x=>x.setAttribute('aria-pressed','false'));
+  c.setAttribute('aria-pressed','true');
+  const f=c.dataset.filtro;
+  fichas.forEach(fi=>{
+    const ok = f==='todos' || fi.dataset.tier===f || fi.dataset.tipo===f;
+    fi.style.display = ok ? '' : 'none';
+  });
+}));
+
+// Filtros vista Legislaturas
+const legChips=document.querySelectorAll('.leg-chip');
+const leyes=document.querySelectorAll('.ley-card');
+const legLabels=document.querySelectorAll('#lista-leyes .seccion-label');
+const legVacio=document.getElementById('leg-vacio');
+legChips.forEach(c=>c.addEventListener('click',()=>{
+  legChips.forEach(x=>x.setAttribute('aria-pressed','false'));
+  c.setAttribute('aria-pressed','true');
+  const f=c.dataset.leg;
+  let visibles=0;
+  leyes.forEach(l=>{
+    const ok = f==='todos' || l.dataset.leg===f;
+    l.style.display = ok ? '' : 'none';
+    if(ok) visibles++;
+  });
+  legLabels.forEach(s=>s.style.display = f==='todos' ? '' : 'none');
+  legVacio.style.display = visibles===0 ? 'block' : 'none';
+}));
+
+// Descarga real del informe de hoy (Markdown)
+const informeMD=`# RADAR REGULATORIO — Relevamiento diario
+**Lunes 03.08.2026 · N° 001**
+
+## TIER 1
+### Res. SE 167/2026 — DDA bimestral en tarifas de gas (BO 24.07)
+Emisor: Secretaría de Energía · Impacto YPF: directo
+Las DDA pasan de ajuste semestral a bimestral desde los cuadros de agosto. Vigente durante la emergencia energética (al 31.12.2027). Beneficiarios: distribuidoras y usuarios (suavización). Monitorear traslado a precios PIST.
+
+## TIER 2
+### Dec. 690/2026 — Nuevo reglamento de practicaje y pilotaje (BO 31.07)
+ANPyN autoridad de aplicación; servicio esencial con intervención de PNA ante interrupciones. Impacto YPF: indirecto en costos logísticos de buques tanque.
+
+### ENARGAS 360-374-375/2026 — Cuadros de transición gas (BO 31.07)
+Vigentes desde 01.08. Actualización mensual TGN/TGS; recargo FNEE $2.508/MWh.
+
+### [Proyecto] Reforma del cabotaje — Marina Mercante
+Borrador del Min. de Desregulación: cabotaje abierto a bandera extranjera con aviso a ANPyN, tripulación gradual, arancel cero para importar buques. Rechazo del sector naviero. Seguimiento legislativo recomendado.
+
+## TIER 3
+### Res. SE 180/2026 — Simplificación registral GLP automotor (BO 28.07)
+DDJJ reemplaza habilitación municipal. Patrón desregulatorio, sin efecto operativo inmediato.
+
+### Res. MEC 1025/2026 — RIGI Pampa Energía, Rincón de Aranda (BO 21.07)
+Primer proyecto costa adentro bajo Dec. 105/2026. USD 4.521 M hasta 2041. Valor de benchmarking para presentaciones propias.
+`;
+function descargarMD(){
+  const blob=new Blob([informeMD],{type:'text/markdown;charset=utf-8'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='radar-regulatorio-2026-08-03.md';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+document.getElementById('btn-dl-hoy').addEventListener('click',descargarMD);
+document.getElementById('btn-dl-md').addEventListener('click',descargarMD);
+</script>
+</body>
+</html>
