@@ -118,6 +118,20 @@ keywords:
   - cammesa
   - mem
 
+# Noticias — Google News RSS (ver PROYECTO.md sección 2).
+noticias:
+  queries:
+    - "YPF"
+    - "Vaca Muerta"
+    - "Secretaría de Energía"
+    - "marina mercante cabotaje"
+  idioma: "es-419"
+  region: "AR"
+  # Solo noticias publicadas dentro de esta ventana, para no reprocesar
+  # la misma nota en corridas sucesivas.
+  ventana_dias: 2
+  max_items_por_query: 6
+
 analisis:
   modelo: "claude-sonnet-4-6"
   max_tokens: 1500

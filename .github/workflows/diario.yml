@@ -1,0 +1,51 @@
+name: Corrida diaria
+
+on:
+  schedule:
+    # 08:00 ART (UTC-3) de lunes a viernes = 11:00 UTC
+    - cron: "0 11 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-regulatorio-diario
+  cancel-in-progress: false
+
+jobs:
+  corrida:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Correr el Radar
+        # ANTHROPIC_API_KEY puede no estar configurada todavía como secret del
+        # repo: la corrida no falla por eso (ver src/analisis.py), publica los
+        # ítems detectados como "pendientes de análisis".
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python src/main.py
+
+      - name: Commitear datos y sitio regenerado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ docs/
+          if git diff --staged --quiet; then
+            echo "Sin cambios para commitear."
+          else
+            git commit -m "Corrida diaria $(date -u +%Y-%m-%d)"
+            git push origin main
+          fi
