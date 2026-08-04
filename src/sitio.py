@@ -175,6 +175,7 @@ def generar_sitio(fecha: date, fichas: list[dict], config: dict) -> Path:
         historico=cargar_historico(config),
         descargas=descargas,
         generado_ts=datetime.now().strftime("%d.%m.%Y %H:%M"),
+        atlas_url=config.get("atlas_url") or None,
     )
 
     index_path = docs_dir / "index.html"

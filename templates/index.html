@@ -124,6 +124,23 @@ main{max-width:880px;margin:0 auto;padding:12px 20px 60px}
 @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 .nota-mock{max-width:880px;margin:0 auto;padding:0 20px;font-size:.72rem;color:var(--gris);font-family:'IBM Plex Mono',monospace;padding-top:10px}
 footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--linea);font-size:.72rem;color:var(--gris);font-family:'IBM Plex Mono',monospace}
+
+/* ===== Card Atlas (proyecto hermano) ===== */
+.atlas-card{max-width:880px;margin:0 auto 24px;padding:16px 20px;background:#fff;border:1px solid var(--linea);border-radius:8px;display:flex;align-items:center;gap:16px;text-decoration:none;color:inherit;transition:box-shadow .15s ease}
+a.atlas-card.disponible:hover{box-shadow:0 3px 16px rgba(6,55,181,.14)}
+.atlas-card.proximamente{cursor:default}
+.atlas-map{width:40px;height:80px;flex-shrink:0}
+.atlas-info{flex:1;min-width:0}
+.atlas-info .atlas-nombre{font-family:'Archivo',sans-serif;font-weight:800;font-size:1rem;color:var(--petroleo);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.atlas-info p{font-size:.8rem;color:var(--gris);margin-top:3px}
+.atlas-badge{font-family:'IBM Plex Mono',monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;padding:2px 7px;border-radius:4px;background:#EEF1F3;color:var(--t3)}
+.atlas-arrow{color:var(--celeste);font-size:1.1rem;flex-shrink:0}
+
+@media (min-width:1240px){
+  .atlas-card{position:fixed;top:130px;right:max(16px,calc(50% - 700px));width:200px;flex-direction:column;text-align:center;margin:0;z-index:5}
+  .atlas-map{width:52px;height:104px}
+  .atlas-info .atlas-nombre{justify-content:center}
+}
 </style>
 </head>
 <body>
@@ -304,6 +321,28 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
     {% endif %}
   </main>
 </section>
+
+<!-- ================= CARD ATLAS (proyecto hermano) ================= -->
+{% set atlas_tag = "a" if atlas_url else "div" %}
+<{{ atlas_tag }} class="atlas-card {{ 'disponible' if atlas_url else 'proximamente' }}"{% if atlas_url %} href="{{ atlas_url }}" target="_blank" rel="noopener"{% endif %}>
+  <svg class="atlas-map" viewBox="0 0 120 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="atlasGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#1E6FE0"/>
+        <stop offset="1" stop-color="#042A8C"/>
+      </linearGradient>
+    </defs>
+    <path d="M52 6 L74 8 L84 34 L96 64 L82 90 L88 118 L72 146 L62 182 L50 212 L38 236 L32 206 L22 168 L30 128 L20 90 L28 52 L40 20 Z" fill="url(#atlasGrad)" stroke="#9DBBF2" stroke-width="1.5"/>
+    <circle cx="55" cy="45" r="3.2" fill="#FFD24A"/>
+    <circle cx="45" cy="95" r="2.6" fill="#EDF2FB"/>
+    <circle cx="60" cy="140" r="3.2" fill="#FFD24A"/>
+    <circle cx="42" cy="175" r="2.6" fill="#EDF2FB"/>
+  </svg>
+  <div class="atlas-info">
+    <div class="atlas-nombre">Atlas {% if atlas_url %}<span class="atlas-arrow">↗</span>{% else %}<span class="atlas-badge">Próximamente</span>{% endif %}</div>
+    <p>Mapa de players de la industria: bloques, operadores, activos.</p>
+  </div>
+</{{ atlas_tag }}>
 
 <footer>RADAR REGULATORIO · fuentes: BORA · Google News · generado {{ generado_ts }} · uso interno</footer>
 
