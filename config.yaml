@@ -1,0 +1,129 @@
+# Configuración del Radar Regulatorio — Fase 1 (MVP: solo BORA)
+# Ver PROYECTO.md sección 2 y MAPA-MAESTRO-AAPP.md sección 8 (banco de keywords).
+
+bora:
+  base_url: "https://www.boletinoficial.gob.ar"
+  seccion: "primera"
+  # Rubros del sumario donde el campo "item" es el TÍTULO/extracto de la norma
+  # (porque solo el PEN emite decretos, no hace falta rotular emisor).
+  # En el resto de los rubros, "item" es el ORGANISMO emisor.
+  rubros_titulo_directo:
+    - "DECRETOS"
+  # Rubros a relevar. El resto (avisos oficiales, concursos, convenciones
+  # colectivas de trabajo) no son normativa sustantiva del sector.
+  rubros_relevados:
+    - "DECRETOS"
+    - "RESOLUCIONES"
+    - "RESOLUCIONES GENERALES"
+    - "RESOLUCIONES SINTETIZADAS"
+    - "DISPOSICIONES"
+
+  # Emisores a filtrar (coinciden por substring, sin acentos, contra el campo
+  # "organismo" que expone el sumario). No incluye "Ministerio de Economía" en
+  # forma genérica porque ahí cuelgan secretarías sin relación con el sector
+  # (agricultura, aduana, etc.) — ver emisores_exactos para ese caso.
+  emisores:
+    - "SECRETARIA DE ENERGIA"
+    - "SUBSECRETARIA DE HIDROCARBUROS"
+    - "SUBSECRETARIA DE COMBUSTIBLES"
+    - "ENTE NACIONAL REGULADOR DEL GAS"
+    - "ENARGAS"
+    - "AGENCIA NACIONAL DE PUERTOS Y VIAS NAVEGABLES"
+    - "PUERTOS Y VIAS NAVEGABLES"
+
+  # Emisores que solo cuentan si el organismo del ítem coincide EXACTO
+  # (evita capturar cualquier secretaría que cuelgue del Ministerio).
+  emisores_exactos:
+    - "MINISTERIO DE ECONOMIA"
+
+# Keywords del sector (banco curado en MAPA-MAESTRO-AAPP.md sección 8).
+# Se usan para filtrar DECRETOS (donde "item" es el título) y como señal
+# adicional de relevancia sobre organismo/código en el resto de los rubros.
+keywords:
+  - hidrocarburos
+  - petroleo
+  - gas natural
+  - gnl
+  - lng
+  - vaca muerta
+  - no convencional
+  - shale
+  - regalias
+  - canon
+  - concesion
+  - permiso de exploracion
+  - costa afuera
+  - offshore
+  - sismica
+  - arenas
+  - fractura
+  - rigi
+  - vpu
+  - retenciones
+  - derechos de exportacion
+  - plan gas
+  - pist
+  - enargas
+  - tarifas
+  - transporte de gas
+  - distribucion
+  - gasoducto
+  - oleoducto
+  - vmos
+  - oldelval
+  - punta colorada
+  - terminal
+  - monoboya
+  - cabotaje
+  - marina mercante
+  - practicaje
+  - hidrovia
+  - puerto
+  - refinacion
+  - refineria
+  - combustibles
+  - naftas
+  - gasoil
+  - icl
+  - impuesto al carbono
+  - biocombustibles
+  - bioetanol
+  - biodiesel
+  - corte
+  - glp
+  - garrafa
+  - programa hogar
+  - estaciones de servicio
+  - petroquimica
+  - admision temporaria
+  - mulc
+  - divisas
+  - eia
+  - impacto ambiental
+  - venteo
+  - metano
+  - pasivos ambientales
+  - abandono de pozos
+  - servidumbre
+  - superficiario
+  - consulta previa
+  - audiencia publica
+  - consulta publica
+  - designacion
+  - renuncia
+  - secretaria de energia
+  - subsecretaria de hidrocarburos
+  - anpyn
+  - emergencia energetica
+  - cammesa
+  - mem
+
+analisis:
+  modelo: "claude-sonnet-4-6"
+  max_tokens: 1500
+  limite_items_por_corrida: 50
+
+salida:
+  data_dir: "data"
+  docs_dir: "docs"
+  templates_dir: "templates"
