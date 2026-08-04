@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar Regulatorio · Relevamiento diario</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --petroleo:#0637B5;
+  --petroleo-deep:#042A8C;
+  --papel:#F4F6F8;
+  --tinta:#131F33;
+  --gris:#5B6B80;
+  --linea:#D6DDE7;
+  --t1:#D93A26;
+  --t2:#F0A50A;
+  --t3:#7C8BA1;
+  --celeste:#1E6FE0;
+  --blanco:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+body{font-family:'IBM Plex Sans',sans-serif;background:var(--papel);color:var(--tinta);font-size:15px;line-height:1.55}
+a{color:var(--celeste)}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--celeste);outline-offset:2px}
+
+/* ===== Masthead ===== */
+.masthead{background:linear-gradient(135deg,#0A45D6 0%,#0637B5 55%,#042A8C 100%);color:#EDF2FB;padding:22px 20px 0}
+.mast-inner{max-width:880px;margin:0 auto}
+.mast-top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.brand-lockup{display:flex;align-items:center;gap:14px}
+.logo-ypf{height:40px;width:auto;display:block}
+.brand{font-family:'Archivo',sans-serif;font-weight:850;font-stretch:115%;font-size:clamp(1.5rem,4.5vw,2.1rem);letter-spacing:.01em;text-transform:uppercase;line-height:1}
+.brand .thin{font-weight:400;font-stretch:75%;color:#9DBBF2}
+.edicion{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:#9DBBF2;text-align:right;line-height:1.5}
+.edicion strong{color:#FFD24A;font-weight:600}
+.mast-sub{margin-top:8px;font-size:.82rem;color:#B8CCF5;max-width:60ch}
+.tabs{display:flex;gap:2px;margin-top:18px}
+.tab{background:transparent;border:none;color:#B8CCF5;font-family:'Archivo',sans-serif;font-weight:600;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;padding:10px 16px;border-radius:6px 6px 0 0;position:relative}
+.tab[aria-selected="true"]{background:var(--papel);color:var(--petroleo)}
+.tab:hover:not([aria-selected="true"]){color:#fff}
+
+/* ===== Resumen strip ===== */
+.strip{max-width:880px;margin:0 auto;padding:14px 20px 0;display:flex;gap:10px;flex-wrap:wrap}
+.pill{font-family:'IBM Plex Mono',monospace;font-size:.72rem;background:#fff;border:1px solid var(--linea);border-radius:999px;padding:5px 12px;color:var(--gris)}
+.pill b{color:var(--tinta);font-weight:600}
+.pill.alerta{border-color:var(--t1);color:var(--t1)}
+.pill.alerta b{color:var(--t1)}
+
+/* ===== Filtros ===== */
+.filtros{max-width:880px;margin:0 auto;padding:16px 20px 4px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chip{border:1px solid var(--linea);background:#fff;border-radius:999px;padding:6px 14px;font-size:.8rem;font-weight:500;color:var(--gris)}
+.chip[aria-pressed="true"]{background:var(--petroleo);border-color:var(--petroleo);color:#fff}
+.filtros .dl{margin-left:auto}
+
+/* ===== Fichas ===== */
+main{max-width:880px;margin:0 auto;padding:12px 20px 60px}
+.seccion-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gris);margin:22px 0 10px;display:flex;align-items:center;gap:10px}
+.seccion-label::after{content:"";flex:1;height:1px;background:var(--linea)}
+.ficha{background:#fff;border:1px solid var(--linea);border-radius:8px;margin-bottom:14px;display:grid;grid-template-columns:6px 1fr;overflow:hidden;transition:box-shadow .15s ease}
+.ficha:hover{box-shadow:0 3px 16px rgba(6,55,181,.14)}
+.ficha .espina{background:var(--t3)}
+.ficha.t1 .espina{background:var(--t1)}
+.ficha.t2 .espina{background:var(--t2)}
+.ficha-body{padding:16px 18px}
+.ficha-head{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.norma-id{font-family:'IBM Plex Mono',monospace;font-size:.74rem;font-weight:600;background:var(--petroleo);color:#FFD24A;padding:3px 9px;border-radius:4px;white-space:nowrap}
+.norma-id.noticia{background:#E5EDFA;color:var(--petroleo-deep)}
+.tier-tag{font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:600;padding:3px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.06em}
+.t1 .tier-tag{background:#FBEAE7;color:var(--t1)}
+.t2 .tier-tag{background:#FBF3DD;color:#A6720A}
+.t3 .tier-tag{background:#EEF1F3;color:var(--t3)}
+.ficha h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.02rem;line-height:1.35;margin:9px 0 4px;width:100%}
+.meta{font-size:.76rem;color:var(--gris);font-family:'IBM Plex Mono',monospace}
+.sintesis{margin:10px 0 12px;color:#2A3944}
+.campos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;border-top:1px dashed var(--linea);padding-top:12px}
+.campo dt{font-family:'IBM Plex Mono',monospace;font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gris);margin-bottom:3px}
+.campo dd{font-size:.84rem}
+.impacto-ypf{grid-column:1/-1;background:#EDF3FC;border-radius:6px;padding:10px 12px}
+.impacto-ypf dt{color:var(--celeste)}
+.ficha-foot{display:flex;gap:14px;margin-top:12px;font-size:.8rem}
+.ficha-foot a{text-decoration:none;font-weight:500}
+.ficha-foot a:hover{text-decoration:underline}
+
+/* ===== Botones ===== */
+.btn{display:inline-flex;align-items:center;gap:7px;border-radius:6px;padding:8px 14px;font-size:.82rem;font-weight:600;border:1px solid var(--petroleo);background:var(--petroleo);color:#fff}
+.btn:hover{background:var(--petroleo-deep)}
+.btn.sec{background:#fff;color:var(--petroleo)}
+.btn.sec:hover{background:#EEF3F7}
+.btn svg{width:14px;height:14px}
+
+/* ===== Histórico ===== */
+.hist-tabla{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--linea);border-radius:8px;overflow:hidden;font-size:.84rem}
+.hist-tabla th{font-family:'IBM Plex Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gris);text-align:left;padding:10px 12px;border-bottom:1px solid var(--linea);background:#FAFBFB}
+.hist-tabla td{padding:10px 12px;border-bottom:1px solid #EDF0F2;vertical-align:top}
+.hist-tabla tr:last-child td{border-bottom:none}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:baseline}
+.dot.d1{background:var(--t1)}.dot.d2{background:var(--t2)}.dot.d3{background:var(--t3)}.dot.dp{background:var(--linea)}
+.buscador{width:100%;max-width:420px;border:1px solid var(--linea);border-radius:6px;padding:9px 12px;font-family:inherit;font-size:.86rem;margin-bottom:14px;background:#fff}
+
+/* ===== Descargas ===== */
+.dl-item{background:#fff;border:1px solid var(--linea);border-radius:8px;padding:14px 18px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.dl-item .info b{font-family:'Archivo',sans-serif;font-weight:700;font-size:.94rem}
+.dl-item .info span{display:block;font-size:.76rem;color:var(--gris);font-family:'IBM Plex Mono',monospace;margin-top:2px}
+.dl-acciones{display:flex;gap:8px}
+
+/* ===== Estado pendiente (sin análisis de API todavía) ===== */
+.ficha-pendiente{background:#fff;border:1px dashed var(--linea);border-radius:8px;padding:14px 18px;margin-bottom:12px}
+.ficha-pendiente .meta{margin-top:6px}
+.ficha-pendiente .nota-pendiente{margin-top:8px;font-size:.8rem;color:var(--gris);font-style:italic}
+
+.vacio{background:#fff;border:1px dashed var(--linea);border-radius:8px;padding:26px 18px;text-align:center;color:var(--gris);font-size:.86rem}
+.vacio b{display:block;font-family:'Archivo',sans-serif;color:var(--tinta);margin-bottom:4px}
+
+.vista{display:none}
+.vista.activa{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.nota-mock{max-width:880px;margin:0 auto;padding:0 20px;font-size:.72rem;color:var(--gris);font-family:'IBM Plex Mono',monospace;padding-top:10px}
+footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--linea);font-size:.72rem;color:var(--gris);font-family:'IBM Plex Mono',monospace}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="mast-inner">
+    <div class="mast-top">
+      <div class="brand-lockup">
+        <img class="logo-ypf" src="logo-ypf.png" alt="YPF" onerror="this.style.display='none'">
+        <div class="brand">Radar<span class="thin"> Regulatorio</span></div>
+      </div>
+      <div class="edicion">
+        {{ fecha_larga }}<br>
+        Relevamiento diario <strong>N° {{ "%03d"|format(numero_relevamiento) }}</strong> · BORA edición del {{ fecha_corta }}
+      </div>
+    </div>
+    <p class="mast-sub">Monitoreo de normativa con impacto en la industria de petróleo y gas · Boletín Oficial · Secretaría de Energía · ENARGAS · ANPyN</p>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-vista="hoy">Hoy</button>
+      <button class="tab" role="tab" aria-selected="false" data-vista="historico">Histórico</button>
+      <button class="tab" role="tab" aria-selected="false" data-vista="descargas">Descargas</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= VISTA HOY ================= -->
+<section class="vista activa" id="vista-hoy">
+  <div class="strip">
+    <span class="pill {{ 'alerta' if contadores.t1 else '' }}"><b>{{ contadores.t1 }}</b> tier 1</span>
+    <span class="pill"><b>{{ contadores.t2 }}</b> tier 2</span>
+    <span class="pill"><b>{{ contadores.t3 }}</b> tier 3</span>
+    {% if contadores.pendientes %}<span class="pill"><b>{{ contadores.pendientes }}</b> pendientes de análisis</span>{% endif %}
+    <span class="pill">Emisores: <b>{{ emisores_hoy or "—" }}</b></span>
+  </div>
+
+  <div class="filtros">
+    <button class="chip" aria-pressed="true" data-filtro="todos">Todos</button>
+    <button class="chip" aria-pressed="false" data-filtro="t1">Tier 1</button>
+    <button class="chip" aria-pressed="false" data-filtro="t2">Tier 2</button>
+    <button class="chip" aria-pressed="false" data-filtro="t3">Tier 3</button>
+    {% if informe_hoy_href %}
+    <a class="btn dl" id="btn-dl-hoy" href="{{ informe_hoy_href }}" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 20h16"/></svg>
+      Descargar informe de hoy
+    </a>
+    {% endif %}
+  </div>
+
+  <main id="lista-fichas">
+    {% if fichas %}
+    <div class="seccion-label">Boletín Oficial · Primera sección</div>
+    {% for f in fichas %}
+    <article class="ficha t{{ f.tier }}" data-tier="t{{ f.tier }}">
+      <div class="espina"></div>
+      <div class="ficha-body">
+        <div class="ficha-head">
+          <span class="norma-id">{{ f.norma_id }}</span>
+          <span class="tier-tag">Tier {{ f.tier }} · {{ f.impacto_ypf.grado|capitalize if f.impacto_ypf else '' }}</span>
+          <h3>{{ f.titulo }}</h3>
+          <div class="meta">Emisor: {{ f.emisor }} · BO {{ f.fecha_bo }} · Segmento: {{ f.segmento|capitalize }}</div>
+        </div>
+        <p class="sintesis">{{ f.sintesis }}</p>
+        <dl class="campos">
+          <div class="campo"><dt>Vigencia / plazo</dt><dd>{{ f.vigencia_plazo or "—" }}</dd></div>
+          <div class="campo"><dt>Beneficiarios</dt><dd>{{ f.beneficiarios or "—" }}</dd></div>
+          <div class="campo"><dt>Afectados</dt><dd>{{ f.afectados or "—" }}</dd></div>
+          {% if f.impacto_ypf %}
+          <div class="campo impacto-ypf"><dt>Impacto YPF</dt><dd>{{ f.impacto_ypf.grado|capitalize }} — {{ f.impacto_ypf.area }}: {{ f.impacto_ypf.accion }}</dd></div>
+          {% endif %}
+        </dl>
+        <div class="ficha-foot"><a href="{{ f.url_fuente }}" target="_blank" rel="noopener">Ver norma en BORA ↗</a></div>
+      </div>
+    </article>
+    {% endfor %}
+    {% endif %}
+
+    {% if pendientes %}
+    <div class="seccion-label">Detectadas hoy · pendientes de análisis</div>
+    {% for p in pendientes %}
+    <article class="ficha-pendiente">
+      <span class="norma-id">{{ p.norma_id }}</span>
+      <div class="meta">Emisor: {{ p.emisor }} · BO {{ p.fecha_bo }} · Rubro: {{ p.rubro }}</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="{{ p.url_fuente }}" target="_blank" rel="noopener">Ver norma en BORA ↗</a></div>
+    </article>
+    {% endfor %}
+    {% endif %}
+
+    {% if not fichas and not pendientes %}
+    <div class="vacio"><b>Sin novedades del sector hoy</b>El BORA de hoy no trajo normas de los emisores o keywords monitoreados.</div>
+    {% endif %}
+  </main>
+</section>
+
+<!-- ================= VISTA HISTÓRICO ================= -->
+<section class="vista" id="vista-historico">
+  <main>
+    <div class="seccion-label">Archivo de relevamientos</div>
+    <input class="buscador" type="search" id="buscador-historico" placeholder="Buscar por norma, tema o emisor… (ej: RIGI, cabotaje, ENARGAS)" aria-label="Buscar en el histórico">
+    {% if historico %}
+    <table class="hist-tabla" id="tabla-historico">
+      <thead><tr><th>Fecha</th><th>Norma / tema</th><th>Emisor</th><th>Tier</th></tr></thead>
+      <tbody>
+        {% for h in historico %}
+        <tr>
+          <td>{{ h.fecha_corta }}</td>
+          <td>{{ h.norma_id }}{% if h.titulo %} · {{ h.titulo }}{% endif %}</td>
+          <td>{{ h.emisor }}</td>
+          <td>{% if h.tier %}<span class="dot d{{ h.tier }}"></span>{{ h.tier }}{% else %}<span class="dot dp"></span>pendiente{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <div class="vacio"><b>Todavía no hay histórico</b>Cada corrida agrega un día a este archivo.</div>
+    {% endif %}
+  </main>
+</section>
+
+<!-- ================= VISTA DESCARGAS ================= -->
+<section class="vista" id="vista-descargas">
+  <main>
+    <div class="seccion-label">Informes disponibles</div>
+    {% if descargas %}
+    {% for d in descargas %}
+    <div class="dl-item">
+      <div class="info"><b>Relevamiento diario — {{ d.fecha_corta }}</b><span>{{ d.resumen }}</span></div>
+      <div class="dl-acciones"><a class="btn" href="{{ d.href }}" download>Markdown</a></div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="vacio"><b>Todavía no hay informes</b>El primer informe se genera en la próxima corrida.</div>
+    {% endif %}
+  </main>
+</section>
+
+<footer>RADAR REGULATORIO · Fase 1 (MVP) · fuente: BORA · generado {{ generado_ts }} · uso interno</footer>
+
+<script>
+// Tabs
+const tabs=document.querySelectorAll('.tab');
+const vistas={hoy:document.getElementById('vista-hoy'),historico:document.getElementById('vista-historico'),descargas:document.getElementById('vista-descargas')};
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  tabs.forEach(x=>x.setAttribute('aria-selected','false'));
+  t.setAttribute('aria-selected','true');
+  Object.values(vistas).forEach(v=>v.classList.remove('activa'));
+  vistas[t.dataset.vista].classList.add('activa');
+}));
+
+// Filtros vista Hoy
+const chips=document.querySelectorAll('.chip[data-filtro]');
+const fichas=document.querySelectorAll('.ficha');
+chips.forEach(c=>c.addEventListener('click',()=>{
+  chips.forEach(x=>x.setAttribute('aria-pressed','false'));
+  c.setAttribute('aria-pressed','true');
+  const f=c.dataset.filtro;
+  fichas.forEach(fi=>{
+    const ok = f==='todos' || fi.dataset.tier===f;
+    fi.style.display = ok ? '' : 'none';
+  });
+}));
+
+// Buscador vista Histórico
+const buscador=document.getElementById('buscador-historico');
+const tabla=document.getElementById('tabla-historico');
+if(buscador && tabla){
+  const filas=tabla.querySelectorAll('tbody tr');
+  buscador.addEventListener('input',()=>{
+    const q=buscador.value.trim().toLowerCase();
+    filas.forEach(fi=>{
+      fi.style.display = fi.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+}
+</script>
+</body>
+</html>

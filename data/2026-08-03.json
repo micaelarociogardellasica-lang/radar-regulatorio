@@ -1,0 +1,28 @@
+{
+  "fecha": "2026-08-03",
+  "generado_ts": "2026-08-04T00:15:16",
+  "fichas": [
+    {
+      "id": "resol-2026-188-apn-se-mec",
+      "tipo": "bora",
+      "norma_id": "Resolución 188/2026",
+      "emisor": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "fecha_bo": "2026-08-03",
+      "url_fuente": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345319/20260803",
+      "codigo": "RESOL-2026-188-APN-SE#MEC",
+      "rubro": "RESOLUCIONES",
+      "estado": "pendiente"
+    },
+    {
+      "id": "resol-2026-189-apn-se-mec",
+      "tipo": "bora",
+      "norma_id": "Resolución 189/2026",
+      "emisor": "MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA",
+      "fecha_bo": "2026-08-03",
+      "url_fuente": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345320/20260803",
+      "codigo": "RESOL-2026-189-APN-SE#MEC",
+      "rubro": "RESOLUCIONES",
+      "estado": "pendiente"
+    }
+  ]
+}
