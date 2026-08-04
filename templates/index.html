@@ -75,6 +75,7 @@ main{max-width:880px;margin:0 auto;padding:12px 20px 60px}
 .t2 .tier-tag{background:#FBF3DD;color:#A6720A}
 .t3 .tier-tag{background:#EEF1F3;color:var(--t3)}
 .ficha h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.02rem;line-height:1.35;margin:9px 0 4px;width:100%}
+.epigrafe{font-size:.78rem;color:var(--gris);font-style:italic;margin:-2px 0 4px;width:100%}
 .meta{font-size:.76rem;color:var(--gris);font-family:'IBM Plex Mono',monospace}
 .sintesis{margin:10px 0 12px;color:#2A3944}
 .campos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;border-top:1px dashed var(--linea);padding-top:12px}
@@ -110,7 +111,9 @@ main{max-width:880px;margin:0 auto;padding:12px 20px 60px}
 
 /* ===== Estado pendiente (sin análisis de API todavía) ===== */
 .ficha-pendiente{background:#fff;border:1px dashed var(--linea);border-radius:8px;padding:14px 18px;margin-bottom:12px}
+.ficha-pendiente .epigrafe{font-size:.78rem;color:var(--gris);font-style:italic;margin-top:4px}
 .ficha-pendiente .meta{margin-top:6px}
+.ficha-pendiente .extracto-pendiente{margin:10px 0;padding:8px 12px;border-left:3px solid var(--linea);background:#FAFBFB;font-size:.84rem;color:#2A3944}
 .ficha-pendiente .nota-pendiente{margin-top:8px;font-size:.8rem;color:var(--gris);font-style:italic}
 
 .vacio{background:#fff;border:1px dashed var(--linea);border-radius:8px;padding:26px 18px;text-align:center;color:var(--gris);font-size:.86rem}
@@ -137,7 +140,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
         Relevamiento diario <strong>N° {{ "%03d"|format(numero_relevamiento) }}</strong> · BORA edición del {{ fecha_corta }}
       </div>
     </div>
-    <p class="mast-sub">Monitoreo de normativa con impacto en la industria de petróleo y gas · Boletín Oficial · Secretaría de Energía · ENARGAS · ANPyN</p>
+    <p class="mast-sub">Monitoreo de normativa y noticias con impacto en la industria de petróleo y gas · Boletín Oficial · Secretaría de Energía · ENARGAS · ANPyN · Google News</p>
     <div class="tabs" role="tablist">
       <button class="tab" role="tab" aria-selected="true" data-vista="hoy">Hoy</button>
       <button class="tab" role="tab" aria-selected="false" data-vista="historico">Histórico</button>
@@ -153,6 +156,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
     <span class="pill"><b>{{ contadores.t2 }}</b> tier 2</span>
     <span class="pill"><b>{{ contadores.t3 }}</b> tier 3</span>
     {% if contadores.pendientes %}<span class="pill"><b>{{ contadores.pendientes }}</b> pendientes de análisis</span>{% endif %}
+    {% if contadores.noticias %}<span class="pill"><b>{{ contadores.noticias }}</b> noticias</span>{% endif %}
     <span class="pill">Emisores: <b>{{ emisores_hoy or "—" }}</b></span>
   </div>
 
@@ -161,6 +165,8 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
     <button class="chip" aria-pressed="false" data-filtro="t1">Tier 1</button>
     <button class="chip" aria-pressed="false" data-filtro="t2">Tier 2</button>
     <button class="chip" aria-pressed="false" data-filtro="t3">Tier 3</button>
+    <button class="chip" aria-pressed="false" data-filtro="bora">BORA</button>
+    <button class="chip" aria-pressed="false" data-filtro="noticia">Noticias</button>
     {% if informe_hoy_href %}
     <a class="btn dl" id="btn-dl-hoy" href="{{ informe_hoy_href }}" download>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 20h16"/></svg>
@@ -173,13 +179,14 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
     {% if fichas %}
     <div class="seccion-label">Boletín Oficial · Primera sección</div>
     {% for f in fichas %}
-    <article class="ficha t{{ f.tier }}" data-tier="t{{ f.tier }}">
+    <article class="ficha t{{ f.tier }}" data-tipo="bora" data-tier="t{{ f.tier }}">
       <div class="espina"></div>
       <div class="ficha-body">
         <div class="ficha-head">
           <span class="norma-id">{{ f.norma_id }}</span>
           <span class="tier-tag">Tier {{ f.tier }} · {{ f.impacto_ypf.grado|capitalize if f.impacto_ypf else '' }}</span>
           <h3>{{ f.titulo }}</h3>
+          {% if f.epigrafe %}<div class="epigrafe">{{ f.epigrafe }}</div>{% endif %}
           <div class="meta">Emisor: {{ f.emisor }} · BO {{ f.fecha_bo }} · Segmento: {{ f.segmento|capitalize }}</div>
         </div>
         <p class="sintesis">{{ f.sintesis }}</p>
@@ -200,17 +207,57 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
     {% if pendientes %}
     <div class="seccion-label">Detectadas hoy · pendientes de análisis</div>
     {% for p in pendientes %}
-    <article class="ficha-pendiente">
+    <article class="ficha-pendiente" data-tipo="bora">
       <span class="norma-id">{{ p.norma_id }}</span>
+      {% if p.epigrafe %}<div class="epigrafe">{{ p.epigrafe }}</div>{% endif %}
       <div class="meta">Emisor: {{ p.emisor }} · BO {{ p.fecha_bo }} · Rubro: {{ p.rubro }}</div>
+      {% if p.extracto %}<blockquote class="extracto-pendiente">{{ p.extracto }}</blockquote>{% endif %}
       <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
       <div class="ficha-foot"><a href="{{ p.url_fuente }}" target="_blank" rel="noopener">Ver norma en BORA ↗</a></div>
     </article>
     {% endfor %}
     {% endif %}
 
-    {% if not fichas and not pendientes %}
-    <div class="vacio"><b>Sin novedades del sector hoy</b>El BORA de hoy no trajo normas de los emisores o keywords monitoreados.</div>
+    {% if fichas_noticias or pendientes_noticias %}
+    <div class="seccion-label">Noticias y proyectos en trámite</div>
+    {% for f in fichas_noticias %}
+    <article class="ficha t{{ f.tier }}" data-tipo="noticia" data-tier="t{{ f.tier }}">
+      <div class="espina"></div>
+      <div class="ficha-body">
+        <div class="ficha-head">
+          <span class="norma-id noticia">{{ f.norma_id }}</span>
+          <span class="tier-tag">Tier {{ f.tier }} · {{ f.impacto_ypf.grado|capitalize if f.impacto_ypf else '' }}</span>
+          <h3>{{ f.titulo }}</h3>
+          {% if f.epigrafe and f.epigrafe != f.titulo %}<div class="epigrafe">Titular original: {{ f.epigrafe }}</div>{% endif %}
+          <div class="meta">Fuente: {{ f.emisor }} · {{ f.fecha_bo }} · Segmento: {{ f.segmento|capitalize }}</div>
+        </div>
+        <p class="sintesis">{{ f.sintesis }}</p>
+        <dl class="campos">
+          <div class="campo"><dt>Vigencia / plazo</dt><dd>{{ f.vigencia_plazo or "—" }}</dd></div>
+          <div class="campo"><dt>Beneficiarios</dt><dd>{{ f.beneficiarios or "—" }}</dd></div>
+          <div class="campo"><dt>Afectados</dt><dd>{{ f.afectados or "—" }}</dd></div>
+          {% if f.impacto_ypf %}
+          <div class="campo impacto-ypf"><dt>Impacto YPF</dt><dd>{{ f.impacto_ypf.grado|capitalize }} — {{ f.impacto_ypf.area }}: {{ f.impacto_ypf.accion }}</dd></div>
+          {% endif %}
+        </dl>
+        <div class="ficha-foot"><a href="{{ f.url_fuente }}" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+      </div>
+    </article>
+    {% endfor %}
+
+    {% for p in pendientes_noticias %}
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">{{ p.norma_id }}</span>
+      {% if p.epigrafe %}<div class="epigrafe">{{ p.epigrafe }}</div>{% endif %}
+      <div class="meta">Fuente: {{ p.emisor }} · {{ p.fecha_bo }}</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="{{ p.url_fuente }}" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    {% endfor %}
+    {% endif %}
+
+    {% if not fichas and not pendientes and not fichas_noticias and not pendientes_noticias %}
+    <div class="vacio"><b>Sin novedades del sector hoy</b>El BORA de hoy no trajo normas de los emisores o keywords monitoreados, ni las queries de noticias trajeron resultados nuevos.</div>
     {% endif %}
   </main>
 </section>
@@ -222,11 +269,12 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
     <input class="buscador" type="search" id="buscador-historico" placeholder="Buscar por norma, tema o emisor… (ej: RIGI, cabotaje, ENARGAS)" aria-label="Buscar en el histórico">
     {% if historico %}
     <table class="hist-tabla" id="tabla-historico">
-      <thead><tr><th>Fecha</th><th>Norma / tema</th><th>Emisor</th><th>Tier</th></tr></thead>
+      <thead><tr><th>Fecha</th><th>Tipo</th><th>Norma / tema</th><th>Emisor</th><th>Tier</th></tr></thead>
       <tbody>
         {% for h in historico %}
         <tr>
           <td>{{ h.fecha_corta }}</td>
+          <td>{{ "Noticia" if h.tipo == "noticia" else "BORA" }}</td>
           <td>{{ h.norma_id }}{% if h.titulo %} · {{ h.titulo }}{% endif %}</td>
           <td>{{ h.emisor }}</td>
           <td>{% if h.tier %}<span class="dot d{{ h.tier }}"></span>{{ h.tier }}{% else %}<span class="dot dp"></span>pendiente{% endif %}</td>
@@ -257,7 +305,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
   </main>
 </section>
 
-<footer>RADAR REGULATORIO · Fase 1 (MVP) · fuente: BORA · generado {{ generado_ts }} · uso interno</footer>
+<footer>RADAR REGULATORIO · fuentes: BORA · Google News · generado {{ generado_ts }} · uso interno</footer>
 
 <script>
 // Tabs
@@ -272,13 +320,13 @@ tabs.forEach(t=>t.addEventListener('click',()=>{
 
 // Filtros vista Hoy
 const chips=document.querySelectorAll('.chip[data-filtro]');
-const fichas=document.querySelectorAll('.ficha');
+const fichas=document.querySelectorAll('.ficha, .ficha-pendiente');
 chips.forEach(c=>c.addEventListener('click',()=>{
   chips.forEach(x=>x.setAttribute('aria-pressed','false'));
   c.setAttribute('aria-pressed','true');
   const f=c.dataset.filtro;
   fichas.forEach(fi=>{
-    const ok = f==='todos' || fi.dataset.tier===f;
+    const ok = f==='todos' || fi.dataset.tier===f || fi.dataset.tipo===f;
     fi.style.display = ok ? '' : 'none';
   });
 }));

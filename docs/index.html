@@ -75,6 +75,7 @@ main{max-width:880px;margin:0 auto;padding:12px 20px 60px}
 .t2 .tier-tag{background:#FBF3DD;color:#A6720A}
 .t3 .tier-tag{background:#EEF1F3;color:var(--t3)}
 .ficha h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.02rem;line-height:1.35;margin:9px 0 4px;width:100%}
+.epigrafe{font-size:.78rem;color:var(--gris);font-style:italic;margin:-2px 0 4px;width:100%}
 .meta{font-size:.76rem;color:var(--gris);font-family:'IBM Plex Mono',monospace}
 .sintesis{margin:10px 0 12px;color:#2A3944}
 .campos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;border-top:1px dashed var(--linea);padding-top:12px}
@@ -110,7 +111,9 @@ main{max-width:880px;margin:0 auto;padding:12px 20px 60px}
 
 /* ===== Estado pendiente (sin análisis de API todavía) ===== */
 .ficha-pendiente{background:#fff;border:1px dashed var(--linea);border-radius:8px;padding:14px 18px;margin-bottom:12px}
+.ficha-pendiente .epigrafe{font-size:.78rem;color:var(--gris);font-style:italic;margin-top:4px}
 .ficha-pendiente .meta{margin-top:6px}
+.ficha-pendiente .extracto-pendiente{margin:10px 0;padding:8px 12px;border-left:3px solid var(--linea);background:#FAFBFB;font-size:.84rem;color:#2A3944}
 .ficha-pendiente .nota-pendiente{margin-top:8px;font-size:.8rem;color:var(--gris);font-style:italic}
 
 .vacio{background:#fff;border:1px dashed var(--linea);border-radius:8px;padding:26px 18px;text-align:center;color:var(--gris);font-size:.86rem}
@@ -133,11 +136,11 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
         <div class="brand">Radar<span class="thin"> Regulatorio</span></div>
       </div>
       <div class="edicion">
-        LUNES 03.08.2026<br>
-        Relevamiento diario <strong>N° 001</strong> · BORA edición del 03.08.26
+        MARTES 04.08.2026<br>
+        Relevamiento diario <strong>N° 002</strong> · BORA edición del 04.08.26
       </div>
     </div>
-    <p class="mast-sub">Monitoreo de normativa con impacto en la industria de petróleo y gas · Boletín Oficial · Secretaría de Energía · ENARGAS · ANPyN</p>
+    <p class="mast-sub">Monitoreo de normativa y noticias con impacto en la industria de petróleo y gas · Boletín Oficial · Secretaría de Energía · ENARGAS · ANPyN · Google News</p>
     <div class="tabs" role="tablist">
       <button class="tab" role="tab" aria-selected="true" data-vista="hoy">Hoy</button>
       <button class="tab" role="tab" aria-selected="false" data-vista="historico">Histórico</button>
@@ -152,8 +155,9 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
     <span class="pill "><b>0</b> tier 1</span>
     <span class="pill"><b>0</b> tier 2</span>
     <span class="pill"><b>0</b> tier 3</span>
-    <span class="pill"><b>2</b> pendientes de análisis</span>
-    <span class="pill">Emisores: <b>MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA</b></span>
+    <span class="pill"><b>17</b> pendientes de análisis</span>
+    <span class="pill"><b>17</b> noticias</span>
+    <span class="pill">Emisores: <b>APN La Pampa · Ambito · Análisis Digital · Cuarto: Salta a diario · El Cronista · HolaSalta · Infobae · La Arena · La Nación · Lmneuquen.com · Minuto Neuquen · Punto Biz · Revista Puerto · econojournal.com.ar · iProfesional</b></span>
   </div>
 
   <div class="filtros">
@@ -161,8 +165,10 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
     <button class="chip" aria-pressed="false" data-filtro="t1">Tier 1</button>
     <button class="chip" aria-pressed="false" data-filtro="t2">Tier 2</button>
     <button class="chip" aria-pressed="false" data-filtro="t3">Tier 3</button>
+    <button class="chip" aria-pressed="false" data-filtro="bora">BORA</button>
+    <button class="chip" aria-pressed="false" data-filtro="noticia">Noticias</button>
     
-    <a class="btn dl" id="btn-dl-hoy" href="descargas/radar-regulatorio-2026-08-03.md" download>
+    <a class="btn dl" id="btn-dl-hoy" href="descargas/radar-regulatorio-2026-08-04.md" download>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 20h16"/></svg>
       Descargar informe de hoy
     </a>
@@ -173,20 +179,146 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
     
 
     
-    <div class="seccion-label">Detectadas hoy · pendientes de análisis</div>
+
     
-    <article class="ficha-pendiente">
-      <span class="norma-id">Resolución 188/2026</span>
-      <div class="meta">Emisor: MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA · BO 2026-08-03 · Rubro: RESOLUCIONES</div>
+    <div class="seccion-label">Noticias y proyectos en trámite</div>
+    
+
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · YPF</span>
+      <div class="epigrafe">Se viene el “split” de YPF: qué es el desdoblamiento de acciones y cómo afecta a los inversores</div>
+      <div class="meta">Fuente: Infobae · 2026-08-03</div>
       <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
-      <div class="ficha-foot"><a href="https://www.boletinoficial.gob.ar/detalleAviso/primera/345319/20260803" target="_blank" rel="noopener">Ver norma en BORA ↗</a></div>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxOT2ZjV1pKSjZQaXp5MW5lc1hCUzdHZ1BRbVZhdTdvR1IyNUhaeERYVl9OZkttdXZsN3k5OVU1UTNBb0l2ckltX0Z2MFJaSlZsdnA4a09IbFFqSWtrQlQxY1RCY0czMlNCNUExUU9WQlRVaGJJUWw0eXJMYjVkMkdScGZYN19zT2MzMWtaaWwyZTJMOTJVUTFFZm4xMHN6Y3hyQTAycHllLUExT1RkWjU5NjVOaWY4c1lhY05uRmFCTlplN0FDMjdNVVlFN2N1bWFHVnVz0gHuAUFVX3lxTE5UUTNJdHRiNmQ3Ny03bGZGNHpIV1JDUlZmbDNqTk5MYl9tNnVxZmE0eXZDcXM3aTJvSGdjLTZ3ek9Ua3hpaHdvaXlmSnlvRnZCcm9XTng0WU5RS2R6bG5wWjZMWFJvai1rRWdXUGlVUlhIbXlsa3hTZlI0aG50X1R1UFBIak8yLVhqN2R5WUlyaDBtYUVFcDdnek03T21ta1ltSi01cHlQMFJZTzNXUVBYSHFTYVJKNU4yWWI5bmNBbEtyTkpFR3MtRzRtQ18yaUY2RDRfMlRMem91OWI2dTlNcVJZVW4xbmJ6ZVc1UUE?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
     </article>
     
-    <article class="ficha-pendiente">
-      <span class="norma-id">Resolución 189/2026</span>
-      <div class="meta">Emisor: MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA · BO 2026-08-03 · Rubro: RESOLUCIONES</div>
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · YPF</span>
+      <div class="epigrafe">Descuentos en combustibles y una guía de ahorro de hasta 30% en YPF, Shell, Axion y Puma</div>
+      <div class="meta">Fuente: iProfesional · 2026-08-03</div>
       <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
-      <div class="ficha-foot"><a href="https://www.boletinoficial.gob.ar/detalleAviso/primera/345320/20260803" target="_blank" rel="noopener">Ver norma en BORA ↗</a></div>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxPLWVHbFFUU1gzTVJRV0ZPN0FoWG0zNWJkUWluYi1xb3JlYm5HTklkbC1ob0lndEt0M3FiTVJlb21IMmpleGtuaXlsN20yWjNVZk5UNzJ6enFvMFZ5RVFDWVdZeHNINTQwZHJELThLWmFVS2hVTXRRTGJ5OXFuSDl4blRReUc1LWpHNjM0TV8zVFY1bHVWNnozZmxkcXE3M2k3X3A4RkRZc25KQmZ1WEptWFpIU2ZrWTFtaklGTWVoNWdrQkJhVDBZadIBzgFBVV95cUxOY3FNRkJUQXBDZkRYd2VBUVZzSVFXOUFlVFBpVTVuenNUSDkwQkVvbkdvMHVicUNfU0FoenNGRmVrSFllQjZRX2g4akJFaTdTRDZCcTRjLTRoNW02aTRfeW5NSFI4QzRrQ182M1B4YllQbDJKYmhTT1FITHY1SjNrX0NWUkN5d0pORXpJZS1rZkVvWmdKTEtlZzJmb1hCU3dEXzFFSU40UWZabzdXSmJDamhBdjVVQ2o4VjJZNDZYd25YU3JsdUt4UFdUUnVpZw?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · YPF</span>
+      <div class="epigrafe">Petroleras en Vaca Muerta: el top five del primer semestre</div>
+      <div class="meta">Fuente: Lmneuquen.com · 2026-08-04</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxNd083Y1I4R3d2QVZUdmZ5TU5sUElSb3kzOWlCdUNUVG1LaFpybG1RVVZDbTk5OEIyQTZ6YVBqaGpiVnFoclpEQ3RMcVJRTTlabmFwSi1SMF84SXFTczZ1WFV5RW1MRVpTYU1Ca2hFdElwaV9jR0tkbUlkc0tmbU9ZbFFUWEM3UjliSGFkQ0hmSEk4ZEQ1VGZBcW9NTGI4S1RsckV4MNIBqgFBVV95cUxNa0FKaEtHazZlSkpRZFc2cTNYSENBeW5fX1dZa0lwVGlJbWRzSVhJSjIyeTV5UDVrdUQ3czRJVFkxUGFJR2w3MWtJYVVPR2RtRjhfQkp3T1BVcnR4N3VzekdhbVJBcG9VbDNsMWMyVlVkYXRBQmo1VzAzR21Ka3o1Q1pUYWFJSU43eDM3WE04Nm5BdHh1UnZvTThvVklIVy1HZXRsb0t2VFdZUQ?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · YPF</span>
+      <div class="epigrafe">Semana de balances: qué mirar en los resultados de Pampa, Ternium e YPF</div>
+      <div class="meta">Fuente: El Cronista · 2026-08-04</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQVnRNY1FsclBKWkdTcXc1Wk9PNEh5TmU0dlZDandFZ1JBOUlHTXR2ZjhqTFl4dHlLbEpZVzRETkxyMWI1SU9VQU0xNzZsSHNxMU9MLThLbXh1NzAwekNYeWhoUlBoMzZyalNLcXUtaGVDWm0xMnQ1QmhQTVlRS05jT0cxQS1YTzhLbkIzNFNVd3M3WkZYRlljaE5ZVnFhOTJCa1BiWlA2QkZuM1Rjd1RNTmR2cw?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · YPF</span>
+      <div class="epigrafe">Vaca Muerta mantiene alta actividad: más de 2.000 etapas de fracturas en julio y fuerte dominio de YPF</div>
+      <div class="meta">Fuente: Ambito · 2026-08-04</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxOal9FaWxtRXpMVC1fb0l2MnpWQkM0aTVia0ZHSndmVVlOM3BLdURHc2pGSi1xQk9GUmJ1azY3NnROOTNsSlVRVlBkb3Vmc1B6bTFkSEplV0Y5V1Rzb2ZibS16RHA0STY2dlU3a1Y2eVpvUkxRZVJZSXBnMDN4UUt5b1JRYjNHMnB0d2Zwc3hmUFJQRzBobTlMMU8wbUtQS0tSSy1rN3FfYkZNeXprSGRLelVqZ0Fab1M5dzFxY3J5bGQ4TmhHamo0?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · YPF</span>
+      <div class="epigrafe">Una YPF Black desembarca en el ingreso a Rosario con formato premium</div>
+      <div class="meta">Fuente: Punto Biz · 2026-08-03</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQREtaWHhnLWs0dUdTc1NmNTJuWXNvYnJieS12LS1Mdl9FWkE1N3FHdWtZR3Y1R1ZvT0pwSG5KVjFyM0Z3TV9uOXFPVW9RcnBLbVZPRjBuV0k0VHc2TjlOdnE1TWpYSVNpLW5HTVNPVGdoM0hQNlhYUFNCUG5ldEZRUG1mZ19zTlNwN0dSZ0NLU3ZnOEhWUS1PZC1YSFBrMDc2YUEw?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · VACA MUERTA</span>
+      <div class="epigrafe">La operadora del oleoducto por el que circula el 75% del petróleo de Vaca Muerta sufrió un ciberataque a sus sistemas</div>
+      <div class="meta">Fuente: Infobae · 2026-08-02</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxOV1JROEhRaVk2LXRwelVBcUV0VHlQOTFUM2otczMyT3huWGRvMm5WSjI5UmRXSTJTOXJ1QnZNOWFFSzQ0ZU1wWTI3WndvNFg5VXJtWGkxYmpjZHI3QWxWUXh1YTlsY1RZRkhjZk8yNEh0VE9lWGtrdWdaTHpncVEyNHh6R2pSNUljV0d2cnVOb2x1Z200OEZRa2JaZTFLTmdLNmRjdmtFWjZBdDJUZGpIam13TV93ZDdidzJsRjl4QkV3OUtETTU2Qm83T2tiN0ZJQ1lxUmtVcEV3Y3VYY2RMN3ZvcEZqeUxUeDFSQ1pMNXo2bDhL0gGPAkFVX3lxTFByWEEwZkk0Vl9sVW9kME1nRnV1bmh4dC1UOHVNYklvTHZQZVAtaDdKUllJRWJfQTJYY1dkRklvLW1yemFmaEw3RVZpOV9IWDU4TTNaeWRzSTVHMDZzbWJfcHA4bm92aUdaRThQbkZpMWdaM1ZuemcyOHdTbzNaU0l0a1Fra2VoUU81bFpEdlNUMER5QjNsVXFLU3NCWWdLM190LXNaRmtId1ZmQU13OF9GRmN0MFBsTWZlNG9MNlNkQjdqQTdVUDJFbkY4Wlh4QzBMdWRIM3JaOGhnZ1UxVzN6aUhoblYzdTNfVGszTUVmcjEyVjNFN0MxMUZJR3RtQnFTSTU2RG5jYXFnQ2dDdEk?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · VACA MUERTA</span>
+      <div class="epigrafe">Ciberataque en Vaca Muerta: ¿Qué pasó con los oleoductos de Oldelval?</div>
+      <div class="meta">Fuente: Lmneuquen.com · 2026-08-03</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQdDNwcU12RmdYWW4zSkdQcDYxelRTSUdwajdrWVVPaFJCTTJNdXU2bEhBY04tN3JqLUEzOVl3RzA3aVVDUlFSWVI1NFpSVlgzalllUXZuT1d4QXFISzMzWUxuRXpSQjRLeVV6NHhMd0pnVGl6V01vQnZ1d09PejlrcGZPMzZNYUxoZ1M2VHlYMVk1aC1uZEdJNW1hVlpHbGItRGcwNURSWdIBrAFBVV95cUxQaHlFT1p5Q0d2WTViYjJWT0tBNTBKUm03RHotSUpEckNHLXJHNE91d3JQRkF5Vzl0aERFN0JYTl82TUpFeWt0TndHc0l0cUptYTRQVzU1MHpzTUZ2V1pyYlNWeUEyVFRBdTZockxLb3NxR0ZQcFBlOGhKNFNDU24yaGRNTklUQmtqdjhER1pFaW92SE5adVB4VlNWNGp4ZmdqaUlKX0JRSzdXMFZ6?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · VACA MUERTA</span>
+      <div class="epigrafe">Vaca Muerta pone a prueba su ciberseguridad: Oldelval confirmó un ataque sin impacto operativo</div>
+      <div class="meta">Fuente: Minuto Neuquen · 2026-08-04</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxPazBXN0tOT0ZIbnMyN2ZBS0ItSVdvakZXYkpndGNxVThhejlQYnkwZU1seHNSdXE1VTlScVFFdFdFY3RlbnlITWFTRjNhOVZwWTdZZWFVWk14Rmp0Y1JqUDJGa2h1b1M0elR2UmtCd3ZhNGZUdUZmd3ZIVjR5OXFNTGFRYzV5NkRXV2pvNnl0QUxNXzlFT1BlUHRhU2lTcG05S1YzNzJjT21wai04aFl5WU1qRkZyVDJYX3R4UXpsNkdsaUZIbENpOEFhWlVFOGxtU0hWekJ6YWJncTJmS0t5aVA0WGNxTjA?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · VACA MUERTA</span>
+      <div class="epigrafe">Vaca Muerta: cómo es el acuerdo de productividad para los petroleros que firmó Marcelo Rucci con empresas operadoras y de servicios</div>
+      <div class="meta">Fuente: econojournal.com.ar · 2026-08-04</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNMm5Gd04wMU41eU9RUDgyb295N2c1LTljLWFscHl2WG1jY0VTYkIwMTBjSnp0dy1IeURjMDN1MEMtZ1lfc3BKMEYxS0E1VnFVbjNRbE5jZXgxYW1wZ3BuSkc5UUNFeVNheFEyZmZVUlB2cTYyUjNMWFREa25JZVpMcWpxaDdXSHFETlpJcXZSaWRORVNVbEpJSklMdUU4amV1XzVXeG56ZUoxNHc?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · VACA MUERTA</span>
+      <div class="epigrafe">El paro de prácticos ya afecta la distribución de combustibles y a una obra clave de Vaca Muerta</div>
+      <div class="meta">Fuente: La Nación · 2026-08-04</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxNcjlTLTBlNG9mSmZRanFyaGs0NW42OGprdmJRbW5aclBZTW0ySUo2clRDNlNndlB6VG5ua1UwVFRibG9keEtnYkM4T1BhQU85TkF0Zmd2cnlSdlhnNTQwRFdid3NPSVlyLVZaS0s0cXNpdUotcTBtQ0l3Rk5NX0xuaHhEajU5Mm44ekJvOFpac3czR0tiZV9vNURPMDRua0xXVV8xcFExTzl3WFRRMzNRYUYyN2doV0pCcmNWZDVvZVoyT0doVFd6UEE3Q0JvSkRRRXVod1dQUmpLUEdzYng5T2V3?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · SECRETARÍA DE ENERGÍA</span>
+      <div class="epigrafe">Empresa privada proyecta invertir casi US$ 30 millones en el Parque Industrial de Santa Rosa</div>
+      <div class="meta">Fuente: APN La Pampa · 2026-08-04</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxPRHdvTUE3Rm1wX0RFRmRzYWR3NnpMS3pYQW9VTS1UNkxmMmdQSnRhSDhQc09ubTgtNEhIZGdYN1NFNjFNRk1GTmszQ2pNUUg3Sm5yTUl2S1BaYW9UT25DZ1B3eklQX19mcjBQbmFUNGpSbk1YRTAtM09GVlRvMlVPdVllZFBhSjlNeDByNlQ0d2RfMDZIYkNicXpKVU55WVY2WjVDdFU5XzB2VXJ0ZklOMFh6c2ZlNkhZcmtJTVM4M1Z3TERsakQ4eXZDd2VnRW93cGlLTEFXdw?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · SECRETARÍA DE ENERGÍA</span>
+      <div class="epigrafe">El EPRE aprobó nuevos aumentos en la energía a partir de agosto</div>
+      <div class="meta">Fuente: Análisis Digital · 2026-08-04</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNX0pJTGhtUFJfZmdCVUlwNm5tT2JIOGV6b0FCTEpQOWlYSGZFeWl0S3U2ZjJ0QnJmYS1YaS1HX0xsRS1iQk9aOGdKa0tqdEc0bG5YaGlyV0lLWVNUX0IwR2dUYVZuZ0hVNjNyUUhXcFpKbW9rdGJfanoybjhBdzR6MUtCSnlpOHhoQUJFaUhwQy05R1BfX3AxcXluUXdxcmZxM2pZc3prZDJnNkltY0ViRk1EbFRuVnc?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · SECRETARÍA DE ENERGÍA</span>
+      <div class="epigrafe">La Secretaría de Energía, Ribeiro y Pampetrol van a Diputados</div>
+      <div class="meta">Fuente: La Arena · 2026-08-04</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNeXJsSS1oMnJjeGtPYW9Gei1EaHNwbm5mUVhrZXVSaFlSTG14c2tpTUlLRWFSUkZHbDVZOERjNmR5em56akVjMHpDVlRySUtYYjE0Y2pENUc3S0dBS0dJb2x2cDFuVWZRMVJiekgtTVJxck1SZDV4ZXFRaHpVLXdDV0JIMHdfVHh1ZDBBS091ckswQkhjM0xYSmFLVlV4LWxDcXo5M2ROeUJCMXIy?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · SECRETARÍA DE ENERGÍA</span>
+      <div class="epigrafe">Salta será sede de la Reunión plenaria del Consejo Federal de Energía Eléctrica</div>
+      <div class="meta">Fuente: HolaSalta · 2026-08-04</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVGladWdmbU0tNTBEU3BITXA2azdVVGN3WGlDaDhVcVpVbDE5V0FwaDA3MWd1Ym00Tk5Ld1dBVUhsWnlDNXNzcFRmWnVLSm40M1hrbUhKRFNOcjVUazg0QzNJdndGemstc3l0MU1Ca1RnUkhWOTg2LVFYejJwRHU1ZlZrb3dubTJxWi1paXROTTlUUERoOEVUY2JxUENJR2JjQjJabkVKclpXWEk?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · SECRETARÍA DE ENERGÍA</span>
+      <div class="epigrafe">Quieren gas | El titular de la Unión Industrial de Salta se reunió con autoridades de la Secretaría de Energía de la Nación</div>
+      <div class="meta">Fuente: Cuarto: Salta a diario · 2026-08-03</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxPMU04WmprWVpvSGkzd3NXRzhwTVRGY3E2a0JfVVJZZGh4R2pXTEVoNjh3RHYxU1VQaVlWQ2NxZHd0YThLRXdNendPM0RKNGxyak5sb3BWVEQ4Q3A2OFNVaUtFbnJvWTIzdzRQMU1ETklzVzd4NEJIV2lkRVZKbFVpSHVNM1JSNk1FOTh0dDRaVGVrQ0xPM3NZcFpIYjczeVM0bGE0cVJ1dFh5TGVMRVRiQU0zYkJJQXJzTUV3ak02NUZwVmFubXRkRGpibTE2MTdaX19KZ3Q5MkM0WUdWcjRMSTh3?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
+    </article>
+    
+    <article class="ficha-pendiente" data-tipo="noticia">
+      <span class="norma-id noticia">NOTICIA · MARINA MERCANTE CABOTAJE</span>
+      <div class="epigrafe">“Es el tiro de gracia para la soberanía nacional”</div>
+      <div class="meta">Fuente: Revista Puerto · 2026-08-04</div>
+      <p class="nota-pendiente">Pendiente de análisis — configurá <code>ANTHROPIC_API_KEY</code> para generar la ficha ejecutiva (tier, síntesis, impacto YPF).</p>
+      <div class="ficha-foot"><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNR2k1bHJYR3VyZGYwVWw2alpWNjkza0ZyWmhOYUE1eVo0cGZDX05zV0hON0FvR1VZUm9FVGJTRUhfc2F3UG5BdllrQXRMeWd0UWF6U3hMSjZIX0JfNG9HejN3TEl0bzVhdFlpTWtRN0VCVzlFYzdsaV9HVVV2aHlrMDFXRUtZTTZXY1NSenlR?oc=5" target="_blank" rel="noopener">Ver cobertura ↗</a></div>
     </article>
     
     
@@ -202,11 +334,148 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
     <input class="buscador" type="search" id="buscador-historico" placeholder="Buscar por norma, tema o emisor… (ej: RIGI, cabotaje, ENARGAS)" aria-label="Buscar en el histórico">
     
     <table class="hist-tabla" id="tabla-historico">
-      <thead><tr><th>Fecha</th><th>Norma / tema</th><th>Emisor</th><th>Tier</th></tr></thead>
+      <thead><tr><th>Fecha</th><th>Tipo</th><th>Norma / tema</th><th>Emisor</th><th>Tier</th></tr></thead>
       <tbody>
         
         <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · YPF</td>
+          <td>Infobae</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · YPF</td>
+          <td>iProfesional</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · YPF</td>
+          <td>Lmneuquen.com</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · YPF</td>
+          <td>El Cronista</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · YPF</td>
+          <td>Ambito</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · YPF</td>
+          <td>Punto Biz</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · VACA MUERTA</td>
+          <td>Infobae</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · VACA MUERTA</td>
+          <td>Lmneuquen.com</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · VACA MUERTA</td>
+          <td>Minuto Neuquen</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · VACA MUERTA</td>
+          <td>econojournal.com.ar</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · VACA MUERTA</td>
+          <td>La Nación</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · SECRETARÍA DE ENERGÍA</td>
+          <td>APN La Pampa</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · SECRETARÍA DE ENERGÍA</td>
+          <td>Análisis Digital</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · SECRETARÍA DE ENERGÍA</td>
+          <td>La Arena</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · SECRETARÍA DE ENERGÍA</td>
+          <td>HolaSalta</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · SECRETARÍA DE ENERGÍA</td>
+          <td>Cuarto: Salta a diario</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
+          <td>04.08.26</td>
+          <td>Noticia</td>
+          <td>NOTICIA · MARINA MERCANTE CABOTAJE</td>
+          <td>Revista Puerto</td>
+          <td><span class="dot dp"></span>pendiente</td>
+        </tr>
+        
+        <tr>
           <td>03.08.26</td>
+          <td>BORA</td>
           <td>Resolución 188/2026</td>
           <td>MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA</td>
           <td><span class="dot dp"></span>pendiente</td>
@@ -214,6 +483,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
         
         <tr>
           <td>03.08.26</td>
+          <td>BORA</td>
           <td>Resolución 189/2026</td>
           <td>MINISTERIO DE ECONOMÍA - SECRETARÍA DE ENERGÍA</td>
           <td><span class="dot dp"></span>pendiente</td>
@@ -232,6 +502,11 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
     
     
     <div class="dl-item">
+      <div class="info"><b>Relevamiento diario — 04.08.26</b><span>Generado 2026-08-04</span></div>
+      <div class="dl-acciones"><a class="btn" href="descargas/radar-regulatorio-2026-08-04.md" download>Markdown</a></div>
+    </div>
+    
+    <div class="dl-item">
       <div class="info"><b>Relevamiento diario — 03.08.26</b><span>Generado 2026-08-03</span></div>
       <div class="dl-acciones"><a class="btn" href="descargas/radar-regulatorio-2026-08-03.md" download>Markdown</a></div>
     </div>
@@ -240,7 +515,7 @@ footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--lin
   </main>
 </section>
 
-<footer>RADAR REGULATORIO · Fase 1 (MVP) · fuente: BORA · generado 04.08.2026 00:15 · uso interno</footer>
+<footer>RADAR REGULATORIO · fuentes: BORA · Google News · generado 04.08.2026 21:58 · uso interno</footer>
 
 <script>
 // Tabs
@@ -255,13 +530,13 @@ tabs.forEach(t=>t.addEventListener('click',()=>{
 
 // Filtros vista Hoy
 const chips=document.querySelectorAll('.chip[data-filtro]');
-const fichas=document.querySelectorAll('.ficha');
+const fichas=document.querySelectorAll('.ficha, .ficha-pendiente');
 chips.forEach(c=>c.addEventListener('click',()=>{
   chips.forEach(x=>x.setAttribute('aria-pressed','false'));
   c.setAttribute('aria-pressed','true');
   const f=c.dataset.filtro;
   fichas.forEach(fi=>{
-    const ok = f==='todos' || fi.dataset.tier===f;
+    const ok = f==='todos' || fi.dataset.tier===f || fi.dataset.tipo===f;
     fi.style.display = ok ? '' : 'none';
   });
 }));

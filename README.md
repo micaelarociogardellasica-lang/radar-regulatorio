@@ -4,9 +4,10 @@ Monitoreo automatizado de normativa y noticias con impacto en la industria de
 petróleo y gas en Argentina (foco YPF). Ver `PROYECTO.md` para la especificación
 completa y `MAPA-MAESTRO-AAPP.md` para el mapa de organismos y keywords del sector.
 
-**Estado actual: Fase 1 (MVP), sesión 1.** Cubre solo BORA — Primera Sección.
-Noticias (Google News RSS), la pestaña Legislaturas y la corrida automática por
-GitHub Actions quedan para las próximas sesiones (ver `GUIA-CLAUDE-CODE.md`).
+**Estado actual: Fase 1 (MVP), sesión 2.** BORA — Primera Sección + noticias
+por Google News RSS, corrida automática con GitHub Actions y publicación en
+GitHub Pages. La pestaña Legislaturas queda para las próximas sesiones (ver
+`GUIA-CLAUDE-CODE.md`).
 
 ## Qué hace esta corrida
 
@@ -14,17 +15,37 @@ GitHub Actions quedan para las próximas sesiones (ver `GUIA-CLAUDE-CODE.md`).
    Primera Sección, filtra por emisor (Secretaría de Energía, Subsecretaría de
    Hidrocarburos, ENARGAS, ANPyN) y por keywords del sector en los decretos
    (que no traen emisor en el sumario), y trae el texto completo de cada norma
-   candidata.
-2. **Analiza cada norma con la API de Claude** (`src/analisis.py`): genera la
+   candidata. Cuando el sumario trae un epígrafe oficial (los decretos lo
+   traen en vez del organismo, ej. "COMBUSTIBLES"), queda guardado y se
+   muestra junto al número de la norma.
+2. **Releva noticias** (`src/fuentes/noticias.py`): Google News RSS con las
+   queries configurables de `config.yaml` (`noticias.queries`), dentro de una
+   ventana de días para no reprocesar la misma noticia en corridas sucesivas.
+3. **Analiza cada ítem con la API de Claude** (`src/analisis.py`): genera la
    ficha ejecutiva (título, síntesis, tier, segmento, impacto YPF) según el
-   esquema de `PROYECTO.md` sección 3. **Si no hay `ANTHROPIC_API_KEY`
-   configurada, este paso se omite** y las normas detectadas se publican igual
-   en el dashboard como "pendientes de análisis" — el pipeline nunca se cae por
-   falta de la key.
-3. **Genera el sitio** (`src/sitio.py`): `docs/index.html` con las pestañas
-   Hoy / Histórico / Descargas, guarda la corrida en `data/YYYY-MM-DD.json`
-   (base histórica) y el informe del día en
+   esquema de `PROYECTO.md` sección 3, tanto para normas del BORA como para
+   noticias. **Si no hay `ANTHROPIC_API_KEY` configurada, este paso se omite**
+   y los ítems detectados se publican igual en el dashboard como "pendientes
+   de análisis" — el pipeline nunca se cae por falta de la key. Para que sean
+   útiles aun sin key, cada ficha pendiente de una norma del BORA trae un
+   **extracto automático de la parte resolutiva** (Artículo 1° o, si no se
+   encuentra, los primeros párrafos).
+4. **Genera el sitio** (`src/sitio.py`): `docs/index.html` con las pestañas
+   Hoy / Histórico / Descargas — separando normas del BORA y noticias en
+   secciones propias —, guarda la corrida en `data/YYYY-MM-DD.json` (base
+   histórica) y el informe del día en
    `docs/descargas/radar-regulatorio-YYYY-MM-DD.md`.
+
+## Automatización y publicación
+
+- **GitHub Actions** (`.github/workflows/diario.yml`): corre de lunes a
+  viernes 08:00 ART (11:00 UTC) — o manualmente desde la pestaña *Actions* del
+  repo, botón *Run workflow* —, ejecuta la corrida y commitea `data/` y
+  `docs/` a `main` si hubo cambios. No falla si el secret
+  `ANTHROPIC_API_KEY` todavía no está configurado en el repo (Settings →
+  Secrets and variables → Actions): en ese caso publica igual las fichas
+  "pendientes de análisis".
+- **GitHub Pages**: servido desde `/docs` en `main` (Settings → Pages).
 
 ## Instalación
 
@@ -47,22 +68,25 @@ python src/main.py --fecha 2026-08-03
 Al terminar, abrí `docs/index.html` en el navegador para ver el dashboard.
 
 Sin `ANTHROPIC_API_KEY`, la corrida igual detecta y lista las normas del BORA
-que matchean emisor/keywords, pero sin ficha ejecutiva (tier, síntesis,
-impacto YPF) — quedan marcadas como "pendientes de análisis" tanto en el sitio
-como en el informe Markdown. En cuanto se carga la key en `.env`, las próximas
-corridas ya generan la ficha completa.
+y las noticias, pero sin ficha ejecutiva (tier, síntesis, impacto YPF) —
+quedan marcadas como "pendientes de análisis" tanto en el sitio como en el
+informe Markdown, con el extracto automático (normas) o el titular (noticias)
+como referencia. En cuanto se carga la key en `.env` (local) o como secret del
+repo (GitHub Actions), las próximas corridas ya generan la ficha completa.
 
 ## Estructura
 
 ```
-config.yaml       # emisores, keywords, límite de ítems/corrida, modelo de la API
-src/main.py        # orquestador de la corrida
-src/fuentes/bora.py # scraper del BORA
-src/analisis.py     # prompt + llamada a la API de Claude
-src/sitio.py         # genera docs/index.html, informe MD e histórico
-templates/index.html # template Jinja2 (derivado de radar-regulatorio-mockup.html)
-data/YYYY-MM-DD.json  # base histórica, un archivo por corrida (Git como base de datos)
-docs/                 # sitio publicado (pensado para GitHub Pages, fase 2)
+config.yaml           # emisores, keywords, queries de noticias, límite de ítems/corrida, modelo de la API
+src/main.py            # orquestador de la corrida
+src/fuentes/bora.py     # scraper del BORA
+src/fuentes/noticias.py # Google News RSS
+src/analisis.py         # prompt + llamada a la API de Claude (normas y noticias) + extracto sin API
+src/sitio.py             # genera docs/index.html, informe MD e histórico
+templates/index.html     # template Jinja2 (derivado de radar-regulatorio-mockup.html)
+data/YYYY-MM-DD.json      # base histórica, un archivo por corrida (Git como base de datos)
+docs/                     # sitio publicado (GitHub Pages, servido desde /docs en main)
+.github/workflows/diario.yml # corrida automática lunes a viernes 08:00 ART
 ```
 
 ## Presupuesto y límites
@@ -72,8 +96,6 @@ de costo (ver `PROYECTO.md` sección 5).
 
 ## Próximas sesiones
 
-- **Sesión 2**: GitHub Actions (corrida diaria o botón manual), publicación en
-  GitHub Pages, noticias por Google News RSS en su propia sección del dashboard.
 - **Sesiones 3-4**: Legislaturas (HCDN, Senado, Neuquén, Río Negro, luego el
   resto de las provincias).
 - Ver `PROYECTO.md` sección 7 para el resto del roadmap.

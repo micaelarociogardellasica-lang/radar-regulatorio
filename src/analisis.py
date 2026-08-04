@@ -16,12 +16,14 @@ import re
 import unicodedata
 
 PROMPT_SISTEMA = """Sos un analista de asuntos públicos y regulatorios de una petrolera \
-integrada en Argentina (YPF). Analizás normas del Boletín Oficial para un \
-dashboard ejecutivo de lectura matinal.
+integrada en Argentina (YPF). Analizás normas del Boletín Oficial y noticias \
+periodísticas del sector para un dashboard ejecutivo de lectura matinal.
 
-Te paso el texto completo de UNA norma del BORA. Devolvé SOLO un objeto JSON \
-válido, sin backticks ni preámbulo ni texto fuera del JSON, con este esquema \
-exacto:
+Te paso el texto de UN ítem: puede ser el texto completo de una norma del BORA, \
+o el título y resumen de una noticia (Google News). Si es una noticia, analizala \
+igual con la información disponible y dejá explícito en la síntesis que es \
+cobertura de prensa, no texto oficial. Devolvé SOLO un objeto JSON válido, sin \
+backticks ni preámbulo ni texto fuera del JSON, con este esquema exacto:
 
 {
   "titulo": "string (una línea, lenguaje ejecutivo, parafraseado)",
@@ -61,17 +63,76 @@ def _slug(texto: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", sin_acentos.lower()).strip("-")
 
 
+MAX_CHARS_EXTRACTO = 700
+
+# "DECRETA:" / "RESUELVE:" / "DISPONE:" cierran el Visto/Considerando y abren
+# la parte resolutiva — es un ancla mucho más confiable que buscar "Artículo
+# 1°" directo, que también aparece citado dentro de los considerandos.
+_ANCLA_RESOLUTIVO = re.compile(r"\b(DECRETA|RESUELVE|DISPONE)\s*:", re.IGNORECASE)
+_ARTICULO_1 = re.compile(r"art[íi]culo\s*1(?!\d)\s*[°ºo]\.?[-–—]", re.IGNORECASE)
+_ARTICULO_2 = re.compile(r"art[íi]culo\s*2(?!\d)\s*[°ºo]?\b", re.IGNORECASE)
+
+
+def _recortar(fragmento: str, max_chars: int) -> str | None:
+    fragmento = fragmento.strip()
+    if not fragmento:
+        return None
+    if len(fragmento) > max_chars:
+        return fragmento[:max_chars].strip() + "…"
+    return fragmento
+
+
+def _extraer_resolutivo(texto: str, max_chars: int = MAX_CHARS_EXTRACTO) -> str | None:
+    """Fallback sin API: busca la parte resolutiva (Artículo 1°) de una norma
+    del BORA. Si no la encuentra, devuelve los primeros párrafos del texto."""
+    if not texto:
+        return None
+
+    inicio = None
+    anclas = list(_ANCLA_RESOLUTIVO.finditer(texto))
+    if anclas:
+        inicio = anclas[-1].end()
+    else:
+        match = _ARTICULO_1.search(texto)
+        if match:
+            inicio = match.start()
+
+    if inicio is not None:
+        fragmento = texto[inicio:]
+        siguiente = _ARTICULO_2.search(fragmento)
+        if siguiente:
+            fragmento = fragmento[:siguiente.start()]
+        recortado = _recortar(fragmento, max_chars)
+        if recortado:
+            return recortado
+
+    parrafos = [p.strip() for p in texto.split("\n") if p.strip()]
+    return _recortar(" ".join(parrafos[:3]), max_chars)
+
+
+def _extracto_pendiente(candidato) -> str | None:
+    """Extracto automático mostrable sin depender de la API (item 3 de la
+    sesión 2): parte resolutiva (Artículo 1° o primeros párrafos) para
+    normas del BORA. Las noticias no tienen "parte resolutiva" — su único
+    contenido pre-análisis es el titular, que ya se muestra como epígrafe."""
+    if getattr(candidato, "tipo", "bora") == "noticia":
+        return None
+    return _extraer_resolutivo(getattr(candidato, "texto_completo", None))
+
+
 def _base_ficha(candidato) -> dict:
     """Campos que salen del scraping, sin depender de la API."""
     return {
         "id": _slug(candidato.codigo or candidato.norma_id),
-        "tipo": "bora",
+        "tipo": getattr(candidato, "tipo", "bora"),
         "norma_id": candidato.norma_id,
         "emisor": candidato.organismo or "Poder Ejecutivo Nacional",
+        "epigrafe": getattr(candidato, "titulo_sumario", None),
         "fecha_bo": candidato.fecha_bo,
         "url_fuente": candidato.url_detalle,
         "codigo": candidato.codigo,
         "rubro": candidato.rubro,
+        "extracto": _extracto_pendiente(candidato),
     }
 
 
@@ -80,6 +141,7 @@ def analizar_candidato(candidato, client, modelo: str, max_tokens: int) -> dict 
     la API decidió descartarla por no ser relevante."""
     base = _base_ficha(candidato)
     texto = candidato.texto_completo or ""
+    es_noticia = base["tipo"] == "noticia"
 
     mensaje = client.messages.create(
         model=modelo,
@@ -88,10 +150,11 @@ def analizar_candidato(candidato, client, modelo: str, max_tokens: int) -> dict 
         messages=[{
             "role": "user",
             "content": (
-                f"Emisor: {base['emisor']}\n"
-                f"Norma: {base['norma_id']}\n"
-                f"Fecha BO: {base['fecha_bo']}\n\n"
-                f"Texto completo:\n{texto}"
+                f"Tipo de fuente: {'Noticia (Google News)' if es_noticia else 'Norma del BORA'}\n"
+                f"{'Fuente' if es_noticia else 'Emisor'}: {base['emisor']}\n"
+                f"Identificador: {base['norma_id']}\n"
+                f"Fecha: {base['fecha_bo']}\n\n"
+                f"{'Título y resumen' if es_noticia else 'Texto completo'}:\n{texto}"
             ),
         }],
     )

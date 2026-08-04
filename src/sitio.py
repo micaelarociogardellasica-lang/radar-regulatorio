@@ -65,6 +65,7 @@ def cargar_historico(config: dict) -> list[dict]:
             filas.append({
                 "fecha": corrida["fecha"],
                 "fecha_corta": _fecha_corta(f),
+                "tipo": ficha.get("tipo", "bora"),
                 "norma_id": ficha.get("norma_id", ""),
                 "titulo": ficha.get("titulo"),
                 "emisor": ficha.get("emisor", ""),
@@ -90,6 +91,8 @@ def generar_informe_md(fichas: list[dict], pendientes: list[dict], fecha: date, 
         lineas.append(f"## TIER {tier}")
         for f in del_tier:
             lineas.append(f"### {f['norma_id']} — {f['titulo']}")
+            if f.get("epigrafe"):
+                lineas.append(f"_{f['epigrafe']}_")
             lineas.append(f"Emisor: {f['emisor']} · Impacto YPF: {f['impacto_ypf']['grado']}")
             lineas.append(f["sintesis"])
             if f.get("impacto_ypf", {}).get("accion"):
@@ -101,7 +104,10 @@ def generar_informe_md(fichas: list[dict], pendientes: list[dict], fecha: date, 
         lineas.append("## PENDIENTES DE ANÁLISIS")
         lineas.append("(Detectadas por el scraper, sin ficha ejecutiva — falta configurar ANTHROPIC_API_KEY)")
         for p in pendientes:
-            lineas.append(f"- {p['norma_id']} — {p['emisor']} — {p['url_fuente']}")
+            epigrafe = f" — {p['epigrafe']}" if p.get("epigrafe") else ""
+            lineas.append(f"- {p['norma_id']}{epigrafe} — {p['emisor']} — {p['url_fuente']}")
+            if p.get("extracto"):
+                lineas.append(f"  > {p['extracto']}")
         lineas.append("")
 
     return "\n".join(lineas) + "\n"
@@ -115,6 +121,11 @@ def generar_sitio(fecha: date, fichas: list[dict], config: dict) -> Path:
     con_error = [f for f in fichas if f.get("estado") == "error"]
 
     analizadas.sort(key=lambda f: f.get("tier", 9))
+
+    analizadas_bora = [f for f in analizadas if f.get("tipo") != "noticia"]
+    analizadas_noticias = [f for f in analizadas if f.get("tipo") == "noticia"]
+    pendientes_bora = [f for f in pendientes if f.get("tipo") != "noticia"]
+    pendientes_noticias = [f for f in pendientes if f.get("tipo") == "noticia"]
 
     numero, _ = guardar_corrida(fichas, fecha, config)
 
@@ -144,6 +155,7 @@ def generar_sitio(fecha: date, fichas: list[dict], config: dict) -> Path:
         "t2": sum(1 for f in analizadas if f.get("tier") == 2),
         "t3": sum(1 for f in analizadas if f.get("tier") == 3),
         "pendientes": len(pendientes),
+        "noticias": len(analizadas_noticias) + len(pendientes_noticias),
     }
     emisores_hoy = " · ".join(sorted({f["emisor"] for f in (analizadas + pendientes) if f.get("emisor")}))
 
@@ -155,8 +167,10 @@ def generar_sitio(fecha: date, fichas: list[dict], config: dict) -> Path:
         numero_relevamiento=numero,
         contadores=contadores,
         emisores_hoy=emisores_hoy,
-        fichas=analizadas,
-        pendientes=pendientes,
+        fichas=analizadas_bora,
+        fichas_noticias=analizadas_noticias,
+        pendientes=pendientes_bora,
+        pendientes_noticias=pendientes_noticias,
         informe_hoy_href=f"descargas/{nombre_informe}" if (analizadas or pendientes) else None,
         historico=cargar_historico(config),
         descargas=descargas,
