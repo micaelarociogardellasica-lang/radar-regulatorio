@@ -1,23 +1,36 @@
 {
   "fecha": "2026-08-05",
-  "generado_ts": "2026-08-05T02:51:51",
+  "generado_ts": "2026-08-05T03:01:53",
   "fuentes_estado": {
-    "bora": "ok",
-    "noticias": "ok"
+    "bora": "error",
+    "noticias": "ok",
+    "bora_error": "HTTPSConnectionPool(host='www.boletinoficial.gob.ar', port=443): Max retries exceeded with url: /seccion/primera/20260805 (Caused by NameResolutionError(\"HTTPSConnection(host='www.boletinoficial.gob.ar', port=443): Failed to resolve 'www.boletinoficial.gob.ar' ([Errno -3] Temporary failure in name resolution)\"))"
   },
   "fichas": [
     {
-      "id": "49aa53e0f6",
+      "id": "95edeafde3",
       "tipo": "noticia",
       "norma_id": "NOTICIA · YPF",
-      "emisor": "Infobae",
-      "epigrafe": "Se viene el “split” de YPF: qué es el desdoblamiento de acciones y cómo afecta a los inversores",
+      "emisor": "El Economista - Últimas noticias económicas y financieras",
+      "epigrafe": "¿Por qué se desplomó la acción de YPF? La explicación detrás de la fuerte caída - El Economista",
       "fecha_bo": "2026-08-03",
-      "url_fuente": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOT2ZjV1pKSjZQaXp5MW5lc1hCUzdHZ1BRbVZhdTdvR1IyNUhaeERYVl9OZkttdXZsN3k5OVU1UTNBb0l2ckltX0Z2MFJaSlZsdnA4a09IbFFqSWtrQlQxY1RCY0czMlNCNUExUU9WQlRVaGJJUWw0eXJMYjVkMkdScGZYN19zT2MzMWtaaWwyZTJMOTJVUTFFZm4xMHN6Y3hyQTAycHllLUExT1RkWjU5NjVOaWY4c1lhY05uRmFCTlplN0FDMjdNVVlFN2N1bWFHVnVz0gHuAUFVX3lxTE5UUTNJdHRiNmQ3Ny03bGZGNHpIV1JDUlZmbDNqTk5MYl9tNnVxZmE0eXZDcXM3aTJvSGdjLTZ3ek9Ua3hpaHdvaXlmSnlvRnZCcm9XTng0WU5RS2R6bG5wWjZMWFJvai1rRWdXUGlVUlhIbXlsa3hTZlI0aG50X1R1UFBIak8yLVhqN2R5WUlyaDBtYUVFcDdnek03T21ta1ltSi01cHlQMFJZTzNXUVBYSHFTYVJKNU4yWWI5bmNBbEtyTkpFR3MtRzRtQ18yaUY2RDRfMlRMem91OWI2dTlNcVJZVW4xbmJ6ZVc1UUE?oc=5",
-      "codigo": "49aa53e0f6",
+      "url_fuente": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQUTFIbkM0SU8wdmdDWkRPZkZQVFZxcFhpcHVxekt6WU1mLWl3WXFfR293WGtzbC1vWGo4X1pDSkdQeUx5eWpwM2luVVNDRUFQbVBwTVczSV9RRkZyTVRDb3lYdzA2SmRMcU5BWTEyMlJNZTFwRHNKbm4yRmhXcFFCM2tCRGJ6cXZFdGp3elhhRDFzRE5Xa2dmaTJjbW5LSkww0gGmAUFVX3lxTE83elA4QlczSUJSNEVSQ3ZOOVNsQXh1X2ZPdVNwelRDZ3pRSmluYWhoR2ViVXVNUng1c0oxYUdpNG9qa3FLVHhYd3NUelZYNTdZdHo1NUVrTDBtejEtS0RRbGJEZHE3NS1nMXBudGhpaFowWkFYWDliOFpPVEhiVEhNUkdaNWVaSHllaVVUNURwUjdOM0ZfVkpaMElVV0g3ZV8teUZ5WXc?oc=5",
+      "codigo": "95edeafde3",
       "rubro": "NOTICIA",
       "extracto": null,
-      "estado": "pendiente"
+      "titulo": "Caída bursátil de acción YPF: cobertura de prensa sobre factores detrás de la baja",
+      "segmento": "transversal",
+      "tier": 2,
+      "sintesis": "Según cobertura periodística de El Economista (no texto oficial), la acción de YPF habría registrado una caída significativa en su cotización. El artículo analiza las causas detrás de ese desplome, aunque el resumen disponible no detalla los factores específicos mencionados. Se trata de información de prensa que requiere verificación con fuentes primarias y seguimiento de mercado.",
+      "vigencia_plazo": null,
+      "beneficiarios": null,
+      "afectados": "Accionistas de YPF; inversores institucionales y minoristas con posición en el papel",
+      "impacto_ypf": {
+        "grado": "directo",
+        "area": "Finanzas Corporativas / Relaciones con Inversores",
+        "accion": "Identificar los factores citados por la prensa como disparadores de la caída; coordinar con IR y Comunicaciones una postura ante consultas de analistas e inversores; monitorear precio en tiempo real y evaluar si aplica comunicación proactiva al mercado"
+      },
+      "estado": "analizado"
     },
     {
       "id": "74308c5a44",
@@ -30,7 +43,19 @@
       "codigo": "74308c5a44",
       "rubro": "NOTICIA",
       "extracto": null,
-      "estado": "pendiente"
+      "titulo": "Ranking de producción Vaca Muerta H1 2025: YPF lidera el top five entre operadoras",
+      "segmento": "upstream",
+      "tier": 2,
+      "sintesis": "Cobertura de prensa de LM Neuquén que presenta el ranking de las cinco principales petroleras con actividad en Vaca Muerta durante el primer semestre del año. El artículo posiciona a los principales jugadores del play no convencional por volúmenes de producción u otras métricas operativas, con YPF mencionada entre las líderes. Al tratarse de un titular sin desarrollo, no se dispone del detalle de métricas ni posiciones exactas del resto del ranking.",
+      "vigencia_plazo": null,
+      "beneficiarios": null,
+      "afectados": null,
+      "impacto_ypf": {
+        "grado": "indirecto",
+        "area": "Upstream / Planeamiento Estratégico",
+        "accion": "Acceder al artículo completo para extraer métricas comparativas de producción H1 frente a competidores (TotalEnergies, Vista, Pampa, Shell u otras); incorporar al benchmarking periódico de cuota de mercado en Vaca Muerta y validar coherencia con datos propios de producción del período."
+      },
+      "estado": "analizado"
     },
     {
       "id": "fd99365abd",
@@ -43,20 +68,19 @@
       "codigo": "fd99365abd",
       "rubro": "NOTICIA",
       "extracto": null,
-      "estado": "pendiente"
-    },
-    {
-      "id": "21456b7269",
-      "tipo": "noticia",
-      "norma_id": "NOTICIA · YPF",
-      "emisor": "Ambito",
-      "epigrafe": "Vaca Muerta mantiene alta actividad: más de 2.000 etapas de fracturas en julio y fuerte dominio de YPF",
-      "fecha_bo": "2026-08-04",
-      "url_fuente": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOal9FaWxtRXpMVC1fb0l2MnpWQkM0aTVia0ZHSndmVVlOM3BLdURHc2pGSi1xQk9GUmJ1azY3NnROOTNsSlVRVlBkb3Vmc1B6bTFkSEplV0Y5V1Rzb2ZibS16RHA0STY2dlU3a1Y2eVpvUkxRZVJZSXBnMDN4UUt5b1JRYjNHMnB0d2Zwc3hmUFJQRzBobTlMMU8wbUtQS0tSSy1rN3FfYkZNeXprSGRLelVqZ0Fab1M5dzFxY3J5bGQ4TmhHamo0?oc=5",
-      "codigo": "21456b7269",
-      "rubro": "NOTICIA",
-      "extracto": null,
-      "estado": "pendiente"
+      "titulo": "YPF expande red de estaciones insignia 'Black' con oferta comercial y gastronómica premium",
+      "segmento": "downstream",
+      "tier": 3,
+      "sintesis": "Cobertura de prensa (iProfesional) sobre la expansión del formato de estaciones de servicio premium de YPF, denominado 'Black', que incorporaría locales comerciales y gastronómicos junto con diseño arquitectónico diferenciado. La nota describe ubicaciones y características de estos puntos de venta de alta gama, orientados a competir en el segmento superior del mercado de combustibles retail. No constituye texto oficial ni regulatorio.",
+      "vigencia_plazo": null,
+      "beneficiarios": "Consumidores finales segmento premium; red de franquiciados YPF",
+      "afectados": null,
+      "impacto_ypf": {
+        "grado": "directo",
+        "area": "Downstream Retail / Red de Estaciones",
+        "accion": "Compartir con área de Red y Retail para seguimiento de rollout del formato Black; evaluar coherencia con estrategia de expansión y posicionamiento de marca en el segmento premium"
+      },
+      "estado": "analizado"
     },
     {
       "id": "b87b35f153",
@@ -69,7 +93,44 @@
       "codigo": "b87b35f153",
       "rubro": "NOTICIA",
       "extracto": null,
-      "estado": "pendiente"
+      "titulo": "Publicación de resultados trimestrales de YPF, Pampa y Ternium: claves para el mercado",
+      "segmento": "transversal",
+      "tier": 2,
+      "sintesis": "Cobertura de prensa (El Cronista): la semana concentra la presentación de balances de varias empresas líderes del mercado argentino, entre ellas YPF. Los inversores y analistas identifican variables clave a monitorear en cada compañía previo a la divulgación de resultados. La nota anticipa expectativas y métricas de seguimiento sin publicar cifras definitivas.",
+      "vigencia_plazo": "Semana del 4 de agosto de 2026",
+      "beneficiarios": null,
+      "afectados": null,
+      "impacto_ypf": {
+        "grado": "directo",
+        "area": "Relaciones con Inversores / Finanzas Corporativas",
+        "accion": "Verificar fecha exacta de publicación del balance trimestral de YPF, alinear con el equipo de Investor Relations los mensajes clave y anticipar consultas de analistas y medios sobre resultados operativos y financieros"
+      },
+      "estado": "analizado"
+    },
+    {
+      "id": "21456b7269",
+      "tipo": "noticia",
+      "norma_id": "NOTICIA · YPF",
+      "emisor": "Ambito",
+      "epigrafe": "Vaca Muerta mantiene alta actividad: más de 2.000 etapas de fracturas en julio y fuerte dominio de YPF",
+      "fecha_bo": "2026-08-04",
+      "url_fuente": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOal9FaWxtRXpMVC1fb0l2MnpWQkM0aTVia0ZHSndmVVlOM3BLdURHc2pGSi1xQk9GUmJ1azY3NnROOTNsSlVRVlBkb3Vmc1B6bTFkSEplV0Y5V1Rzb2ZibS16RHA0STY2dlU3a1Y2eVpvUkxRZVJZSXBnMDN4UUt5b1JRYjNHMnB0d2Zwc3hmUFJQRzBobTlMMU8wbUtQS0tSSy1rN3FfYkZNeXprSGRLelVqZ0Fab1M5dzFxY3J5bGQ4TmhHamo0?oc=5",
+      "codigo": "21456b7269",
+      "rubro": "NOTICIA",
+      "extracto": null,
+      "titulo": "Vaca Muerta registró más de 2.000 etapas de fractura en julio con YPF como operador dominante",
+      "segmento": "upstream",
+      "tier": 1,
+      "sintesis": "Cobertura de prensa (Ámbito): la actividad de estimulación hidráulica en Vaca Muerta sostuvo niveles elevados durante julio, superando las 2.000 etapas de fractura en el mes. YPF concentraría la mayor parte de esa actividad, consolidando su posición de liderazgo operativo en el play no convencional frente al resto de los operadores.",
+      "vigencia_plazo": null,
+      "beneficiarios": "YPF como operador líder; empresas de servicios de well completion",
+      "afectados": null,
+      "impacto_ypf": {
+        "grado": "directo",
+        "area": "Upstream / No Convencional",
+        "accion": "Validar la cifra interna de etapas ejecutadas en julio contra el dato publicado; evaluar si el ritmo de fractura es consistente con el plan de producción y los compromisos de inversión anunciados para 2025-2026"
+      },
+      "estado": "analizado"
     },
     {
       "id": "42561e8bb9",
@@ -82,7 +143,19 @@
       "codigo": "42561e8bb9",
       "rubro": "NOTICIA",
       "extracto": null,
-      "estado": "pendiente"
+      "titulo": "Gobernador de Chubut rechaza ley de tierras, defiende PASO y cuestiona posible salida de YPF",
+      "segmento": "transversal",
+      "tier": 2,
+      "sintesis": "Según cobertura de prensa del diario El Chubut, el gobernador Linares habría expresado posiciones en tres frentes: rechazo a una ley de tierras, defensa del sistema de elecciones primarias y cuestionamiento a una eventual salida de YPF, sin que se especifique el alcance de esta última referencia. La mención a YPF en un discurso de un gobernador de provincia productora de hidrocarburos amerita seguimiento, aunque el resumen disponible no permite determinar si alude a desinversión, retiro operativo u otro escenario. Al tratarse de declaraciones recogidas por un medio provincial, la información debe contrastarse con fuentes oficiales antes de extraer conclusiones.",
+      "vigencia_plazo": null,
+      "beneficiarios": null,
+      "afectados": null,
+      "impacto_ypf": {
+        "grado": "indirecto",
+        "area": "AAPP / Relaciones Institucionales",
+        "accion": "Identificar el contexto exacto del cuestionamiento del gobernador Linares sobre YPF; determinar si refiere a operaciones en Chubut, marco accionarial u otro aspecto, y evaluar necesidad de respuesta institucional o gestión ante la provincia"
+      },
+      "estado": "analizado"
     },
     {
       "id": "aed02c2b81",
@@ -95,7 +168,19 @@
       "codigo": "aed02c2b81",
       "rubro": "NOTICIA",
       "extracto": null,
-      "estado": "pendiente"
+      "titulo": "Vaca Muerta: sindicato de petroleros privados firma acuerdo de productividad con operadoras y empresas de servicios",
+      "segmento": "upstream",
+      "tier": 2,
+      "sintesis": "Cobertura de prensa: el gremio liderado por Marcelo Rucci habría suscripto un convenio de productividad con compañías operadoras y prestadoras de servicios en Vaca Muerta. El acuerdo buscaría establecer esquemas de incentivos y condiciones laborales orientados a incrementar la eficiencia operativa en el bloque no convencional. Los detalles del mecanismo y los umbrales de productividad acordados no surgen del resumen disponible.",
+      "vigencia_plazo": null,
+      "beneficiarios": "Trabajadores petroleros privados encuadrados en UEPPA; empresas operadoras y de servicios signatarias",
+      "afectados": "Operadoras y contratistas con actividad en Vaca Muerta sujetas al nuevo esquema",
+      "impacto_ypf": {
+        "grado": "directo",
+        "area": "RRHH / Relaciones Laborales Upstream",
+        "accion": "Obtener texto completo del acuerdo; evaluar si YPF figura como firmante o si aplica por extensión; analizar impacto en estructura de costos laborales y benchmarking respecto de esquemas propios de productividad en Vaca Muerta"
+      },
+      "estado": "analizado"
     },
     {
       "id": "ef31411b00",
@@ -108,7 +193,19 @@
       "codigo": "ef31411b00",
       "rubro": "NOTICIA",
       "extracto": null,
-      "estado": "pendiente"
+      "titulo": "Paro de prácticos impacta distribución de combustibles y obra de infraestructura en Vaca Muerta",
+      "segmento": "midstream",
+      "tier": 1,
+      "sintesis": "Cobertura de prensa (La Nación): una huelga del gremio de prácticos de navegación estaría generando disrupciones en la cadena logística de combustibles y afectando el avance de una obra de infraestructura vinculada a Vaca Muerta. La medida de fuerza compromete el movimiento de buques en puertos clave, con potencial impacto en abastecimiento y exportaciones. El alcance temporal y los puertos involucrados no se especifican en el resumen disponible.",
+      "vigencia_plazo": "En curso (fecha de publicación: 04/08/2026)",
+      "beneficiarios": null,
+      "afectados": "Distribuidores de combustibles, operadores portuarios, proyectos de infraestructura de Vaca Muerta",
+      "impacto_ypf": {
+        "grado": "directo",
+        "area": "Logística / Trading / Upstream",
+        "accion": "Verificar afectación de terminales portuarias propias (Puerto Rosales, Bahía Blanca, Río Negro), estado de carga/descarga de buques con crudo o productos, y posibles demoras en obras contratadas vinculadas a Vaca Muerta; activar plan de contingencia logístico si corresponde"
+      },
+      "estado": "analizado"
     },
     {
       "id": "f74a1695c4",
@@ -121,7 +218,19 @@
       "codigo": "f74a1695c4",
       "rubro": "NOTICIA",
       "extracto": null,
-      "estado": "pendiente"
+      "titulo": "Paro portuario amenaza el suministro de combustibles y la operación de Vaca Muerta",
+      "segmento": "transversal",
+      "tier": 1,
+      "sintesis": "Según cobertura periodística de Clarín, las compañías del sector evalúan el riesgo de desabastecimiento de combustibles ante un paro en los puertos argentinos. La medida de fuerza podría afectar tanto la cadena de distribución de derivados como la provisión de insumos críticos para la operación de los yacimientos no convencionales de Vaca Muerta. Las petroleras analizan escenarios de contingencia para mitigar el impacto sobre su producción.",
+      "vigencia_plazo": "null",
+      "beneficiarios": null,
+      "afectados": "Empresas petroleras con operaciones en Vaca Muerta y en distribución de combustibles; sector logístico portuario",
+      "impacto_ypf": {
+        "grado": "directo",
+        "area": "Logística / Supply Chain / Upstream Vaca Muerta",
+        "accion": "Activar protocolo de contingencia logística: verificar niveles de inventario de combustibles y químicos de perforación, evaluar rutas alternativas de abastecimiento, coordinar con Operaciones y Downstream el impacto en despachos y exportaciones de crudo/GNL, y monitorear evolución del conflicto gremial portuario"
+      },
+      "estado": "analizado"
     },
     {
       "id": "c139ef197f",
@@ -134,7 +243,19 @@
       "codigo": "c139ef197f",
       "rubro": "NOTICIA",
       "extracto": null,
-      "estado": "pendiente"
+      "titulo": "Conflicto gremial de prácticos portuarios afecta exportaciones de Vaca Muerta",
+      "segmento": "midstream",
+      "tier": 1,
+      "sintesis": "Cobertura de prensa: pilotos prácticos portuarios habrían iniciado medidas de fuerza en conflicto con el gobierno nacional, generando parálisis en las operaciones de exportación vinculadas a la producción agrícola y de hidrocarburos de Vaca Muerta. El paro afectaría el movimiento de buques en puertos clave para las ventas externas del sector energético. La tensión habría surgido en el marco de políticas desreguladoras impulsadas por el ministerio de Desregulación a cargo de Sturzenegger.",
+      "vigencia_plazo": null,
+      "beneficiarios": null,
+      "afectados": "Exportadores de hidrocarburos y agro con salida por puertos patagónicos y del litoral fluvial; YPF y operadores de Vaca Muerta",
+      "impacto_ypf": {
+        "grado": "directo",
+        "area": "Comercial Oil & Gas / Trading / Logística",
+        "accion": "Verificar estado operativo de puertos de embarque de crudo y GNL (Bahía Blanca, Caleta Olivia, Punta Colorada); evaluar impacto en cargamentos programados y revisar cláusulas de fuerza mayor con compradores internacionales"
+      },
+      "estado": "analizado"
     },
     {
       "id": "8751fa9db7",
@@ -147,7 +268,19 @@
       "codigo": "8751fa9db7",
       "rubro": "NOTICIA",
       "extracto": null,
-      "estado": "pendiente"
+      "titulo": "Neuquén consolida liderazgo petrolero (70,5% del crudo nacional) y dinamiza mercado inmobiliario regional",
+      "segmento": "upstream",
+      "tier": 3,
+      "sintesis": "Cobertura periodística (Ámbito) que destaca el peso creciente de Neuquén en la producción nacional de crudo, aportando más de dos tercios del total país como reflejo del avance de Vaca Muerta. El artículo aborda el derrame económico sobre el mercado inmobiliario local como indicador del dinamismo de la actividad hidrocarburífera en la cuenca. Se trata de una nota de contexto sectorial, no de una norma oficial.",
+      "vigencia_plazo": null,
+      "beneficiarios": "Desarrolladores inmobiliarios y economía regional de Neuquén; operadores con actividad en Vaca Muerta",
+      "afectados": null,
+      "impacto_ypf": {
+        "grado": "contexto",
+        "area": "Upstream / Relaciones Institucionales",
+        "accion": "Monitorear indicadores socioeconómicos de Neuquén como proxy del ritmo de actividad en Vaca Muerta; evaluar implicancias en costos de infraestructura y retención de talento ante presión inmobiliaria en la región"
+      },
+      "estado": "analizado"
     },
     {
       "id": "d8f1793cb4",
@@ -160,20 +293,8 @@
       "codigo": "d8f1793cb4",
       "rubro": "NOTICIA",
       "extracto": null,
-      "estado": "pendiente"
-    },
-    {
-      "id": "20fb38dee5",
-      "tipo": "noticia",
-      "norma_id": "NOTICIA · SECRETARÍA DE ENERGÍA",
-      "emisor": "Análisis Digital",
-      "epigrafe": "El EPRE aprobó nuevos aumentos en la energía a partir de agosto",
-      "fecha_bo": "2026-08-04",
-      "url_fuente": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNX0pJTGhtUFJfZmdCVUlwNm5tT2JIOGV6b0FCTEpQOWlYSGZFeWl0S3U2ZjJ0QnJmYS1YaS1HX0xsRS1iQk9aOGdKa0tqdEc0bG5YaGlyV0lLWVNUX0IwR2dUYVZuZ0hVNjNyUUhXcFpKbW9rdGJfanoybjhBdzR6MUtCSnlpOHhoQUJFaUhwQy05R1BfX3AxcXluUXdxcmZxM2pZc3prZDJnNkltY0ViRk1EbFRuVnc?oc=5",
-      "codigo": "20fb38dee5",
-      "rubro": "NOTICIA",
-      "extracto": null,
-      "estado": "pendiente"
+      "estado": "error",
+      "error": "Expecting value: line 1 column 1 (char 0)"
     },
     {
       "id": "e274c9db33",
@@ -186,7 +307,19 @@
       "codigo": "e274c9db33",
       "rubro": "NOTICIA",
       "extracto": null,
-      "estado": "pendiente"
+      "titulo": "Secretaría de Energía y empresas del sector comparecen ante Diputados",
+      "segmento": "transversal",
+      "tier": 3,
+      "sintesis": "Según cobertura de prensa del diario La Arena, representantes de la Secretaría de Energía, el funcionario Ribeiro y la empresa Pampetrol fueron convocados a la Cámara de Diputados. El artículo no detalla el motivo específico de la convocatoria ni los temas a tratar. Al tratarse de cobertura periodística y no de texto oficial, los detalles y alcances deben verificarse con fuentes primarias.",
+      "vigencia_plazo": null,
+      "beneficiarios": null,
+      "afectados": null,
+      "impacto_ypf": {
+        "grado": "contexto",
+        "area": "AAPP",
+        "accion": "Monitorear el temario de la convocatoria parlamentaria y sus eventuales derivaciones regulatorias o políticas para el sector; consultar fuentes oficiales del Congreso para confirmar agenda y participantes."
+      },
+      "estado": "analizado"
     },
     {
       "id": "779adb14df",
@@ -199,33 +332,19 @@
       "codigo": "779adb14df",
       "rubro": "NOTICIA",
       "extracto": null,
-      "estado": "pendiente"
-    },
-    {
-      "id": "d72d8aa8cd",
-      "tipo": "noticia",
-      "norma_id": "NOTICIA · SECRETARÍA DE ENERGÍA",
-      "emisor": "HolaSalta",
-      "epigrafe": "Salta será sede de la Reunión plenaria del Consejo Federal de Energía Eléctrica",
-      "fecha_bo": "2026-08-04",
-      "url_fuente": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVGladWdmbU0tNTBEU3BITXA2azdVVGN3WGlDaDhVcVpVbDE5V0FwaDA3MWd1Ym00Tk5Ld1dBVUhsWnlDNXNzcFRmWnVLSm40M1hrbUhKRFNOcjVUazg0QzNJdndGemstc3l0MU1Ca1RnUkhWOTg2LVFYejJwRHU1ZlZrb3dubTJxWi1paXROTTlUUERoOEVUY2JxUENJR2JjQjJabkVKclpXWEk?oc=5",
-      "codigo": "d72d8aa8cd",
-      "rubro": "NOTICIA",
-      "extracto": null,
-      "estado": "pendiente"
-    },
-    {
-      "id": "0448e246f3",
-      "tipo": "noticia",
-      "norma_id": "NOTICIA · MARINA MERCANTE CABOTAJE",
-      "emisor": "Revista Puerto",
-      "epigrafe": "“Es el tiro de gracia para la soberanía nacional”",
-      "fecha_bo": "2026-08-04",
-      "url_fuente": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNR2k1bHJYR3VyZGYwVWw2alpWNjkza0ZyWmhOYUE1eVo0cGZDX05zV0hON0FvR1VZUm9FVGJTRUhfc2F3UG5BdllrQXRMeWd0UWF6U3hMSjZIX0JfNG9HejN3TEl0bzVhdFlpTWtRN0VCVzlFYzdsaV9HVVV2aHlrMDFXRUtZTTZXY1NSenlR?oc=5",
-      "codigo": "0448e246f3",
-      "rubro": "NOTICIA",
-      "extracto": null,
-      "estado": "pendiente"
+      "titulo": "Río Negro promoverte eficiencia energética en pymes mediante jornada en Cipolletti",
+      "segmento": "transversal",
+      "tier": 3,
+      "sintesis": "Cobertura de prensa (no texto oficial). La provincia de Río Negro organizará una jornada de eficiencia energética orientada a pequeñas y medianas empresas en la ciudad de Cipolletti. El evento apunta a difundir buenas prácticas en consumo energético entre el sector productivo regional, sin implicancias regulatorias directas sobre la industria de hidrocarburos.",
+      "vigencia_plazo": null,
+      "beneficiarios": "Pymes de Río Negro",
+      "afectados": null,
+      "impacto_ypf": {
+        "grado": "contexto",
+        "area": "AAPP / Sustentabilidad",
+        "accion": "Monitorear agenda de eficiencia energética provincial por posibles extensiones regulatorias futuras hacia operadores industriales en la región"
+      },
+      "estado": "analizado"
     }
   ]
 }
