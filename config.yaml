@@ -4,6 +4,12 @@
 bora:
   base_url: "https://www.boletinoficial.gob.ar"
   seccion: "primera"
+  # Fallback opcional si el acceso directo desde el runner de Actions queda
+  # bloqueado por el WAF del sitio (ver src/fuentes/http.py para el
+  # diagnóstico y scripts/proxy-bora-cloudflare-worker.js para desplegar un
+  # relay propio gratis en Cloudflare Workers). "{url}" se reemplaza por la
+  # URL original, URL-encodeada. Vacío = sin fallback (comportamiento actual).
+  proxy_url_template: ""
   # Rubros del sumario donde el campo "item" es el TÍTULO/extracto de la norma
   # (porque solo el PEN emite decretos, no hace falta rotular emisor).
   # En el resto de los rubros, "item" es el ORGANISMO emisor.
