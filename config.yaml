@@ -141,3 +141,8 @@ salida:
   data_dir: "data"
   docs_dir: "docs"
   templates_dir: "templates"
+
+# Atlas — proyecto hermano (mapa de players de la industria, repo aparte,
+# ver "ATLAS-SPEC (1).md"). Vacío = la card del dashboard se muestra en
+# estado "Próximamente" sin link activo.
+atlas_url: ""

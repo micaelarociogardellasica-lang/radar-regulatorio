@@ -14,14 +14,12 @@ from datetime import date, datetime
 import requests
 from bs4 import BeautifulSoup
 
+from fuentes.http import sesion_resiliente
+
 MESES_ES = {
     "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
     "julio": 7, "agosto": 8, "septiembre": 9, "octubre": 10,
     "noviembre": 11, "diciembre": 12,
-}
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; RadarRegulatorioYPF/1.0)"
 }
 
 
@@ -58,8 +56,7 @@ class BoraScraper:
     def __init__(self, config: dict, session: requests.Session | None = None):
         self.config = config["bora"]
         self.keywords = [normalizar(k) for k in config.get("keywords", [])]
-        self.session = session or requests.Session()
-        self.session.headers.update(HEADERS)
+        self.session = session or sesion_resiliente()
 
     def _url_sumario(self, fecha: date | None) -> str:
         base = f"{self.config['base_url']}/seccion/{self.config['seccion']}"

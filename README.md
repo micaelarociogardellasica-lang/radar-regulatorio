@@ -47,6 +47,19 @@ GitHub Pages. La pestaña Legislaturas queda para las próximas sesiones (ver
   "pendientes de análisis".
 - **GitHub Pages**: servido desde `/docs` en `main` (Settings → Pages).
 
+## Resiliencia por fuente
+
+Cada fuente (BORA, noticias) corre en su propio `try/except` en `src/main.py`:
+si una falla (red, DNS, cambio de formato del sitio), la corrida no se cae —
+sigue con las demás fuentes y publica igual, marcando la fuente caída con un
+aviso en el dashboard ("⚠ BORA: fuente caída hoy"), en el informe Markdown y
+en `data/YYYY-MM-DD.json` (`fuentes_estado`). Las requests de scraping
+(`src/fuentes/http.py`) llevan headers de navegador y reintentos con backoff
+exponencial (`urllib3.Retry`, hasta 5 intentos), pensado para fallas
+transitorias de DNS/red del runner de Actions — el workflow además fuerza
+resolvers DNS públicos (1.1.1.1, 8.8.8.8) antes de correr como mitigación
+extra.
+
 ## Instalación
 
 ```bash
@@ -81,6 +94,7 @@ config.yaml           # emisores, keywords, queries de noticias, límite de íte
 src/main.py            # orquestador de la corrida
 src/fuentes/bora.py     # scraper del BORA
 src/fuentes/noticias.py # Google News RSS
+src/fuentes/http.py     # sesión HTTP compartida: headers de navegador + reintentos con backoff
 src/analisis.py         # prompt + llamada a la API de Claude (normas y noticias) + extracto sin API
 src/sitio.py             # genera docs/index.html, informe MD e histórico
 templates/index.html     # template Jinja2 (derivado de radar-regulatorio-mockup.html)

@@ -17,9 +17,7 @@ from urllib.parse import quote
 import feedparser
 import requests
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; RadarRegulatorioYPF/1.0)"
-}
+from fuentes.http import sesion_resiliente
 
 
 def _partir_fuente(titulo: str) -> tuple[str, str | None]:
@@ -76,8 +74,7 @@ class NoticiaCandidata:
 class NoticiasScraper:
     def __init__(self, config: dict, session: requests.Session | None = None):
         self.config = config.get("noticias", {})
-        self.session = session or requests.Session()
-        self.session.headers.update(HEADERS)
+        self.session = session or sesion_resiliente()
 
     def _url_rss(self, query: str) -> str:
         idioma = self.config.get("idioma", "es-419")

@@ -1,6 +1,10 @@
 {
-  "fecha": "2026-08-04",
-  "generado_ts": "2026-08-04T22:13:59",
+  "fecha": "2026-08-05",
+  "generado_ts": "2026-08-05T02:51:51",
+  "fuentes_estado": {
+    "bora": "ok",
+    "noticias": "ok"
+  },
   "fichas": [
     {
       "id": "49aa53e0f6",
@@ -11,19 +15,6 @@
       "fecha_bo": "2026-08-03",
       "url_fuente": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOT2ZjV1pKSjZQaXp5MW5lc1hCUzdHZ1BRbVZhdTdvR1IyNUhaeERYVl9OZkttdXZsN3k5OVU1UTNBb0l2ckltX0Z2MFJaSlZsdnA4a09IbFFqSWtrQlQxY1RCY0czMlNCNUExUU9WQlRVaGJJUWw0eXJMYjVkMkdScGZYN19zT2MzMWtaaWwyZTJMOTJVUTFFZm4xMHN6Y3hyQTAycHllLUExT1RkWjU5NjVOaWY4c1lhY05uRmFCTlplN0FDMjdNVVlFN2N1bWFHVnVz0gHuAUFVX3lxTE5UUTNJdHRiNmQ3Ny03bGZGNHpIV1JDUlZmbDNqTk5MYl9tNnVxZmE0eXZDcXM3aTJvSGdjLTZ3ek9Ua3hpaHdvaXlmSnlvRnZCcm9XTng0WU5RS2R6bG5wWjZMWFJvai1rRWdXUGlVUlhIbXlsa3hTZlI0aG50X1R1UFBIak8yLVhqN2R5WUlyaDBtYUVFcDdnek03T21ta1ltSi01cHlQMFJZTzNXUVBYSHFTYVJKNU4yWWI5bmNBbEtyTkpFR3MtRzRtQ18yaUY2RDRfMlRMem91OWI2dTlNcVJZVW4xbmJ6ZVc1UUE?oc=5",
       "codigo": "49aa53e0f6",
-      "rubro": "NOTICIA",
-      "extracto": null,
-      "estado": "pendiente"
-    },
-    {
-      "id": "ac96e56e92",
-      "tipo": "noticia",
-      "norma_id": "NOTICIA · YPF",
-      "emisor": "iProfesional",
-      "epigrafe": "Descuentos en combustibles y una guía de ahorro de hasta 30% en YPF, Shell, Axion y Puma",
-      "fecha_bo": "2026-08-03",
-      "url_fuente": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPLWVHbFFUU1gzTVJRV0ZPN0FoWG0zNWJkUWluYi1xb3JlYm5HTklkbC1ob0lndEt0M3FiTVJlb21IMmpleGtuaXlsN20yWjNVZk5UNzJ6enFvMFZ5RVFDWVdZeHNINTQwZHJELThLWmFVS2hVTXRRTGJ5OXFuSDl4blRReUc1LWpHNjM0TV8zVFY1bHVWNnozZmxkcXE3M2k3X3A4RkRZc25KQmZ1WEptWFpIU2ZrWTFtaklGTWVoNWdrQkJhVDBZadIBzgFBVV95cUxOY3FNRkJUQXBDZkRYd2VBUVZzSVFXOUFlVFBpVTVuenNUSDkwQkVvbkdvMHVicUNfU0FoenNGRmVrSFllQjZRX2g4akJFaTdTRDZCcTRjLTRoNW02aTRfeW5NSFI4QzRrQ182M1B4YllQbDJKYmhTT1FITHY1SjNrX0NWUkN5d0pORXpJZS1rZkVvWmdKTEtlZzJmb1hCU3dEXzFFSU40UWZabzdXSmJDamhBdjVVQ2o4VjJZNDZYd25YU3JsdUt4UFdUUnVpZw?oc=5",
-      "codigo": "ac96e56e92",
       "rubro": "NOTICIA",
       "extracto": null,
       "estado": "pendiente"
@@ -42,14 +33,14 @@
       "estado": "pendiente"
     },
     {
-      "id": "b87b35f153",
+      "id": "fd99365abd",
       "tipo": "noticia",
       "norma_id": "NOTICIA · YPF",
-      "emisor": "El Cronista",
-      "epigrafe": "Semana de balances: qué mirar en los resultados de Pampa, Ternium e YPF",
+      "emisor": "iProfesional",
+      "epigrafe": "Dónde estará la nueva YPF Black con locales comerciales, gastronómicos y arquitectura top",
       "fecha_bo": "2026-08-04",
-      "url_fuente": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVnRNY1FsclBKWkdTcXc1Wk9PNEh5TmU0dlZDandFZ1JBOUlHTXR2ZjhqTFl4dHlLbEpZVzRETkxyMWI1SU9VQU0xNzZsSHNxMU9MLThLbXh1NzAwekNYeWhoUlBoMzZyalNLcXUtaGVDWm0xMnQ1QmhQTVlRS05jT0cxQS1YTzhLbkIzNFNVd3M3WkZYRlljaE5ZVnFhOTJCa1BiWlA2QkZuM1Rjd1RNTmR2cw?oc=5",
-      "codigo": "b87b35f153",
+      "url_fuente": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPRVVFakJkUmZEQ1dMbHJSWnc2V1hOczJIcE5xeW5IZEU4UEpCTU1ISnkxYXNjWjZTZjFhT2hLX0c3VWZaYkYyNWZLdUdiYS1vcTdTbEtIeXJIT0FqRV80VzFnT3F1U1h0eXRrRHJjYXcyclRpVnNKX1E5NUc5el9qTzdCQUtDZ1JNa1lHZmlwOUhMaFppWHAwWE4zLTRnSm56SUFxRGtFTk1STmhfcmZZcWdnZDIxN2phcktUMHphUlQ2U1BGYWlCak0tV2PSAdIBQVVfeXFMTm1lbWdEVUJzZVZtNWljNjZvX05raUtBQjRYRDZsbmxoOXVvRjdZX3dwQUhhakJEeUt6MW1wdDhGcEFMOHViMi1YUF9PcThkVUJLdEUybVlnN3RwanUyT19mSzBqbXFZUU1EUlBqUVdnalBfY1BHY1lXZ0dXLTRYckRyZkZhaUo4ZFRmaVNma2t2OFlOWjM1Z0twd2hlTUFiVEhORWVaRkVuQW4ySkU4S1lVN2NiaFRCM3hJNVpBeHhlaC05R2Y4OFVrZngtSERxZTFB?oc=5",
+      "codigo": "fd99365abd",
       "rubro": "NOTICIA",
       "extracto": null,
       "estado": "pendiente"
@@ -68,53 +59,27 @@
       "estado": "pendiente"
     },
     {
-      "id": "66882d5211",
+      "id": "b87b35f153",
       "tipo": "noticia",
       "norma_id": "NOTICIA · YPF",
-      "emisor": "Punto Biz",
-      "epigrafe": "Una YPF Black desembarca en el ingreso a Rosario con formato premium",
-      "fecha_bo": "2026-08-03",
-      "url_fuente": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQREtaWHhnLWs0dUdTc1NmNTJuWXNvYnJieS12LS1Mdl9FWkE1N3FHdWtZR3Y1R1ZvT0pwSG5KVjFyM0Z3TV9uOXFPVW9RcnBLbVZPRjBuV0k0VHc2TjlOdnE1TWpYSVNpLW5HTVNPVGdoM0hQNlhYUFNCUG5ldEZRUG1mZ19zTlNwN0dSZ0NLU3ZnOEhWUS1PZC1YSFBrMDc2YUEw?oc=5",
-      "codigo": "66882d5211",
-      "rubro": "NOTICIA",
-      "extracto": null,
-      "estado": "pendiente"
-    },
-    {
-      "id": "f6951278a8",
-      "tipo": "noticia",
-      "norma_id": "NOTICIA · VACA MUERTA",
-      "emisor": "Infobae",
-      "epigrafe": "La operadora del oleoducto por el que circula el 75% del petróleo de Vaca Muerta sufrió un ciberataque a sus sistemas",
-      "fecha_bo": "2026-08-02",
-      "url_fuente": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOV1JROEhRaVk2LXRwelVBcUV0VHlQOTFUM2otczMyT3huWGRvMm5WSjI5UmRXSTJTOXJ1QnZNOWFFSzQ0ZU1wWTI3WndvNFg5VXJtWGkxYmpjZHI3QWxWUXh1YTlsY1RZRkhjZk8yNEh0VE9lWGtrdWdaTHpncVEyNHh6R2pSNUljV0d2cnVOb2x1Z200OEZRa2JaZTFLTmdLNmRjdmtFWjZBdDJUZGpIam13TV93ZDdidzJsRjl4QkV3OUtETTU2Qm83T2tiN0ZJQ1lxUmtVcEV3Y3VYY2RMN3ZvcEZqeUxUeDFSQ1pMNXo2bDhL0gGPAkFVX3lxTFByWEEwZkk0Vl9sVW9kME1nRnV1bmh4dC1UOHVNYklvTHZQZVAtaDdKUllJRWJfQTJYY1dkRklvLW1yemFmaEw3RVZpOV9IWDU4TTNaeWRzSTVHMDZzbWJfcHA4bm92aUdaRThQbkZpMWdaM1ZuemcyOHdTbzNaU0l0a1Fra2VoUU81bFpEdlNUMER5QjNsVXFLU3NCWWdLM190LXNaRmtId1ZmQU13OF9GRmN0MFBsTWZlNG9MNlNkQjdqQTdVUDJFbkY4Wlh4QzBMdWRIM3JaOGhnZ1UxVzN6aUhoblYzdTNfVGszTUVmcjEyVjNFN0MxMUZJR3RtQnFTSTU2RG5jYXFnQ2dDdEk?oc=5",
-      "codigo": "f6951278a8",
-      "rubro": "NOTICIA",
-      "extracto": null,
-      "estado": "pendiente"
-    },
-    {
-      "id": "6e12a47105",
-      "tipo": "noticia",
-      "norma_id": "NOTICIA · VACA MUERTA",
-      "emisor": "Lmneuquen.com",
-      "epigrafe": "Ciberataque en Vaca Muerta: ¿Qué pasó con los oleoductos de Oldelval?",
-      "fecha_bo": "2026-08-03",
-      "url_fuente": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdDNwcU12RmdYWW4zSkdQcDYxelRTSUdwajdrWVVPaFJCTTJNdXU2bEhBY04tN3JqLUEzOVl3RzA3aVVDUlFSWVI1NFpSVlgzalllUXZuT1d4QXFISzMzWUxuRXpSQjRLeVV6NHhMd0pnVGl6V01vQnZ1d09PejlrcGZPMzZNYUxoZ1M2VHlYMVk1aC1uZEdJNW1hVlpHbGItRGcwNURSWdIBrAFBVV95cUxQaHlFT1p5Q0d2WTViYjJWT0tBNTBKUm03RHotSUpEckNHLXJHNE91d3JQRkF5Vzl0aERFN0JYTl82TUpFeWt0TndHc0l0cUptYTRQVzU1MHpzTUZ2V1pyYlNWeUEyVFRBdTZockxLb3NxR0ZQcFBlOGhKNFNDU24yaGRNTklUQmtqdjhER1pFaW92SE5adVB4VlNWNGp4ZmdqaUlKX0JRSzdXMFZ6?oc=5",
-      "codigo": "6e12a47105",
-      "rubro": "NOTICIA",
-      "extracto": null,
-      "estado": "pendiente"
-    },
-    {
-      "id": "008fff6061",
-      "tipo": "noticia",
-      "norma_id": "NOTICIA · VACA MUERTA",
-      "emisor": "Minuto Neuquen",
-      "epigrafe": "Vaca Muerta pone a prueba su ciberseguridad: Oldelval confirmó un ataque sin impacto operativo",
+      "emisor": "El Cronista",
+      "epigrafe": "Semana de balances: qué mirar en los resultados de Pampa, Ternium e YPF",
       "fecha_bo": "2026-08-04",
-      "url_fuente": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPazBXN0tOT0ZIbnMyN2ZBS0ItSVdvakZXYkpndGNxVThhejlQYnkwZU1seHNSdXE1VTlScVFFdFdFY3RlbnlITWFTRjNhOVZwWTdZZWFVWk14Rmp0Y1JqUDJGa2h1b1M0elR2UmtCd3ZhNGZUdUZmd3ZIVjR5OXFNTGFRYzV5NkRXV2pvNnl0QUxNXzlFT1BlUHRhU2lTcG05S1YzNzJjT21wai04aFl5WU1qRkZyVDJYX3R4UXpsNkdsaUZIbENpOEFhWlVFOGxtU0hWekJ6YWJncTJmS0t5aVA0WGNxTjA?oc=5",
-      "codigo": "008fff6061",
+      "url_fuente": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVnRNY1FsclBKWkdTcXc1Wk9PNEh5TmU0dlZDandFZ1JBOUlHTXR2ZjhqTFl4dHlLbEpZVzRETkxyMWI1SU9VQU0xNzZsSHNxMU9MLThLbXh1NzAwekNYeWhoUlBoMzZyalNLcXUtaGVDWm0xMnQ1QmhQTVlRS05jT0cxQS1YTzhLbkIzNFNVd3M3WkZYRlljaE5ZVnFhOTJCa1BiWlA2QkZuM1Rjd1RNTmR2cw?oc=5",
+      "codigo": "b87b35f153",
+      "rubro": "NOTICIA",
+      "extracto": null,
+      "estado": "pendiente"
+    },
+    {
+      "id": "42561e8bb9",
+      "tipo": "noticia",
+      "norma_id": "NOTICIA · YPF",
+      "emisor": "El Chubut",
+      "epigrafe": "Linares ratificó su rechazo a la Ley de Tierras, defendió la continuidad de las Paso y cuestionó la salida de YPF",
+      "fecha_bo": "2026-08-04",
+      "url_fuente": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOZFdfZFdsLWNTVEd6TmFXN2JMd0diTnZSLXJqZkxvZktDbXRDNGQ2cm9iU0RNcmVGY0xybm01TXItNHZkSlYzWDZFeW9BUUMxU1ozV2x3dVBUVzhmSTJGR0hpQ0ZHM0JCV01QZ1d5X0czaHRBR1hGVmlFWk9kNlZiRVR4a1o0c1dwTDNwREc0TUNIc191X3I0LU1RNk1XaDA2RFY4WmRfWmJVSUFHYTdYUEc2WkJHVkdKbElrY0NNYUg0amgxSE03cjBtZE9KODdKWEtKaTBxRVdQY2M0LW1qOUlOZTg0Y2xpZUZMeV91djdPOFBkejJOSkpUcXE?oc=5",
+      "codigo": "42561e8bb9",
       "rubro": "NOTICIA",
       "extracto": null,
       "estado": "pendiente"
@@ -141,6 +106,45 @@
       "fecha_bo": "2026-08-04",
       "url_fuente": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNcjlTLTBlNG9mSmZRanFyaGs0NW42OGprdmJRbW5aclBZTW0ySUo2clRDNlNndlB6VG5ua1UwVFRibG9keEtnYkM4T1BhQU85TkF0Zmd2cnlSdlhnNTQwRFdid3NPSVlyLVZaS0s0cXNpdUotcTBtQ0l3Rk5NX0xuaHhEajU5Mm44ekJvOFpac3czR0tiZV9vNURPMDRua0xXVV8xcFExTzl3WFRRMzNRYUYyN2doV0pCcmNWZDVvZVoyT0doVFd6UEE3Q0JvSkRRRXVod1dQUmpLUEdzYng5T2V3?oc=5",
       "codigo": "ef31411b00",
+      "rubro": "NOTICIA",
+      "extracto": null,
+      "estado": "pendiente"
+    },
+    {
+      "id": "f74a1695c4",
+      "tipo": "noticia",
+      "norma_id": "NOTICIA · VACA MUERTA",
+      "emisor": "Clarin.com",
+      "epigrafe": "Paro en los puertos: las petroleras evalúan el riesgo de desabastecimiento de combustibles y cómo afectaría la producción de Vaca Muerta",
+      "fecha_bo": "2026-08-04",
+      "url_fuente": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZC1qaGJyMkI5aFp0SUJJNGZMZlBUdmlrdDdBZFYxNVBycUNtNnNFUlNZZXFoQ1M5TnNraF9mb2FkWXhkalpCNm9TY1hncjgxV2NSd1VCcVdtdGlqY3pVdGRKaFhKZVNjelpQUS1HN1B5MnlzQm1hcHZZZmRQUDNRUXdVRlhGV1JRc1ZsTHlMbDFMOUtqTjJSWXR5dFV1WVE1YWQ0ZDkxS3hWLTIydm5mTUhLc25hZkNlM2ZhRE9iM0M?oc=5",
+      "codigo": "f74a1695c4",
+      "rubro": "NOTICIA",
+      "extracto": null,
+      "estado": "pendiente"
+    },
+    {
+      "id": "c139ef197f",
+      "tipo": "noticia",
+      "norma_id": "NOTICIA · VACA MUERTA",
+      "emisor": "La Política Online",
+      "epigrafe": "Los prácticos se rebelan contra Sturzenegger y paralizan las exportaciones del campo y Vaca Muerta",
+      "fecha_bo": "2026-08-03",
+      "url_fuente": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBPZ01hYXNOS1d2OFFKeW11TGRTNUhzY0pjS0lGTGlna2dNd0xNeTVyTThYU2wwNHMwclVqSUdhRjVUMXBVNTJGM3J6R0x1aHhTeWVXSnA1bld5NHRYZGdRVmp30gHbAUFVX3lxTE5STVo4TUxiZEQwaG4xQ1N0WUxFS2QyREdKeWtOS1JqS0NKa0VPR3BlRzdvdm82NHJzN1lEVmlOSElPWmE1STlqcTFYRzNOLVlSWUROVjE0MWlQX0RzVHhWbTQ4aDZELWJEMG5Db2NUSHhReE51bUJwSFlMYXkyaVFoRWNzTXZaNXR6QkV3YUhtOGFzYlE4dVBTSEZMVUUtZU1keGt3ZFZ4TXZNb21LRW9BQm1nelVVOVdSRFM4ZVAtdHVidXNicDRFeXMyRUlud1JIc3BFWXhvWXdUNA?oc=5",
+      "codigo": "c139ef197f",
+      "rubro": "NOTICIA",
+      "extracto": null,
+      "estado": "pendiente"
+    },
+    {
+      "id": "8751fa9db7",
+      "tipo": "noticia",
+      "norma_id": "NOTICIA · VACA MUERTA",
+      "emisor": "Ambito",
+      "epigrafe": "El \"efecto Vaca Muerta\" impacta en el real estate: Neuquén ya aporta el 70,5% del petróleo nacional y acelera el desarrollo inmobiliario",
+      "fecha_bo": "2026-08-04",
+      "url_fuente": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOZk9kdmlKdkRwVTRISTZ6aUpuclFmYXgwQjgzQThoM3h5aElPTWRybzVSRmZ5NEtkbnJjM3BrenpIVmxhUTM1T0V0d0g1dlIyWjhTOWkxbFlMcTdKM3RHcWl2X01RSV9DS3RmZ284VlFLWEo5dTM2Wl9zYVJSUTNpVFNFeUhBeko5SUpNOTRsRGtfOTBZUzlpaGhmMnVSRkZVZXd6WkZ5T3NxbFJfZ2prTGxlcFBORlF2cUdMNFFjdm5iYTFzUUtXd2pLTWxraVcwRlY5N2twYmtUUG9hQ0c2aUFGbUZGbUZwUTlTMm1tU1lwUXliaEJWelpZN25EZ9IBgwJBVV95cUxNcHJPUDlFU2t2Wk9pMXdoVHdsbmY2RTB0RV9vNVVLZTZWYk0zMjhvZGJDcDdqWkljcDlJLUR0bGFlOWR3RFdSbFN3VXlNckZYMzBoaVJWSV9ZcGtBQlB3VmQ3OTZEZm53VDFwd1A2N2VHa1V1ZWZZNm5WazhJWFlmYnE0ZUQ3UVZqcWFSd2stMXduaF80eU8taGtFWUc2dC1Ud3VDcWdIbGxSbmxnaGV3SmNmYkxMQk1janZrZTVSMWZRbGkzWHJVNWhTWFdWcVVMNzcxWjlWVUh2NV9mNjJQVGJoenRaSHVyU3NjRDhOLUNDdjh4bVBrUGVrZkRRWWtJMGI0?oc=5",
+      "codigo": "8751fa9db7",
       "rubro": "NOTICIA",
       "extracto": null,
       "estado": "pendiente"
@@ -185,14 +189,14 @@
       "estado": "pendiente"
     },
     {
-      "id": "a36fe2d866",
+      "id": "779adb14df",
       "tipo": "noticia",
       "norma_id": "NOTICIA · SECRETARÍA DE ENERGÍA",
-      "emisor": "Gobierno de Santa Fe",
-      "epigrafe": "Santa Fe exige a Nación frenar el impacto tarifario eléctrico sobre el sector productivo provincial",
-      "fecha_bo": "2026-08-02",
-      "url_fuente": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9PTHk4NzFYTUt4SFhzNkx1WWFaam1zY3ZEOWxZaDNYSDN1YnZ1Q0tURlhlTXBNOEppVTdobWhNRm5iSlFDUE9UN3FqcTNvck5rUWpkSHlqM0F2LWxxZlJNMQ?oc=5",
-      "codigo": "a36fe2d866",
+      "emisor": "Diario Río Negro",
+      "epigrafe": "Río Negro organizará en Cipolletti una jornada de eficiencia energética dedicada a las pymes",
+      "fecha_bo": "2026-08-04",
+      "url_fuente": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOV0FZWWZzT1hWcE9yN21NUUV6VFZCcDh4MlNFdzhmTGZsVy01Y014eHdaRU83Q2VRUURYeUZab2dmQkVJT3Y4VXIwT3hDVGhTcXlPREdJeGpWaURqdHNyNU5oOVdhbURjQ2hxV1p2WHp4WWpyZ1EyWVV2Sng2MC13YzdwWE0zOWszcm1RRnJuUHkta3hTMTlmUXAyWlNFZnVkMVJNaTB1bU0zNVpqSENvWldlMDRIS1VVT292cUp5WU1Ta3VaWVVjZ0ZfTlcyMWlLMy1r0gHbAUFVX3lxTFB6X3BaTjktUDFaZGFrYTRsMmZNSDdtXzBfTkduMUFVVHBreENyNHM4MEZ3QXE5YnpFUWhqSTlBRGI1YVZOM3FXaDUtNmF3bHVJdWE5RnkyWGI0dnAwcGhqalplNmt2d1N3b3l2Z2VldXJnX1REMDVFWWIyQUZsWklwa00xRHdWT0NYRjhJYmZBR2ZJeERCWmlvQVZJdk5YUTYwekxOQW1jRGowVzlVaHl2WFNDTzZiZUN2c0dPSjlnd1BlMWRZQnJDaXVJQ2otYm1DNkNJbkdaOGM4Zw?oc=5",
+      "codigo": "779adb14df",
       "rubro": "NOTICIA",
       "extracto": null,
       "estado": "pendiente"
