@@ -25,7 +25,7 @@ def _fecha_larga(f: date) -> str:
     return f"{DIAS_LARGO[f.weekday()].upper()} {f.strftime('%d.%m.%Y')}"
 
 
-def guardar_corrida(fichas: list[dict], fecha: date, config: dict) -> tuple[int, Path]:
+def guardar_corrida(fichas: list[dict], fecha: date, config: dict, fuentes_estado: dict) -> tuple[int, Path]:
     """Guarda data/YYYY-MM-DD.json y devuelve el número de relevamiento
     (cuántos días de corrida hay en total, incluido este)."""
     data_dir = Path(config["salida"]["data_dir"])
@@ -35,6 +35,7 @@ def guardar_corrida(fichas: list[dict], fecha: date, config: dict) -> tuple[int,
     archivo.write_text(json.dumps({
         "fecha": fecha.isoformat(),
         "generado_ts": datetime.now().isoformat(timespec="seconds"),
+        "fuentes_estado": fuentes_estado,
         "fichas": fichas,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -74,14 +75,22 @@ def cargar_historico(config: dict) -> list[dict]:
     return filas
 
 
-def generar_informe_md(fichas: list[dict], pendientes: list[dict], fecha: date, numero: int) -> str:
+def generar_informe_md(fichas: list[dict], pendientes: list[dict], fecha: date, numero: int, fuentes_estado: dict) -> str:
     lineas = [
         "# RADAR REGULATORIO — Relevamiento diario",
         f"**{_fecha_larga(fecha).capitalize()} · N° {numero:03d}**",
         "",
     ]
+    if fuentes_estado.get("bora") == "error":
+        lineas.append("⚠️ **BORA: fuente caída hoy** — no se pudo relevar el Boletín Oficial en esta corrida.")
+        lineas.append("")
+    if fuentes_estado.get("noticias") == "error":
+        lineas.append("⚠️ **Noticias: fuente caída hoy** — no se pudo relevar Google News en esta corrida.")
+        lineas.append("")
+
     if not fichas and not pendientes:
-        lineas.append("Sin novedades del sector en el BORA de hoy.")
+        if fuentes_estado.get("bora") != "error":
+            lineas.append("Sin novedades del sector en el BORA de hoy.")
         return "\n".join(lineas) + "\n"
 
     for tier in (1, 2, 3):
@@ -113,9 +122,10 @@ def generar_informe_md(fichas: list[dict], pendientes: list[dict], fecha: date, 
     return "\n".join(lineas) + "\n"
 
 
-def generar_sitio(fecha: date, fichas: list[dict], config: dict) -> Path:
+def generar_sitio(fecha: date, fichas: list[dict], config: dict, fuentes_estado: dict | None = None) -> Path:
     """Orquesta: guarda la corrida, genera el informe MD del día, arma el
     histórico y renderiza docs/index.html. Devuelve la ruta del index."""
+    fuentes_estado = fuentes_estado or {"bora": "ok", "noticias": "ok"}
     analizadas = [f for f in fichas if f.get("estado") == "analizado"]
     pendientes = [f for f in fichas if f.get("estado") == "pendiente"]
     con_error = [f for f in fichas if f.get("estado") == "error"]
@@ -127,13 +137,13 @@ def generar_sitio(fecha: date, fichas: list[dict], config: dict) -> Path:
     pendientes_bora = [f for f in pendientes if f.get("tipo") != "noticia"]
     pendientes_noticias = [f for f in pendientes if f.get("tipo") == "noticia"]
 
-    numero, _ = guardar_corrida(fichas, fecha, config)
+    numero, _ = guardar_corrida(fichas, fecha, config, fuentes_estado)
 
     docs_dir = Path(config["salida"]["docs_dir"])
     descargas_dir = docs_dir / "descargas"
     descargas_dir.mkdir(parents=True, exist_ok=True)
 
-    informe_md = generar_informe_md(analizadas, pendientes, fecha, numero)
+    informe_md = generar_informe_md(analizadas, pendientes, fecha, numero, fuentes_estado)
     nombre_informe = f"radar-regulatorio-{fecha.isoformat()}.md"
     (descargas_dir / nombre_informe).write_text(informe_md, encoding="utf-8")
 
@@ -176,6 +186,7 @@ def generar_sitio(fecha: date, fichas: list[dict], config: dict) -> Path:
         descargas=descargas,
         generado_ts=datetime.now().strftime("%d.%m.%Y %H:%M"),
         atlas_url=config.get("atlas_url") or None,
+        fuentes_estado=fuentes_estado,
     )
 
     index_path = docs_dir / "index.html"

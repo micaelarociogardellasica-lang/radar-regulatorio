@@ -44,6 +44,10 @@ button{font-family:inherit;cursor:pointer}
 .tab[aria-selected="true"]{background:var(--papel);color:var(--petroleo)}
 .tab:hover:not([aria-selected="true"]){color:#fff}
 
+/* ===== Aviso de fuente caída ===== */
+.fuente-caida{max-width:880px;margin:14px auto 0;padding:10px 16px;background:#FBEAE7;border:1px solid #F0C6BE;border-radius:8px;color:#8C2A1A;font-size:.82rem}
+.fuente-caida b{font-family:'Archivo',sans-serif}
+
 /* ===== Resumen strip ===== */
 .strip{max-width:880px;margin:0 auto;padding:14px 20px 0;display:flex;gap:10px;flex-wrap:wrap}
 .pill{font-family:'IBM Plex Mono',monospace;font-size:.72rem;background:#fff;border:1px solid var(--linea);border-radius:999px;padding:5px 12px;color:var(--gris)}
@@ -168,6 +172,12 @@ a.atlas-card.disponible:hover{box-shadow:0 3px 16px rgba(6,55,181,.14)}
 
 <!-- ================= VISTA HOY ================= -->
 <section class="vista activa" id="vista-hoy">
+  {% if fuentes_estado.bora == "error" %}
+  <div class="fuente-caida"><b>⚠ BORA: fuente caída hoy.</b> No se pudo relevar el Boletín Oficial en esta corrida (falla de red o del sitio) — se reintentará en la próxima. Las noticias de abajo sí se relevaron con normalidad.</div>
+  {% endif %}
+  {% if fuentes_estado.noticias == "error" %}
+  <div class="fuente-caida"><b>⚠ Noticias: fuente caída hoy.</b> No se pudo relevar Google News en esta corrida — se reintentará en la próxima.</div>
+  {% endif %}
   <div class="strip">
     <span class="pill {{ 'alerta' if contadores.t1 else '' }}"><b>{{ contadores.t1 }}</b> tier 1</span>
     <span class="pill"><b>{{ contadores.t2 }}</b> tier 2</span>
@@ -274,7 +284,13 @@ a.atlas-card.disponible:hover{box-shadow:0 3px 16px rgba(6,55,181,.14)}
     {% endif %}
 
     {% if not fichas and not pendientes and not fichas_noticias and not pendientes_noticias %}
-    <div class="vacio"><b>Sin novedades del sector hoy</b>El BORA de hoy no trajo normas de los emisores o keywords monitoreados, ni las queries de noticias trajeron resultados nuevos.</div>
+      {% if fuentes_estado.bora == "error" and fuentes_estado.noticias == "error" %}
+      <div class="vacio"><b>Sin datos hoy</b>Ninguna fuente pudo relevarse en esta corrida — ver avisos arriba.</div>
+      {% elif fuentes_estado.bora == "error" %}
+      <div class="vacio"><b>Sin novedades del sector hoy</b>El BORA no pudo relevarse (ver aviso arriba) y las queries de noticias no trajeron resultados nuevos.</div>
+      {% else %}
+      <div class="vacio"><b>Sin novedades del sector hoy</b>El BORA de hoy no trajo normas de los emisores o keywords monitoreados, ni las queries de noticias trajeron resultados nuevos.</div>
+      {% endif %}
     {% endif %}
   </main>
 </section>

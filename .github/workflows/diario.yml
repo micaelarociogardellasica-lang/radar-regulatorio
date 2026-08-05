@@ -30,6 +30,28 @@ jobs:
       - name: Instalar dependencias
         run: pip install -r requirements.txt
 
+      # Mitigación para "Temporary failure in name resolution" visto en el
+      # runner al resolver boletinoficial.gob.ar: no es un bloqueo geográfico
+      # del sitio (funciona igual desde otras redes) sino DNS del runner que
+      # tarda en asentarse recién arrancada la VM. Forzamos resolvers
+      # públicos y esperamos a que el nombre resuelva antes de correr — si
+      # de última no resuelve, src/main.py igual sigue sin este paso
+      # (BORA queda marcado como "fuente caída hoy" y publica las noticias).
+      - name: Diagnóstico y mitigación de DNS
+        continue-on-error: true
+        run: |
+          echo "Resolver actual:"
+          cat /etc/resolv.conf || true
+          printf "nameserver 1.1.1.1\nnameserver 8.8.8.8\n" | sudo tee /etc/resolv.conf
+          for i in 1 2 3 4 5; do
+            if getent hosts www.boletinoficial.gob.ar >/dev/null 2>&1; then
+              echo "DNS ok en el intento $i"
+              break
+            fi
+            echo "Intento $i: todavía no resuelve www.boletinoficial.gob.ar, reintentando en 5s..."
+            sleep 5
+          done
+
       - name: Correr el Radar
         # ANTHROPIC_API_KEY puede no estar configurada todavía como secret del
         # repo: la corrida no falla por eso (ver src/analisis.py), publica los

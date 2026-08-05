@@ -37,9 +37,15 @@ def main():
     print(f"== Radar Regulatorio — corrida {fecha.isoformat()} ==")
 
     print("1/4 Relevando BORA Primera Sección...")
-    scraper = BoraScraper(config)
-    candidatos_bora = scraper.relevar(fecha=fecha, limite=limite)
-    print(f"    {len(candidatos_bora)} norma(s) candidata(s) (emisor/keyword match).")
+    fuentes_estado = {"bora": "ok", "noticias": "ok"}
+    try:
+        candidatos_bora = BoraScraper(config).relevar(fecha=fecha, limite=limite)
+        print(f"    {len(candidatos_bora)} norma(s) candidata(s) (emisor/keyword match).")
+    except Exception as exc:  # el BORA puede fallar (red, DNS, cambio de formato) sin tumbar la corrida
+        candidatos_bora = []
+        fuentes_estado["bora"] = "error"
+        fuentes_estado["bora_error"] = str(exc)
+        print(f"    [AVISO] no se pudo relevar el BORA — se publica como 'fuente caída hoy': {exc}")
 
     print("2/4 Relevando noticias (Google News RSS)...")
     try:
@@ -47,6 +53,8 @@ def main():
         print(f"    {len(candidatos_noticias)} noticia(s) candidata(s).")
     except Exception as exc:  # el RSS de Google News puede fallar sin tumbar la corrida
         candidatos_noticias = []
+        fuentes_estado["noticias"] = "error"
+        fuentes_estado["noticias_error"] = str(exc)
         print(f"    [AVISO] no se pudieron relevar noticias: {exc}")
 
     candidatos = (candidatos_bora + candidatos_noticias)[:limite]
@@ -61,7 +69,7 @@ def main():
     print(f"    {analizadas} ficha(s) generada(s) · {descartadas} descartada(s) por la API.")
 
     print("4/4 Generando el sitio...")
-    index_path = generar_sitio(fecha, fichas, config)
+    index_path = generar_sitio(fecha, fichas, config, fuentes_estado)
     print(f"    Listo: {index_path}")
 
 
