@@ -50,15 +50,36 @@ GitHub Pages. La pestaña Legislaturas queda para las próximas sesiones (ver
 ## Resiliencia por fuente
 
 Cada fuente (BORA, noticias) corre en su propio `try/except` en `src/main.py`:
-si una falla (red, DNS, cambio de formato del sitio), la corrida no se cae —
-sigue con las demás fuentes y publica igual, marcando la fuente caída con un
-aviso en el dashboard ("⚠ BORA: fuente caída hoy"), en el informe Markdown y
-en `data/YYYY-MM-DD.json` (`fuentes_estado`). Las requests de scraping
-(`src/fuentes/http.py`) llevan headers de navegador y reintentos con backoff
-exponencial (`urllib3.Retry`, hasta 5 intentos), pensado para fallas
+si una falla (red, DNS, WAF, cambio de formato del sitio), la corrida no se
+cae — sigue con las demás fuentes y publica igual, marcando la fuente caída
+con un aviso en el dashboard ("⚠ BORA: fuente caída hoy"), en el informe
+Markdown y en `data/YYYY-MM-DD.json` (`fuentes_estado`). Las requests de
+scraping (`src/fuentes/http.py`) llevan headers de navegador y reintentos con
+backoff exponencial (`urllib3.Retry`, 3 intentos), pensado para fallas
 transitorias de DNS/red del runner de Actions — el workflow además fuerza
 resolvers DNS públicos (1.1.1.1, 8.8.8.8) antes de correr como mitigación
 extra.
+
+### Si el BORA sigue cayendo desde Actions (bloqueo por WAF, no DNS)
+
+Las respuestas del BORA traen una cookie `TSxxxxxxxx=...`, firma de un WAF F5
+BIG-IP ASM — este tipo de WAF suele aplicar bloqueo/rate-limit por
+reputación de IP más agresivo contra rangos de datacenter/cloud (donde
+corren los runners de Actions) que contra conexiones residenciales, lo que
+explica que funcione desde una máquina normal y falle desde la corrida
+automática aun con DNS y reintentos resueltos.
+
+Mitigación disponible: `config.yaml` → `bora.proxy_url_template` acepta una
+URL de relay propia (con `{url}` como placeholder) que el scraper usa como
+segundo intento si el acceso directo falla — sin tocar código. Se probaron
+proxies públicos gratuitos (allorigins, codetabs, corsproxy) y no son
+confiables para esto (caídos o dados de baja al momento de evaluarlos), así
+que la opción recomendada es desplegar un relay propio y gratis en
+Cloudflare Workers: `scripts/proxy-bora-cloudflare-worker.js` trae el script
+listo (allowlist al dominio del BORA, sin abrir un proxy genérico) y las
+instrucciones de deploy en el encabezado del archivo — no requiere tarjeta
+ni expone ningún secret (la URL del worker no es sensible, el Boletín
+Oficial es información pública).
 
 ## Instalación
 
@@ -94,12 +115,13 @@ config.yaml           # emisores, keywords, queries de noticias, límite de íte
 src/main.py            # orquestador de la corrida
 src/fuentes/bora.py     # scraper del BORA
 src/fuentes/noticias.py # Google News RSS
-src/fuentes/http.py     # sesión HTTP compartida: headers de navegador + reintentos con backoff
+src/fuentes/http.py     # sesión HTTP compartida: headers de navegador + reintentos con backoff + fallback vía proxy
 src/analisis.py         # prompt + llamada a la API de Claude (normas y noticias) + extracto sin API
 src/sitio.py             # genera docs/index.html, informe MD e histórico
 templates/index.html     # template Jinja2 (derivado de radar-regulatorio-mockup.html)
 data/YYYY-MM-DD.json      # base histórica, un archivo por corrida (Git como base de datos)
 docs/                     # sitio publicado (GitHub Pages, servido desde /docs en main)
+scripts/proxy-bora-cloudflare-worker.js # relay opcional (Cloudflare Workers) si el BORA bloquea al runner
 .github/workflows/diario.yml # corrida automática lunes a viernes 08:00 ART
 ```
 

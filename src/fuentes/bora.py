@@ -14,7 +14,7 @@ from datetime import date, datetime
 import requests
 from bs4 import BeautifulSoup
 
-from fuentes.http import sesion_resiliente
+from fuentes.http import get_con_fallback, sesion_resiliente
 
 MESES_ES = {
     "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
@@ -57,6 +57,10 @@ class BoraScraper:
         self.config = config["bora"]
         self.keywords = [normalizar(k) for k in config.get("keywords", [])]
         self.session = session or sesion_resiliente()
+        self.proxy_url_template = self.config.get("proxy_url_template") or None
+
+    def _get(self, url: str) -> requests.Response:
+        return get_con_fallback(self.session, url, proxy_url_template=self.proxy_url_template)
 
     def _url_sumario(self, fecha: date | None) -> str:
         base = f"{self.config['base_url']}/seccion/{self.config['seccion']}"
@@ -70,8 +74,7 @@ class BoraScraper:
     def obtener_sumario(self, fecha: date | None = None) -> list[NormaCandidata]:
         """Descarga el sumario del día y devuelve TODOS los ítems de los rubros
         relevados (sin filtrar todavía por emisor/keywords)."""
-        resp = self.session.get(self._url_sumario(fecha), timeout=30)
-        resp.raise_for_status()
+        resp = self._get(self._url_sumario(fecha))
         soup = BeautifulSoup(resp.text, "html.parser")
 
         rubros_relevados = set(self.config["rubros_relevados"])
@@ -150,8 +153,7 @@ class BoraScraper:
 
     def enriquecer_con_detalle(self, item: NormaCandidata) -> NormaCandidata:
         """Trae el texto completo de la norma desde su página de detalle."""
-        resp = self.session.get(item.url_detalle, timeout=30)
-        resp.raise_for_status()
+        resp = self._get(item.url_detalle)
         soup = BeautifulSoup(resp.text, "html.parser")
 
         detalle = soup.find(id="detalleAviso")
