@@ -9,7 +9,7 @@ bora:
   # diagnóstico y scripts/proxy-bora-cloudflare-worker.js para desplegar un
   # relay propio gratis en Cloudflare Workers). "{url}" se reemplaza por la
   # URL original, URL-encodeada. Vacío = sin fallback (comportamiento actual).
-  proxy_url_template: ""
+  proxy_url_template: "https://bora-proxy.micaelarociogardellasica.workers.dev/?url={url}"
   # Rubros del sumario donde el campo "item" es el TÍTULO/extracto de la norma
   # (porque solo el PEN emite decretos, no hace falta rotular emisor).
   # En el resto de los rubros, "item" es el ORGANISMO emisor.
