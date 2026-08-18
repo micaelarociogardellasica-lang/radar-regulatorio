@@ -1,0 +1,83 @@
+# RADAR REGULATORIO — Relevamiento diario
+**Martes 18.08.2026 · N° 011**
+
+## TIER 1
+### NOTICIA · YPF — Fondos demandantes solicitan extensión de plazo para apelar fallo adverso contra YPF en corte estadounidense
+_Juicio contra YPF: fondos que perdieron la demanda piden más tiempo a la Corte de EE.UU. para la apelación_
+Emisor: MDZ Online · Impacto YPF: directo
+Según cobertura de prensa, los fondos que obtuvieron un resultado desfavorable en el litigio contra YPF ante tribunales de Estados Unidos habrían solicitado una prórroga de plazo para presentar su apelación. El pedido mantiene activo el proceso judicial y prolonga la incertidumbre legal en torno al caso. Se trata de cobertura periodística, no de texto oficial ni resolución judicial publicada.
+Acción: Monitorear resolución de la corte sobre el pedido de extensión; coordinar con equipo legal externo en EE.UU. para evaluar cronograma de apelación y estrategia de contingencia patrimonial
+Fuente: https://news.google.com/rss/articles/CBMiywFBVV95cUxPNUtDUnVPSmlPRFUyZ0Jfc1Q2YnBHaHJWdTd4RDM4RDVHQ29FeC1oZFVjbGk3bnVRUnQ5VGVmMG9lWmlEVjJvdFNJV0Y4Sms4djFRMC1GUzdRbkg4a2JWc25PT3p3UlpPeVdrSWtLdmlGMThhTE1lTC13VjZYTXZaNXk3Nk96dW12S2ExS1ZZSk95ZDYtTjE3OWpqWnN0b21seFpCTkREUFpmbUR3SzJqMkRrWnd5NzZpRVR5d01XazVHa0pzN1M4QjB5MNIB0AFBVV95cUxNY2dhSVdfMHRVeUJLUGRZNkZXWVVTNm4wMFRtZUNtcVgtbXhfMm9KaHVmTlQtVk1BenRlQjhoRmY3SnRHT05JWUpSRWtSUEtyV2ZMVzI2eHlCUVhQckV0STdKR3FaTm5wMEtUYXNKOVV4ekRBRmFNeGVxbDR2VTRzblBEYVRGUl92bHBqNWg4cHZDM0pUWjJZbHBkX0xfZXd5cExodC1oN3FKTEpUVUsyemctRUY3cTRWNG5STDA3cDhpajZDVHVBcEx4aGtmU1dL?oc=5
+
+### NOTICIA · YPF — YPF retoma exploración en Palermo Aike con nuevas perforaciones previstas
+_YPF volverá a perforar en Palermo Aike: ¿cuándo preveen iniciar los trabajos?_
+Emisor: Diario Río Negro · Impacto YPF: directo
+Según cobertura periodística del Diario Río Negro, YPF planea reanudar actividades de perforación en el área Palermo Aike, ubicada en la cuenca Austral. La nota anticipa un cronograma de inicio de trabajos, aunque los detalles precisos sobre fechas y alcance no surgen del resumen disponible. Se trata de información de prensa, no de un comunicado oficial de la compañía.
+Acción: Confirmar con las gerencias de E&P y Cuenca Austral el cronograma oficial de perforación, presupuesto comprometido y estado de permisos ambientales y operativos en Palermo Aike; alinear comunicación externa con lo publicado en prensa
+Fuente: https://news.google.com/rss/articles/CBMiuwFBVV95cUxNMDZ1RHV5Z3MyS3oxRUlFTmFNX2xTM2EwcHZUb2owNHAySEU4b1JMbjkyTm14WkhRN3dmWlpWSnBNYlRkUllFWDFBYTdUSGJXTHcwdGRDaml0aGVySFN3M3VQeFlmQ2hYdXNIdzljTTJkeFE3Qy1iQjJncFk5eXF6VEdBcGdDM3RpNVlXYk9iU3VadnBueXlJckF0dWEySHU5OFRaOGt1M25JT29HdWpIblJ6S1ZmWlJrdGVB0gHDAUFVX3lxTFAxTjBqdjVIMVhtb0wtRkwxUDJlMmFmV3A4LUt4UERLMkVsdUF2Nmd1WGRHNzBuQjdXMFJEbGhhQnQyQWpIMzZ5Y2hBbUhqTjI1d29fM1VQMmdabDJlX0hRV1BOOEJFYmd0c0lvVWMxQkNKQ3QzblpRVjkxelR2ZEZuaUdpcjlEZ1pJNGdXQ096UjZiUlJidVdNc0gwWm1UVWNFUnBYMWhhY0FueFRaYkFKY25nS292dkFEQ3NVN3ZoTWp6SQ?oc=5
+
+### NOTICIA · VACA MUERTA — Neuquén licita 15 áreas de Vaca Muerta: bases, participantes y criterios de adjudicación
+_Neuquén abre licitación por 15 áreas de Vaca Muerta: quiénes participan, cómo definen ganadores y las aclaraciones de último momento_
+Emisor: Ambito · Impacto YPF: directo
+La provincia de Neuquén lanzó un proceso licitatorio para adjudicar 15 bloques en la formación Vaca Muerta, según cobertura periodística de Ámbito. La nota detalla quiénes serían los participantes, los criterios utilizados para seleccionar ganadores y precisiones incorporadas en la etapa final del proceso. Al tratarse de información de prensa y no de texto oficial, los detalles deben contrastarse con la documentación publicada por la autoridad provincial.
+Acción: Verificar si YPF participa como oferente, evaluar bloques en juego respecto al portafolio propio y monitorear adjudicaciones a competidores que puedan alterar el mapa de operadores en Vaca Muerta
+Fuente: https://news.google.com/rss/articles/CBMi8gFBVV95cUxQQ0NYMHNLS2QwTC15VHFDT29TRW1BbE9CenhucUpDNEVQT1hQOVROckFQa2FKT0ZUaWllQ0FWYUkzLThoZFJ3aXlZOHpxZkZiS2FqQTlVa3pndHB0ZTZIYUtXYVNZdnF6dzN4VU5qb0x0cFZlMWhOa1VQcEY4V3JIMUlfOW1xQVdaQW9YRThuN0ZVQTVuOFB6dHdoUVpBZ3hDX3FhYWtTN3ZmcW5YamY3WEY2aE9vTTBJTXQxWm9fdnUzVUhKUEkyT1AxOUFDYTN3NC1NNnZQdnVKNUlmUUxWZjRGVUJZX2Y1M0NzSEZzRHZ0UQ?oc=5
+
+## TIER 2
+### NOTICIA · YPF — Petroleras de Cuenca Cuyana buscan alinear estándares operativos y laborales tras retiro de YPF
+_Tras la salida de YPF, las petroleras de la Cuenca Cuyana buscan unificar criterios de producción y empleo_
+Emisor: Diario UNO · Impacto YPF: indirecto
+Según cobertura de prensa de Diario UNO, luego de que YPF abandonara operaciones en la Cuenca Cuyana, los operadores privados restantes estarían coordinando posiciones comunes sobre producción y empleo en la región. El movimiento sugiere una reconfiguración del ecosistema productor local sin la participación de YPF. La noticia es cobertura periodística y no constituye texto normativo ni decisión oficial.
+Acción: Verificar estado de obligaciones remanentes post-salida (pasivos ambientales, compromisos laborales, contratos de concesión) y monitorear si la coordinación entre competidores genera presiones regulatorias o sindicales que afecten activos linderos o reputación institucional de YPF en Mendoza
+Fuente: https://news.google.com/rss/articles/CBMi2wFBVV95cUxOTTBhSE5PRjBJUFpCbzdSSzdnNkVIMXdoYUx5U3cwclVOOUttWHlTZFJxMEI5WUZYbWc5SUJhX2Jhb3hWWE5jWC1wQVB2RUdyLWo5WFAxX05WUldZdlN0ZG5Ic0RQVGdyNmVzNWxRSGY2UDJrLWN5dm5hS3JsRkJEaHVaRzFHdkRkWlFUV0o3T1hVUGhMeE1LaHFJTkg3TUpSWjB6SWpXZ014X3M4c2lkVjRUb2NaWDZZa3FKT0plUC1oZnppcklEVDN6TEpHNXJDX0oxY25Yekgxc1XSAeABQVVfeXFMUFhRU0dUVUZyR3dFYkJFcngxbzRGMWhNd2lDU1ZlM3FfRGMwNFdTazdUSlRuMDdjUlJ5Nk9kcE45TTA3VGFocFBld1BBc0tkVHhiMjZxTjRmNzRFdHBZcXJ4eUFxS0N0QXJaS0o3cTJRY25mLXBhTWpsZkZ3WnNjdjJRWUxfQ3JfZ1RlYkRHcldvQWNmRzhUWWphekItQ1R2RnJydl9BSnJpbEtmdFdLTFZKS2lEcjJfSjdyci1yV2x3d3F5OFBZRVpVV2g3dlBzQWpaejhDcXhROEtLeWRqcnY?oc=5
+
+### NOTICIA · SECRETARÍA DE ENERGÍA — Tettamanti propone retirar al Estado del rol empresarial en el sector energético
+_Tettamanti acelera el giro energético: "Hay que quitar al Estado del rol de empresario" - El Economista_
+Emisor: El Economista - Últimas noticias económicas y financieras · Impacto YPF: directo
+Según cobertura periodística de El Economista, el funcionario a cargo de la Secretaría de Energía impulsa un cambio de paradigma orientado a reducir la participación estatal directa en el negocio energético. La señal política apunta a un modelo con mayor protagonismo del sector privado en la operación y gestión de activos energéticos. Al tratarse de una nota de prensa y no de texto normativo oficial, el alcance concreto de las medidas anunciadas requiere seguimiento.
+Acción: Monitorear declaraciones y posibles iniciativas normativas derivadas: privatización parcial, reducción de mandatos públicos, modificación del rol de YPF como empresa de bandera; escalar a Dirección de Asuntos Regulatorios y Presidencia para evaluación estratégica
+Fuente: https://news.google.com/rss/articles/CBMirwFBVV95cUxNMkJPX2k5OFVYRlpqRFZvcmZpSUYtMUN6eFk0ZDJBSWpfdUVxRkM4WjgtTmh1R2l1T3NHY3FLWWFVUWJlVVVMOE1keG1WMnUyRTdSSzNRUlRxckl5S2xsMlduYjFvanVLVVc1QmdxMm93eXR0bjhEa0dmazAxYi1PcGtybE5Gb1N6RFFjZWNvUHVEMEE3NVlZdlRqUUhQS1Rqb2prSC1tQ0E4WUN3VGFj0gG0AUFVX3lxTE9zLVlVWlBkRlp6eV83dHpEd0NiZ1JVMGVuVWtic1JKc0FsNzQwZmcyMnA1UGZFTUl5amVNcmUwWGgwb25udlZaZDN4RGQtVEZyRXRaRk9kX3ZOVi1ic0xtVFo4MVVrdFUtaUxIbjlhQXI1TVdFZnBJY0xleUZ5SGJzLUFwN0ZuSjBNX1JTazV6RU4ySEZTeG44YnhyekhoQ2JIa2FXbzJUeWFoWThZOFhYTFh4VQ?oc=5
+
+### NOTICIA · SECRETARÍA DE ENERGÍA — Gobierno convoca a gobernadores del Norte Grande para abordar problemática energética regional
+_El Gobierno convoca a los gobernadores del Norte Grande para buscar una solución al consumo energético_
+Emisor: Border Periodismo · Impacto YPF: indirecto
+Según cobertura periodística de Border Periodismo, el Ejecutivo nacional habría convocado a los mandatarios provinciales de la región Norte Grande para tratar la situación del consumo energético en esa área. La noticia sugiere tensiones o desequilibrios en el suministro o la demanda eléctrica del norte del país que requieren una respuesta política coordinada. Al tratarse de cobertura de prensa y no de texto oficial, los alcances y acuerdos concretos de la reunión aún no son verificables.
+Acción: Monitorear resoluciones o acuerdos que emerjan de la reunión; evaluar implicancias sobre contratos de suministro de gas y combustibles líquidos en provincias del Norte Grande donde YPF opera estaciones y provee gas a distribuidoras locales
+Fuente: https://news.google.com/rss/articles/CBMi3gFBVV95cUxNR0RFdk0wcW5jNjNFSV9YNm4tbHZZOElzejNpQVNtYXRyZ0NhLU5tbklPZEIwQzVCbVBWMXJQUk1BV25ZckhJMU1CamNxS1FRYVRnQzBOcW5ra0p0TFc5SUtiaXVjWE1YaXJiTzZsa2NIM0d2LUk2UUNPdnNtZUt5ZkdqdEl4YjhYLUlBSTFya0ZjMVR1SUVIYmNfVjJVNzc0UGlzRlU3OE1TeTdVS0l6dExhb3BlXzktLVNZOGwtNEFQNnRUcTdpakFHaGlVbjRtSlZuazk1bUhaM3h2bXc?oc=5
+
+### NOTICIA · MARINA MERCANTE CABOTAJE — Gremio de Capitanes activa campaña nacional en defensa del cabotaje marítimo argentino
+_Capitanes lanzó una campaña nacional en defensa de la Marina Mercante y el cabotaje argentino_
+Emisor: Comex Online · Impacto YPF: indirecto
+Según cobertura periodística de Comex Online, el gremio de Capitanes lanzó una campaña de alcance nacional orientada a defender el régimen de cabotaje y la Marina Mercante argentina. La iniciativa gremial busca presionar para mantener o fortalecer las restricciones que reservan el transporte de cargas en aguas interiores a buques de bandera nacional. El contexto regulatorio del cabotaje es sensible para el sector hidrocarburífero, que depende del transporte fluvial y marítimo de crudo, combustibles y GNL.
+Acción: Monitorear evolución de la campaña y posibles modificaciones al régimen de cabotaje que puedan afectar disponibilidad, costos o contratación de buques para transporte de crudo y productos refinados; coordinar con área de Flota y AAPP ante eventual debate legislativo o regulatorio
+Fuente: https://news.google.com/rss/articles/CBMi3AFBVV95cUxQUWhMaGNIS1BmZEw2UVhXeGxpWWNkY1k1NEd1M1IweEhsWFBxUnVKcFQtQ0d0QzlFdkVtYWFPMWV0TDdxaXB3LUdIT0pfMFRLN285blJRTklfNmt6STVaUldFdnpXcENKc29NQXMzemo3c3pFTlRIZFlJRURQY0p6RHd2aENVSUZ3STVDN2pmb1M5ZzFTWjhtYlBGcTJob2JLOE5PSmVVNG5nSm5YbGJhQlFDZkdKT1ozOVNvSy1iUE02NlFOQUNnTVlZUk0wUXBPcl9uV3FhVk1na3lh?oc=5
+
+## TIER 3
+### NOTICIA · YPF — YPF aplica metodología de anclaje psicológico en procesos licitatorios para optimizar precios de compra
+_La innovadora fórmula que usa YPF para sus licitaciones: apela al “efecto psicológico” para conseguir el precio más bajo_
+Emisor: Infobae · Impacto YPF: directo
+Según cobertura periodística de Infobae, YPF estaría utilizando una técnica basada en sesgos cognitivos —conocida como 'anclaje'— en sus licitaciones de bienes y servicios, con el objetivo de inducir a los oferentes a presentar propuestas económicas más bajas. La nota describe la práctica como una herramienta de gestión de compras que busca eficiencia en costos de adquisición. Al tratarse de cobertura de prensa y no de texto oficial, los detalles metodológicos y su alcance real no pueden verificarse sin acceso a fuentes primarias.
+Acción: Área de Compras debe identificar si la práctica referida es oficial o informal, evaluar riesgos reputacionales frente a proveedores y verificar cumplimiento con políticas de transparencia y ética en contrataciones.
+Fuente: https://news.google.com/rss/articles/CBMi9AFBVV95cUxQQ00wTWluYmhnZjNUcjNCWWdfN2dRN3BRc0hCSXpIVE9fVkpZejZVZTVMZ0JPeHNNNlZEbEZmOEo4ZnVtd29WbFhRUUdudXVFa2hNb0FITWlqQ1lfb3ZPaGFrRnRiY0d2b1NMa2dSVnRXamd2cUtrX3RWOVVCZWF0YXE5RWQtckd3Ynh5QjNNU0NFWWxna3RFR3JDRmo2OURUTFVoMzZ2a2xLZWZ5N3JzWHljdC02anNjOVRsQlk2VU5WeUxxd3ZnOUhicVlQcGhmSmN6RzAxR3d1cXhPYkZ5NkszRGs3SE1BUEpFSFhaRERVZF9r0gGPAkFVX3lxTE01ZjJCWEZ2T1l5c0NDc2FQMkVyUGZiQngyUWVieWRYTlc5QTE2RE1GN3hrLUdpNnVZR1ZwSkZWT29zSEZaT0pmb2R6eTE5cnZGUGhtYUtya1c1Y3l6RW03dzB4TkhPakJjaUtuVmc1S3dHZGlyakhrMHV3S3ZWZTRzaGVESGZDelVHOUl3Y3Vhd204UU5rakVGbXBrekRDSWo2NFE1TVdLTnoxdnV4TmlzS01URGc1SDA5S2xCamFNQUEzaHZlNmpUaEJaQmZ0azhBOWhlSVB3a2JaQ3BlSU5aRWVvVzlPc2t4MnNDdkpHb1lSakVFRXNUX0hNcGxkV1RIa1UxMnhtR1o3Yzg0bDQ?oc=5
+
+### NOTICIA · YPF — Análisis bursátil sobre el balance histórico de YPF y perspectivas de valuación
+_YPF y su balance histórico: ¿tiene recorrido?_
+Emisor: Ambito · Impacto YPF: directo
+Cobertura de prensa (Ámbito, 17/08/2026): El artículo examina los resultados financieros de YPF calificándolos como históricos y plantea el interrogante sobre el potencial de apreciación adicional de la acción. No surge del resumen disponible el detalle de las métricas ni las proyecciones concretas utilizadas para el análisis. Se trata de una nota de análisis bursátil orientada a inversores minoristas e institucionales.
+Acción: Monitorear cobertura mediática del balance; evaluar si el artículo contiene proyecciones o recomendaciones de analistas que requieran respuesta o alineamiento con el mensaje corporativo hacia el mercado
+Fuente: https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUmczTFFuSzFBVDZGUmthMG8tWlRjd2lKMkNsUVNob0V2YWRXZFYtdzRxVUJ1bUlOY05zLU1mSFZaSG9ERGh0Z0pyMjdWQll4S3JmVENCeWpiQnJCa0ljSTNWZk02Z3c0cWNPRnJuY01HVTh6ZnJIR2txN196ZWJYcEhvNkcxZUREdThB0gGQAUFVX3lxTFB4SG5EUFgzZ1BQdEF3LV9NMGd4SW42WVZhdkVlTXBPRTQyWTJFdjFfNjZXY0prdnhrUDlaSEhoTG9FVXpUOS1mSkFZM2xYUkxoRngzUjRXY1pvcElyOC1vVDNLVVRKcXRDNi1YQWtJUDRiWEFxUU1CWDRpdlp3eVZuQXk4SW1zbjEtVVY4Tndubg?oc=5
+
+### NOTICIA · VACA MUERTA — Melconian destaca Vaca Muerta como ancla de estabilidad macroeconómica del país
+_Carlos Melconian, economista: “No nos pegamos un tiro porque está Vaca Muerta”_
+Emisor: La Nación · Impacto YPF: contexto
+El economista Carlos Melconian, según cobertura de prensa de La Nación, atribuyó a la producción de Vaca Muerta un rol central en la sostenibilidad económica de Argentina, sugiriendo que el sector hidrocarburífero funciona como amortiguador ante vulnerabilidades macroeconómicas. La nota refleja el consenso creciente en el debate público sobre el peso estratégico del shale en el balance externo y fiscal del país. Se trata de cobertura periodística, no de texto oficial ni normativo.
+Acción: Monitorear narrativa pública favorable a Vaca Muerta para incorporar en comunicaciones institucionales y posicionamiento ante reguladores y mercados de capital
+Fuente: https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcDl0VUM5SEVKWVF6VmVKR2FJdTFCNUQ4LWxUSXdiSFNyckp1cjRyZ1J3eWw4VEtZdnhuWVVuM1JRY3FGUjYwTTJfaTBjUWtmQnlmbkxzME5QckNsR2NGWWVBU1JLcHVpQ0tLSGxYSFR6QUthMXJ3SGF1aFBESkU0d2FaSVBRZkZwY1JIT05MNEppWjU1eEM3TUhzempnTk8wSGl2d2Q5OUpGLTlYOWlfaXhIY2w4WWMxTWQ4THI3V3hkZw?oc=5
+
+### NOTICIA · VACA MUERTA — Instituto Vaca Muerta abre inscripciones para capacitación de operadores upstream hasta el 21 de agosto
+_Instituto Vaca Muerta: hasta el 21 de agosto está abierta la inscripción para operadores de Upstream_
+Emisor: Vaca Muerta News · Impacto YPF: indirecto
+Según cobertura de prensa de Vaca Muerta News, el Instituto Vaca Muerta tiene abierto un proceso de inscripción para operadores de upstream con cierre el 21 de agosto. La iniciativa apunta al desarrollo de capital humano especializado para la cuenca neuquina. No se trata de una norma oficial sino de una convocatoria de formación sectorial.
+Acción: Evaluar si la convocatoria es relevante para planes de formación de personal operativo de YPF en Vaca Muerta; verificar condiciones y contenidos del programa antes del cierre del 21 de agosto
+Fuente: https://news.google.com/rss/articles/CBMicEFVX3lxTE45LWJsVklwR2MxSTFSaUFmV25qYUNITUdBNVc1eGFMajZPak4yczlWTGhhbUY2NG9nc0J6V0JQSTZoRWpfN3JwbFBrci1wYlZIaTVBV2k0TUZxcklBdTg5dTJnSW93d0NxTE83M18xR2nSAWdBVV95cUxNek5fOExaTmRJekNpbE9YZDZJaEVkejVmeHBlRkdvZ1FXdVBFR3BJdF9aRlNwSXNfYzVpV2FIR0VMRkNBRDdOVnRBall2anYzQmZPdzBMVFE1Si10UWs0Y1pHaFlIU3pj?oc=5
+
