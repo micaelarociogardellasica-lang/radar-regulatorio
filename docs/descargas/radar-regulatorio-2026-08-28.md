@@ -1,0 +1,90 @@
+# RADAR REGULATORIO — Relevamiento diario
+**Viernes 28.08.2026 · N° 018**
+
+## TIER 1
+### NOTICIA · VACA MUERTA — Vaca Muerta acelera búsqueda de US$20.000 M en inversiones antes del ciclo electoral 2027
+_Vaca Muerta corre contra las elecciones: busca US$20.000 millones antes de 2027_
+Emisor: La Nación · Impacto YPF: directo
+Según cobertura periodística de La Nación, el sector no convencional de Vaca Muerta buscaría atraer hasta USD 20.000 millones en inversiones con urgencia preelectoral, anticipando que la incertidumbre política de 2027 podría ralentizar los flujos de capital. La nota sugiere que operadores e inversores priorizan cerrar compromisos y financiamientos antes de que el calendario electoral introduzca volatilidad regulatoria y cambiaria. Se trata de cobertura de prensa, no de texto oficial ni normativa.
+Acción: Verificar alineación del plan de inversiones Vaca Muerta 2025-2027 con ventana preelectoral; evaluar oportunidad de acelerar cierres de financiamiento y acuerdos con socios o compradores (offtakers) antes del ciclo electoral
+Fuente: https://news.google.com/rss/articles/CBMixAFBVV95cUxQMjluWXdVWlZsejZzM2x3cjRpcE9jZFJtLW92UXNsaDdIZFhZMy1sNjJlZ1NNV0dUTnRUNGx1TjYxckE0WC15al9ycktrR3F3QXR5RW1ZZ0ZiR3A5ak00dUVRUmNJc2R1djBuMEp3bE5BZU5KWmU0X01ZV0kxOW55cWdNeVhHaE9pSnFGejVIWjdHS1pPVTk3LWV4VTlnRXFnSjJwbHdtUFp1WnZOVUVWbWY3Y2JzcTBjZC01WnRjQVBFVHBV?oc=5
+
+### NOTICIA · VACA MUERTA — Producción de crudo en Argentina alcanza máximo histórico impulsado por Vaca Muerta
+_Vaca Muerta impulsó un récord histórico para el crudo argentino_
+Emisor: Lmneuquen.com · Impacto YPF: directo
+Según cobertura de prensa de LM Neuquén, la producción argentina de petróleo crudo habría alcanzado un nivel récord histórico, siendo Vaca Muerta el principal motor de ese desempeño. La noticia refleja el dinamismo sostenido de la formación no convencional en la Cuenca Neuquina. Al tratarse de cobertura periodística y no de fuente oficial, los datos precisos de volumen y período deberán verificarse en informes de la Secretaría de Energía.
+Acción: Confirmar con datos oficiales de la Secretaría de Energía el nivel de producción propio de YPF en Vaca Muerta para el período de referencia; evaluar impacto en volúmenes de lifting y previsiones de exportación de crudo.
+Fuente: https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZ00xS3BhU2N2LTNZM1ZvN0hfbDNBR1F2NFJibVVhNVk1LVdoWlcxR0NiUUw4MGZYV0ExZV9ZV0tSSldPOHFvSWNvQk9saU1pZHhja2tNcG9vNHAzYVFHMUs5MUIzZld4MFEyOGowMWJUME9HaWxtTjF6YVdTSGxLUUU3N3NYSUNTc05NN1dSc1ZyNGJ3UERFTW9ac1NPb01kVGNNQ092T3XSAa4BQVVfeXFMT1V4RDVFWUJzdHRtdEU3T0FRZ1lCT0VEdGJYendQb2NUMS1aakxnMVZsTElLRFA1Uk0tOXFmY2pRaTJtVmkzZTJzU1Yxb0pVZVMzRTBXblR3SEs3NHI2QmRMRjA4eDdsMjBXVUZYN2k1dHY2ZkJjWmZ4WjM5TlBHUU9tdWdHMk4xcHpfMUU5RGZJR09DVUkza1cyY1pIXzRnY1JBS0NMX2JWZGhyN0l3?oc=5
+
+### NOTICIA · VACA MUERTA — Producción petrolera de Vaca Muerta alcanza nuevo récord y el crudo se posiciona como principal rubro exportador de Argentina
+_Vaca Muerta llevó la producción de petróleo a otro récord y el crudo ya lidera las exportaciones argentinas_
+Emisor: Ambito · Impacto YPF: directo
+Según cobertura periodística de Ámbito, la actividad en Vaca Muerta impulsó la producción de petróleo a un nuevo máximo histórico, consolidando al crudo como el principal producto de exportación del país. La noticia refleja la expansión sostenida del shale oil argentino y su creciente peso en la balanza comercial. Como principal operador de la formación, YPF es actor central en este desempeño.
+Acción: Verificar participación de YPF en el nuevo récord de producción, actualizar proyecciones de lifting y volúmenes de exportación; evaluar posicionamiento comercial ante mayor oferta exportable y revisar logística de evacuación (oleoductos, puertos) para sostener el crecimiento
+Fuente: https://news.google.com/rss/articles/CBMi2gFBVV95cUxNaHl6OTlDRFAxcGp3blNCRTladHBsMG10UkdxSmQwa0M5WGtZSGVMNnJQeHVlUnVPWTRVc3c1b01OSE1LMlRaUk1MZDc0RmF6UU5TMVQ4b1lHZVQ5OUFUMzIyZThLSlhWdUdnWEZQR2NDWXhVTnVBeVhQdk1mZU14VkFVZlVsNnJNaDBIalM2MTA3QTFzSWJna3pDTlZBUjF2ZFNpMl9CRzJHR29La3hzT0VJU1lMWFppR0dIRTFtX2otXzB6elcwTjI5VTROZlZvb2R1S3VJRWl2Zw?oc=5
+
+## TIER 2
+### NOTICIA · VACA MUERTA — Accidente fatal en Vaca Muerta: la Justicia revela detalles del caso con dos operarios fallecidos
+_La Justicia dio detalles del accidente que provocó la muerte de dos operarios en Vaca Muerta_
+Emisor: TN · Impacto YPF: indirecto
+Cobertura de prensa (TN): la Justicia difundió precisiones sobre un accidente laboral ocurrido en Vaca Muerta que resultó en la muerte de dos trabajadores. El caso tiene implicancias judiciales y potencial impacto reputacional para las operadoras y contratistas involucrados. La noticia no identifica en el resumen a la empresa o contratista responsable del incidente.
+Acción: Verificar si el accidente involucra pozos, contratos o contratistas de YPF; monitorear evolución judicial y evaluar exposición reputacional; revisar protocolos de seguridad aplicables
+Fuente: https://news.google.com/rss/articles/CBMizgFBVV95cUxPYWVyVVpZVGRnRWl5RExCMnMxakdXTk1FU2ZicENsZTE1V2tzUnRZRWVZd3Z6Nk9MTkVoX3NELVNwN2k1SzZWdWtPMFIwZko4bHFzUHNvSWZxSWZSVjhsQllLNUtvVFFIeVNmRnI5LWJUWDlIU01tRWdydzdVd2hGcUtncVBPY29kM01wczd5VG1fZUNJS3ZzTWIzdlB5emV4NEUxR3l1aXJpb1h3T2IyNzE1YWswMk0zUGluZ0ZVd2NyMTlLMFg5Sy0wNjlLd9IB4gFBVV95cUxQX1g4aHlpMmREMmgxazBpUU10NzFQa2dtbzJPbXNDYjhITU5qNV9MYzVKeF9FcG1hQ2FESmFQcExGMXRWVEdpcHE4VkVMRWdGZ21uTzBNcERlRDhtb1UxNElIU0JRZHFXcTlsN2Rlc1NTU05hMVNlcDFyd3ZnaUhCRTlqcEVlZm15d09nWmVkV3ZsYjQyakYwTmRBb1lVeDBRdmVTT2RqVUJqNlJFT3hUdjlhSHRHWVFYWWQybHNMQ3VQUDA2ZnNuV29EUnY4QmNZRW9ySEdHSkxienRIVGNha0hR?oc=5
+
+### NOTICIA · VACA MUERTA — Halliburton suspende recortes de servicios en Vaca Muerta e inicia negociaciones individuales con proveedores
+_Giro en Vaca Muerta: Halliburton deja en pausa el recorte y abre una negociación con cada proveedor - El Economista_
+Emisor: El Economista - Últimas noticias económicas y financieras · Impacto YPF: indirecto
+Según cobertura de prensa, Halliburton habría revertido temporalmente una decisión de reducir operaciones en Vaca Muerta y abierto negociaciones caso a caso con su cadena de proveedores locales. El movimiento sugiere tensiones en la estructura de costos del mercado de servicios petroleros no convencionales y podría redefinir condiciones contractuales en el segmento. Como noticia periodística, los detalles y alcance definitivo requieren confirmación oficial.
+Acción: Monitorear evolución de negociaciones de Halliburton con proveedores; evaluar impacto en disponibilidad de equipos y costos de servicios para el programa de perforación propio en Vaca Muerta; contrastar con área de Supply Chain
+Fuente: https://news.google.com/rss/articles/CBMixAFBVV95cUxNM1VXdldkSmNSV0NjRE5aSTVQZkhsbFJ3Y1hpTV9oc0ZPMWJlbFBpcHlrYmMwYVVoYWtvWFZMUTVLLTlEeDNuNEhnUngtcjRPV0NJTG5nazR3djR6OVpBbzF5SlBQMG56UHkwOExwc0lXcG9KUC15WFI4RG1GTW1WdnlyQ01xeVFyR2NKVmlraXM3ZTN6R1NCYUtBRU5NUkNxZFdPWWpkbFNZVkpZSU5ybGpodXVFY3lGYXdSZEVTdzBGcHRP0gHKAUFVX3lxTE5sdHdGQ1R1NEUxV3VLUnNoZnVxdmlXQmhZQjhaLVdNc1V5S1hrdlhWdzhmb3ByaTdCUTlxMU9GTGNiZ0ZnX29qQlAyaFVib2xjY3AzbE52V0lQdThRRWFQU1o5M3lJV211eGN4aVA0RHVxSXU0ZEdXMVN2M1FfTWxERVJiRXBZd3AxblZWNGs0cTZ2U0dUUmd4UF9RR3VnZ0duVExZMF9QSmc3THl2VURIRWNPZG4yUERZVDhsUkMwMlBjSlE5S2lpcnc?oc=5
+
+## TIER 3
+### NOTICIA · YPF — YPF habilita operaciones bursátiles de sus propias acciones desde la aplicación móvil corporativa
+_YPF permite la compra y venta de sus acciones a través de su app_
+Emisor: TN · Impacto YPF: directo
+Según cobertura de prensa de TN, YPF incorporó en su plataforma digital la posibilidad de que usuarios compren y vendan acciones de la compañía directamente desde la aplicación. La medida apunta a ampliar el acceso minorista a los títulos de la petrolera estatal. Al tratarse de cobertura periodística y no de texto oficial, los detalles operativos y regulatorios de la iniciativa deben ser verificados en fuentes primarias.
+Acción: Verificar alcance regulatorio de la funcionalidad con el área Legal y de Mercado de Capitales; confirmar si requiere registro ante CNV o intermediación de agente bursátil; evaluar impacto en imagen y comunicación institucional
+Fuente: https://news.google.com/rss/articles/CBMiywFBVV95cUxPZHhFMHZqRmJMQm5UMzdzY25iTXBoS0loNzlHWW10VDJjZkZJTlNES3U5ckQ3LUlaQXRndkRuOHAyZVY2WHd5N2hmRklOZlYzSFBKQ3JIZ3UtVkU1X2RLRThBT0hzdE02Q2JwUnV6UHdXN0V2NGVRZkVSWUJYdUJhNThBY3l5RHlvTXZjN0FzM1NGNFFFc2stVFl3RDhDTXZvaU1CYkI1YUxxQzF6NzBiUjFBMkJBWVgzS3VpcXNyZzZ6OTktTFMxbzRNONIB3wFBVV95cUxQVFJuT3pocTdUVW5RNVlRTWZkam94VVVyTEFNOWRZZDFzeG5nbHBXclpRY1ZSczJYOThtdm05VHM4ay1JZnVBR0ZudVBFWFBqUy1YaGVaZGUtMndnOFJOWlptalNLdXBEbEpiRnJyNmloLUFYVmxUclVoUnFGaVpPMVQ5RHVwRlhQYXpYWTF3dTNsbVFCeTR0WHg4b2ZweGVsS2hjWmdMZVhVckw5V1k3SkJfRWxTbk9EMXMtZUlyZGxEeWN3Wk9aN0R5VlRIR1VQREZUME9PRzY2SkN0Ullj?oc=5
+
+### NOTICIA · YPF — YPF pone en operación centro de monitoreo de seguridad 24/7 para más de 520 activos críticos
+_YPF inauguró la nueva Sala RTIC Security que monitorea más de 520 activos críticos las 24 horas_
+Emisor: Lmneuquen.com · Impacto YPF: directo
+Según cobertura de prensa de LM Neuquén, YPF inauguró una sala especializada de ciberseguridad y monitoreo operacional (RTIC Security) que vigila en tiempo real más de 520 activos considerados críticos para la compañía. La instalación operaría de forma continua para detectar y responder a incidentes de seguridad física y cibernética. No se dispone del texto oficial ni detalles técnicos adicionales más allá del anuncio periodístico.
+Acción: Relevar alcance de activos monitoreados, integración con sistemas SCADA/OT y protocolos de respuesta a incidentes; evaluar comunicación institucional asociada al lanzamiento
+Fuente: https://news.google.com/rss/articles/CBMi0wFBVV95cUxOb1FyQjhVUFIwNDgtbDhFLTVDT2VCZ0F4QV9nSUZNT016NGlQc1E1T3BxZnpuNC1nVllWdVAwZ1p4cy1YMW03bUhpWXUzLUpHeGRIelNtWkxfdFpsaHB1UnRXTFJQb2IzMzBpOHVkYVltc0kyQVBSc0lHeXNHcE5HbEdIVHB4c0NjSTlNb1lYZ1l3Q1Q4NmNhTHhxbVJoT3N2bi1LYWY3TTlLUEpxby0tWWxaak16MlpKZ2dIQ0pqd25jV2NyQ0NCbmlnTlI1cUJJQkQw0gHYAUFVX3lxTE0xYjZJbndpSzBFcExpQXBwUzhHTHBLdlZoQUZnYkd2ekg4dWlicW9MeXl2QVpDQVhpc1BRV3luLXFDclVITnB6M1VxTmd6Tmo2WnQ3WHdTMEZBX01ZcHgzcmNnV25ZckxYUUQzU1lsUVRxZTBJYXFuYTR4RWdUMnRjVVRxQnNQOWNpX3dQZkQzWENZajBZQUcwWVZicUF2aG5BNGdvY0Y5NEpoNzI1Ujk2OWdDOU83bjhZdEw0SElYaXlCZjJRMzdrWHpQakJHOHhVZDdtWTlTNQ?oc=5
+
+### NOTICIA · YPF — YPF despliega iniciativas de desarrollo de proveedores y educación en Sierra Grande y San Antonio Oeste
+_YPF en Río Negro: se realizaron iniciativas de educación y desarrollo de proveedores en Sierra Grande y San Antonio Oeste_
+Emisor: Diario Río Negro · Impacto YPF: contexto
+Según cobertura periodística del Diario Río Negro, YPF llevó adelante acciones de responsabilidad social empresaria en localidades de la provincia de Río Negro, enfocadas en capacitación educativa y fortalecimiento de la cadena local de proveedores. Este tipo de iniciativas suele acompañar la presencia operativa de la compañía en territorios con actividad o potencial de actividad extractiva.
+Acción: Monitorear cobertura mediática y evaluar si las acciones de RSE se alinean con compromisos de contenido local ante la provincia de Río Negro; identificar oportunidades de visibilidad institucional
+Fuente: https://news.google.com/rss/articles/CBMi-AFBVV95cUxOUGtFaEJ0SDN2SUIzN0paaUhucFhhLThOOUFkWUtuc0MzM3d2MllWaFk2c2Z0MzcyYVMxdHJ6TkxnYWxJWlBiX0dfU1dDbUxTLWE4a2hKZlplamgxVEVJVHZIaXNLdHM0VDZoLVRQaWYxdjdIaXRMd0JtVUt6ejZZeGt1VFU5X3h5MGhrRDZ4RDQzTXdGOTU3SWlrcGlNOGlLdG1xaHVpUk5ReWZhTlpmRldnYW4xcEt2enBfYnhySHdubVNWaFdrLXVOcEpSakxOQkluMDg2NTR4SVloUGZ6cWFqNGVFZFdOcXprNzE3bHcxblBTc3FTTdIBgAJBVV95cUxQWmg1YVhUd1ltZzd3Q3BvT0NlaDNoM0d6emd6eW9YRDJEbUJfaXY4Y2NhNEsyVHVfQm1PY2lpOGxOaW51SUJtTmJXa2JIZUlJa1FiMHlfcTJHdl9KNXJnQlpYajB2M1JvME9jbEdHLVFKazRyZjBnY3d1a1VqZ0xIc3N0cDZhQ1RpRHN1dkdGTnQ0QTJHUTl5TzEwbGlNaWhVZ2NodHBIaUo2OG1BdkFrQUt5clhxVVVPbl9nc0dITXRqUndrRW1Qd0NfNWxSRmtPaDE1UGlycVpWdG1vVGdFNTlWekdxZW9JTk84QTgwQnlXbUF1Nl8wZW5ZN1JZdEtv?oc=5
+
+### NOTICIA · YPF — CEO de YPF expone su filosofía de gestión basada en resultados económicos concretos
+_Horacio Marín y su frase sobre el liderazgo en YPF: “Yo lo llamo plata o mierda”_
+Emisor: La Nación · Impacto YPF: contexto
+Cobertura de prensa (La Nación). El presidente de YPF, Horacio Marín, sintetizó públicamente su estilo de conducción empresaria con una expresión directa que prioriza la generación de valor económico como métrica central del desempeño. El titular refuerza el perfil ejecutivo que el CEO proyecta hacia el mercado y el entorno regulatorio.
+Acción: Monitorear el impacto reputacional de declaraciones públicas del CEO y evaluar consistencia con mensajes corporativos oficiales ante inversores y reguladores
+Fuente: https://news.google.com/rss/articles/CBMixgFBVV95cUxQb0J6U2F2QTdwOXdXZHhhTktXQzVxRnlYeFJKSVZ1RGs1WFBxNmZGdUZFakxVTWN1cWRoNU8zYkRQY20yQklmVnNKdWJtS3VYOVBLVVdOVWZHM19YaEE5SHpwT3dkc2V1XzIyZm53VzAzX1V0ZnRwempPQ3JTUGo0Zl83WFpES1hGUGpzcGVteUlUaHhxOFhjUGNCVWFmaGhtaFh0Q0RDVG1MZkM0LXROT25sSjUwUWlvVmdjSmtyYWFsZ2s3eVE?oc=5
+
+### NOTICIA · VACA MUERTA — Tren a Vaca Muerta: potencial logístico más allá del hidrocarburo hacia la cordillera
+_No sólo petróleo: el tren a Vaca Muerta puede ser la llave logística para la cordillera argentina_
+Emisor: El Cronista · Impacto YPF: indirecto
+Cobertura periodística de El Cronista que analiza el proyecto ferroviario hacia Vaca Muerta como infraestructura logística multipropósito, con alcance potencial para conectar la región cordillerana y no limitarse al transporte de hidrocarburos. El artículo posiciona el tren como una llave de integración territorial que podría beneficiar a distintos sectores productivos de la región. Al tratarse de cobertura de prensa y no de texto oficial, los alcances y plazos del proyecto no están confirmados normativamente.
+Acción: Monitorear el avance del proyecto ferroviario y evaluar oportunidades de optimización logística para traslado de insumos, equipos y producción desde y hacia las operaciones en Vaca Muerta
+Fuente: https://news.google.com/rss/articles/CBMivwFBVV95cUxNUGhHeVEwNWh1aEZWODFVb3ZBOWlPSmt3NDI2MENOdW53S09oLW02N2xadFNJaGxHWnZvZWJpYXIxMEtsbGpOc2s1bDF2bk5fWWVrRUhqUElRTFByR0ZqcEducE1QODBjdUdMYm5vakVrR0ExMmNZV0hueThHWFIzb3VDVUctVzZfa3lPSkNUX0FBdVlFcjh0YU1HNUV0N3EwTEdvZDE3cFktcDk4VEtKeTQ5bUVwTGVyTVBCaVl6Yw?oc=5
+
+### NOTICIA · SECRETARÍA DE ENERGÍA — Cervi consolida posición en comisión de Energía del Senado frente a candidata del bloque de Figueroa
+_Pablo Cervi le ganó la pulseada a la senadora de Rolando Figueroa y se quedó con un puesto clave en la comisión de Energía_
+Emisor: econojournal.com.ar · Impacto YPF: contexto
+Según cobertura de prensa de Econojournal, el senador Pablo Cervi logró imponerse a una candidata del espacio político de Rolando Figueroa para ocupar un lugar relevante en la comisión de Energía del Senado. La disputa refleja tensiones internas en el bloque legislativo patagónico con incidencia en la agenda energética del Congreso. El resultado podría condicionar el tratamiento de normativa sectorial en la cámara alta.
+Acción: Monitorear composición y correlación de fuerzas en la comisión de Energía del Senado para anticipar posicionamientos en proyectos que afecten a upstream y contratos de Vaca Muerta
+Fuente: https://news.google.com/rss/articles/CBMiogFBVV95cUxPVVFWblY4SkdvamhWZUkwUmpZbU50U01ZbEhrcWd6b19JMEwwN0FGajBPNUxXbE11X084ZFFMTmMwb0h2RnpLdWptQThydXhFZ1RpWGJDY1FpenZNamdCcWh4dEp5Vlk4LUJ3cUk3RVQzYno5U2hKOXdXdW1vWHVmNk16YjhiZ202MUJHOHY3aEc0SnZfeDd3XzF2R1R4X0hOT3c?oc=5
+
+### NOTICIA · SECRETARÍA DE ENERGÍA — Secretaría de Energía convoca licitación para ampliar red eléctrica del AMBA
+_La Secretaría de Energía autorizó el llamado a licitación para la ampliación del sistema eléctrico del AMBA_
+Emisor: Abogados.com.ar · Impacto YPF: contexto
+Según cobertura de prensa, la Secretaría de Energía habilitó formalmente el proceso licitatorio para expandir la infraestructura de transmisión y/o distribución eléctrica en el área metropolitana de Buenos Aires. La medida apunta a reforzar la capacidad del sistema ante la creciente demanda urbana. No se dispone del texto oficial de la norma habilitante.
+Acción: Monitorear el pliego licitatorio por eventuales oportunidades para YPF Luz o impacto en demanda de gas para generación en el AMBA; sin acción urgente requerida.
+Fuente: https://news.google.com/rss/articles/CBMi4AFBVV95cUxNb0VqWFIwekhuTlNwTVFKakxlQTZ2cEJrZ251UGNIeW5jRTVpSG5CckNCTGdJRm4yU3E0SU9fZU85OGFkdDhGUi16NElxZVg4WklETnhmRENXeGFFRTkzX1BQcV9BSVUzZVBCdFotSENudnZDdm95NFZfQXhQZmFLeDJKZDNPTUtjdV9pQnllY29PNkZGWElJS2dhLUlaSy1Ia3VvTkxCTlNMNXVKb0pzTHVZQTlSNl9Ba3dwdWQtcXFuODZxeHF4dVVqU21LdWlqRWJJdXVGeldKR2swam5rYw?oc=5
+
