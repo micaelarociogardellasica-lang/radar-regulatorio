@@ -1,0 +1,96 @@
+# RADAR REGULATORIO — Relevamiento diario
+**Miércoles 09.09.2026 · N° 026**
+
+## TIER 1
+### NOTICIA · YPF — YPF avanza en dos nuevos proyectos bajo RIGI que elevarían su plan de inversiones a USD 154.100 M
+_YPF prepara dos nuevos proyectos para el RIGI y elevaría sus inversiones a u$s154.100 millones_
+Emisor: Ambito · Impacto YPF: directo
+Según cobertura periodística de Ámbito, YPF estaría preparando la presentación de dos nuevos proyectos bajo el Régimen de Incentivo a las Grandes Inversiones (RIGI), lo que llevaría el total comprometido por la compañía bajo ese esquema a USD 154.100 millones. La noticia, basada en fuentes no oficiales, sugiere una profundización de la estrategia de acceso a beneficios fiscales, cambiarios y regulatorios del régimen. No se dispone del detalle de los sectores o cuencas involucrados en los nuevos proyectos.
+Acción: Confirmar con áreas de Planificación y Legales el estado de formulación y presentación de los dos nuevos proyectos RIGI; verificar coherencia del monto total con el plan de negocio vigente y alinear comunicación institucional
+Fuente: https://news.google.com/rss/articles/CBMiwwFBVV95cUxPenVQQUdFR0NMYkpvbWVDLWQ3MFh6dXhoX3NnSXhnT1VhU3ZfVXMySjdpaFhUWHVueWt5LUZCeU9MVkhxUERWSnpPeVBpdWJ5cENxd0tvY0pNQVFoWUpyZ0RMYW42OWhjNy1zeHRBSFlucU1OMXFBeThzM25iamFJOFdQaDdqRzdoOHp0RVExQjNVVDNoU3VTckxHZm5yNm94RS1ySHpCNk00aGQ1WjVwUFdyNlozUXQ4SG5xLWFKdi05MFE?oc=5
+
+### NOTICIA · YPF — YPF incorpora el primer equipo de fractura hidráulica 100% eléctrico operativo en Vaca Muerta
+_El primer equipo de fractura 100% eléctrico de Vaca Muerta ya está en el país_
+Emisor: iProfesional · Impacto YPF: directo
+Según cobertura de prensa de iProfesional, el primer equipo de fractura hidráulica con propulsión íntegramente eléctrica habría llegado al país para operar en la formación no convencional de Vaca Muerta. La incorporación de esta tecnología representa un salto en eficiencia operativa y reducción de emisiones en las tareas de estimulación de pozos. La noticia es de origen periodístico y no se cuenta con comunicado oficial de YPF ni documentación técnica de respaldo.
+Acción: Confirmar con áreas de Operaciones y Compras el estado de incorporación del equipo, proveedor, condiciones contractuales y plan de despliegue; evaluar impacto en costos de lifting y en metas de descarbonización del plan estratégico
+Fuente: https://news.google.com/rss/articles/CBMivAFBVV95cUxNek9hRmtpd1pZWlpfRlhEVG0yRVNqSG1RdHNyR0JoZXFyX0dmaS10VXIydWRRSG5zMV93SHJ3eGw5eFdUTTJYQklHWENRTzNYeTNUU1h1NDI4R0tBcmRfOU9zcHJTVjZZeUVfOVhEZE8wNXRaaENta29xMUpReDRkYWVWUEdKQW82c1NpYXo3R1hHUGM1akZiN2xhOUVRRG1ReFlOSEt0REZoZTlQdEZJLWtsZWtsUm5xX0pPQtIBwgFBVV95cUxORlpzUVMtQUFRSnRRRkxLZVFRc3pWRzNxb1ZFX0dKc2dKckpVTFNQNV9xRkdzZFhzOXRfY1AyRzBNV1g4Uk9LdEowWkM5djViZEx0bUJQaWo1cm9VSFU3WG9EN2t1QldLY09CWkxmSmJGaFV6dG40VkRMaWdBdlBkVS1Yamx0TGRJVTQ4MjF0M1psUkdjWkM0T3Jkd2dkUVpXUWVBcUNieEpGREtPQWFVNVVFSzVDOWNuYVZHRF9HWV9ZUQ?oc=5
+
+### NOTICIA · SECRETARÍA DE ENERGÍA — Gobierno descarta extensión del Plan Gas más allá de 2028
+_Plan Gas: el Gobierno confirmó que no habrá prórroga después de 2028_
+Emisor: MejorInformado.com · Impacto YPF: directo
+Según cobertura de prensa de MejorInformado.com, la Secretaría de Energía habría confirmado que el esquema de contratos y precios garantizados del Plan Gas no tendrá continuidad tras su vencimiento en 2028. La señal implica que los productores deberán reorientar sus estrategias comerciales hacia precios de mercado a partir de esa fecha. El impacto es significativo dado el peso que el programa tiene en la planificación de inversiones y en los ingresos del segmento de gas natural.
+Acción: Evaluar exposición de YPF a contratos Plan Gas post-2028, revisar proyecciones de ingreso de gas convencional y no convencional, y anticipar estrategia comercial para transición a precios de mercado; monitorear confirmación oficial en BORA
+Fuente: https://news.google.com/rss/articles/CBMiqwFBVV95cUxPenV1cEhjdXhlZkg0eG5hTFV2T2ZJRDVPLTFSSE9GeEpfbXZSYW8wVkRhcGNiRHpkbjlseUQzSGkyQnh1cF95a2l0eDQzcnYxbnRLb19pNjliRVBjLU1URW5xc2o2UEZzT3BrWnk0LUt3NDBmN0dLVUNrLVhWYkdPNDBDM2QyS25pQ2pTaHFRNEtRZG9nUWl2Y0pSR2N5OThaWFNJcHFzSnVaOWvSAasBQVVfeXFMT3p1dXBIY3V4ZWZINHhuYUxVdk9mSUQ1Ty0xUkhPRnhKX212UmFvMFZEYXBjYkR6ZG45bHlEM0hpMkJ4dXBfeWtpdHg0M3J2MW50S29faTY5YkVQYy1NVEVucXNqNlBGc09wa1p5NC1LdzQwZjdHS1VDay1YVmJHTzQwQzNkMktuaUNqU2hxUTRLUWRvZ1FpdmNKUkdjeTk4WlhTSXBxc0p1Wjlr?oc=5
+
+## TIER 2
+### Resolución 54/2026 — ANPyN renueva bonificación del 16,7% en peaje del Canal Martín García sobre la Vía Navegable Troncal
+Emisor: AGENCIA NACIONAL DE PUERTOS Y NAVEGACIÓN · Impacto YPF: indirecto
+La Agencia Nacional de Puertos y Navegación dispone una nueva bonificación tarifaria temporal del 16,7% sobre el peaje del tramo Sección 0.0–1.2 de la Vía Navegable Troncal para buques que utilicen el Canal Martín García, continuando así el esquema aprobado por la Resolución 42/2026. La medida rige retroactivamente desde el 1° de septiembre de 2026 y se extiende hasta que el adjudicatario de la Licitación Pública N°1/2025 tome posesión de la concesión. El objetivo es mantener condiciones operativas y de navegabilidad durante el período de transición entre la concesión actual (AGP) y el nuevo contratista.
+Acción: Verificar si buques de YPF o fletados por YPF utilizan el Canal Martín García en ese tramo y cuantificar el ahorro en costos de peaje; monitorear avance de la Licitación Pública N°1/2025 y fecha de toma de posesión para anticipar cambios tarifarios post-transición
+Fuente: https://www.boletinoficial.gob.ar/detalleAviso/primera/347157/20260909
+
+### NOTICIA · YPF — YPF colocaría una nueva Obligación Negociable en dólares accesible desde billeteras virtuales
+_YPF lanza una nueva ON en dólares: cómo invertir desde una billetera virtual_
+Emisor: El Cronista · Impacto YPF: directo
+Según cobertura periodística de El Cronista, YPF estaría lanzando una nueva emisión de deuda corporativa denominada en dólares bajo el formato de Obligación Negociable, con acceso habilitado a través de billeteras virtuales para minoristas. La noticia sugiere un canal de distribución ampliado respecto a emisiones anteriores, apuntando a captar ahorro del público general. Al tratarse de cobertura de prensa y no de un prospecto oficial, los términos definitivos, montos y condiciones deben verificarse en documentación de CNV y en el área de Finanzas Corporativas.
+Acción: Confirmar con Finanzas Corporativas los términos de la emisión (monto, tasa, plazo, fecha de corte); verificar prospecto en CNV; evaluar impacto en estructura de deuda y costo financiero
+Fuente: https://news.google.com/rss/articles/CBMiuwFBVV95cUxQaVpVcjlHektGSEIza1Nsb3JERW11dkVzel9yMDJkMUVOZ1FObTA2TmtXT0xNSmhJWnJQcnYtZ2ctWGUwNklHSVZxT05JemJhLTV0VmxDUUhTeUFEYUJZRnJZNlUwVkZhQXlnLVBHTXRDQV8wLV9meGR5RF9JdHdmTXU5QzJ1ZUFuRnA1RlRCaU96OHdVVGF3WHRvZVZ2S0VobXNhcXlDNk9zYXowZ2xuVjFpZHdBTjRZbWd3?oc=5
+
+### NOTICIA · YPF — Sistema de fractura eléctrica Zeus de Halliburton llega a Argentina para operaciones de YPF en Vaca Muerta
+_Zeus camino a Vaca Muerta: llegó el sistema de fractura eléctrica de Halliburton para YPF_
+Emisor: Lmneuquen.com · Impacto YPF: directo
+Según cobertura periodística de LM Neuquén, el equipo de fractura hidráulica eléctrica Zeus de Halliburton habría arribado al país con destino a las operaciones de YPF en Vaca Muerta. Esta tecnología, que reemplaza motores diésel por accionamiento eléctrico, representa un avance en eficiencia operativa y reducción de emisiones en las operaciones de estimulación de pozos no convencionales. La noticia no surge de texto oficial, por lo que los detalles técnicos y contractuales deberán confirmarse con fuentes internas.
+Acción: Confirmar con equipos de perforación y completaciones el alcance contractual del servicio Zeus, cronograma de despliegue en pad/s asignados y potencial impacto en costos de fractura y métricas ESG de emisiones en VMuerta
+Fuente: https://news.google.com/rss/articles/CBMiwAFBVV95cUxQOG0wTkJKTWlqWjBrWUJoOFBjdXAtTkxhRmY0U1N1SlNHLWJLVGViWnZCV2RVZktwUE1nUzc2Q3JEN0xPdW9HR1F0M1FYTWI1OWRZU1V0RXpacU9Kc01OZ2VmbnlPTXhIdnVGc1VVUE9WWmpINWJDbEZxdTdmaTlFQTIyd2pZN053MVNudE9JaUhOYjFSZ29vTUFsbl8yOXhpcFBCTzJ5Z0NTcld2VTk0RUNPM2pOTHljVkRrbGxudnrSAcYBQVVfeXFMUGZvMXZJWXdJTldjc245bjFoTEg4V2pVSlZMaTBMcURoWmlDSEFaUHF0SGMyWE1sZU5pb3J2b0pTdDZGRDVGSlg4cHF2S1dyV2RnLURTLWFXRERIc2x6Tk9NWWthM3p6ZmhFQllCemhtOEE3RlNiLWdURC1nSUN0NXhvTjJLUy1TWUtaUk5JaWhlNXhUYl9zNHBENUUtSE8yRTlpU2JSc3VkZkNNTUFEV0lDc3NoYTI1aTc3QUJXUFE1ZFBmVUJn?oc=5
+
+### NOTICIA · YPF — YPF incorpora primer equipo de fractura eléctrica en Argentina para optimizar operaciones en Vaca Muerta
+_Nueva tecnología para Vaca Muerta: YPF incorporó al país el primer set de fractura eléctrica para impulsar la producción hidrocarburífera_
+Emisor: Diario Río Negro · Impacto YPF: directo
+Según cobertura periodística del Diario Río Negro, YPF habría introducido al país el primer set de fracturación eléctrica, tecnología que reemplaza equipos convencionales a diésel en operaciones de estimulación hidráulica en Vaca Muerta. La incorporación buscaría mejorar la eficiencia operativa y reducir costos y emisiones en el proceso de fractura. Al tratarse de una noticia de prensa y no de un documento oficial, los detalles técnicos y alcance del despliegue deben verificarse con las áreas internas correspondientes.
+Acción: Confirmar con área de Operaciones Vaca Muerta el alcance del despliegue, proveedores involucrados, métricas de eficiencia proyectadas y potencial comunicación corporativa asociada al hito tecnológico
+Fuente: https://news.google.com/rss/articles/CBMijgJBVV95cUxPM0p1aE9QU2pDQlVKQy15MVAydTI5WUtOQXpIYzQxRFNmV0JxMUNrelJtQTIzblYxLVZRN09jRVJibUowU3JSNGllWlpWR0tmUGdaOTFuNlFGZjNDRDI1QU5HcVhLSlZJT2t0bm1FclZlYm8wN3JrdXNzWWVWVTN6MEdIMG5lQ1ZISno5akVxT3QyalM2R19Gd05FT3pmTEM4amM1VXFmM1VuNWFHOHgwRzNKdjEwTzFmQVdJbkE5dlpMUTRFdnFpa0YwbW5tR3UzVHh2SE10VTllSUNFeF9ZQ2cwNWp5emh2TGI4cFJoc19oVmM3VWpYal82NUU3aWVxcVpyb0haeTh5d0dtREHSAZYCQVVfeXFMTW91czM0YzhfVkxBVUFXbUNSWko5Wk0zQXFUWGxrbUplNUFzR19RZ2hIeF9zcTVWWWU2cUIyUmVaZkt3enpxSzUwMUlwNWNPRTYxeVZEeXBBZzlWQ052QXFoNVJEY0lHdko0Wk9MejFRS2N0eGJXT3F6dzBrUnlXWHkxUmliU2QyQ1BDdzJyTUF6MW9obUhJUnIwS2VlOWNMY2J4R25UY3A0emZlRDAxTEY3bHNzZk1hcGxfMFRUUjQ2MVZxZE83TVpCb3pvNG4zeWlTQko2M3NEUkFDNTF5Ml9lV3hyNXFKemtjazI1Q2l2OWxpZW1Gc0o4OXNsOU93M1I1M3oyOGNHTF9BZmVCVnc4Vmp3RFE?oc=5
+
+### NOTICIA · VACA MUERTA — Halliburton advierte sobre factores limitantes para la expansión de Vaca Muerta
+_Vaca Muerta prepara otro salto y Halliburton revela el factor que puede limitar su expansión_
+Emisor: Minuto Neuquen · Impacto YPF: indirecto
+Cobertura de prensa: Halliburton, uno de los principales proveedores de servicios para la formación no convencional, identifica restricciones que podrían frenar el próximo ciclo de crecimiento de Vaca Muerta. El artículo anticipa un nuevo salto productivo en la cuenca pero subraya que factores de oferta de servicios, infraestructura o recursos humanos podrían actuar como cuello de botella. La perspectiva de un proveedor estratégico de este calibre es señal de alerta temprana para la planificación operativa.
+Acción: Identificar qué factor limitante señala Halliburton (equipos de fractura, arena, mano de obra, etc.) y contrastar con el plan de drilling 2025-2026 de YPF para anticipar cuellos de botella en contratos de servicios
+Fuente: https://news.google.com/rss/articles/CBMi5gFBVV95cUxOM3ZRdkNyQmEzQkN1SlNTd1E5MjIyNndYSktwbXRNUjNuMGR5bEI5b2NfbWt5cFJ0aUlwN3NHVmZ4d2VLOG01em9aVWlxMkhIS2VNUjNYY3BkbHlSUGVPcEx5bnhHZmxVbFpKRUFIYWNZMEozZEYzd1RVOVVCaldTZFZPNmtnM0RUYmRzMjJkMnN3aTk3OWoxSlc2MTlhUjhrMEptVTI2dTNzQl9KZEJGMmgtcE5qVURreXdvU2ZtZjF6dmpKOFBFVVJaS3dhUHZXajc4ZzFnemgxYno2MzIwd3hQRkJZQQ?oc=5
+
+### NOTICIA · VACA MUERTA — Argentina exigiría a petroleras declarar origen del crudo: Vaca Muerta o Malvinas
+_El crudo de Vaca Muerta o el de Malvinas: Argentina obliga a las petroleras a elegir_
+Emisor: EL PAÍS · Impacto YPF: directo
+Según cobertura periodística de El País, el gobierno argentino estaría impulsando una medida que obliga a las compañías productoras a identificar y declarar el origen geográfico de su crudo, distinguiendo entre producción de Vaca Muerta y la proveniente de áreas en disputa en Malvinas. La medida tendría implicancias geopolíticas y comerciales para la comercialización del crudo argentino en mercados externos. Al tratarse de cobertura de prensa y no de texto oficial, los alcances regulatorios precisos deben ser verificados en el Boletín Oficial.
+Acción: Verificar si existe norma publicada en BORA; evaluar impacto en contratos de exportación y certificación de origen del crudo; alertar a áreas de Trading y Asuntos Públicos sobre potencial obligación de clasificación geográfica de producción
+Fuente: https://news.google.com/rss/articles/CBMixwFBVV95cUxNdUFCUGRFWGQxeGJ5SkdoVGUwNmdsaGNraml0ZWRsOGp2a2IyZ2w2aUlGQmNNcklNSEUtN3hpaFh2UVNoa2VjYmdvaFlOVnpzaHhEX0dNaDRjSUhlLURtZTRJTV9Wd2N0WkhtYXZadkl1Q1B0cXZnRVkyNHpiQmkwWU5LR2FhQmEzamRWTm9xNlNZcUx6WkwtYWlldWFFbXJnUy0yRUdJZGZrYXB4Y0x6TU1Hc1h2RFZTQnB3SE10bFI1T0g3ZXF30gHbAUFVX3lxTE5KOV9HYUhsWUV3aXduZHNqZjNveVdUM1FPWkMtejVqdXQ1dGQxS0FEbGlYbk5yS0FseDlRUW4xS2VuSHVMLXhtZmFJRzRFd2llazVrN1lrS1o1M1RhUGRRb3Z1QlJHdEtzamF5TlQyYTQ5eUZ1SFh4MHpldTNfV1lTcjM5cUZHM3FCWWRzczJpTW5QSkhLMnBYV0dTSXVpZWllVlV2aVJjanVyXzVOSFJwaURDZGR0REtaRFpwRU9UNEhVM3pidy1qeUNoaVdUSGVqLUFTQkVScnIyVQ?oc=5
+
+### NOTICIA · VACA MUERTA — Argentina compite por servicios petroleros con Malvinas usando el poder de atracción económica de Vaca Muerta
+_"Billetera mata galán": la jugada maestra de Argentina para que Vaca Muerta deje sin empresas de servicios a Malvinas_
+Emisor: Diario Río Negro · Impacto YPF: indirecto
+Cobertura de prensa del Diario Río Negro que analiza cómo el dinamismo económico y el volumen de inversiones en Vaca Muerta estarían generando una migración de empresas de servicios petroleros hacia el continente, en detrimento de las operaciones en las Islas Malvinas. La nota sugiere que la escala y rentabilidad de la cuenca neuquina actúa como imán para contratistas y proveedores especializados que antes operaban en el área disputada. Se trata de análisis periodístico, no de una norma o política oficial.
+Acción: Monitorear disponibilidad y capacidad de proveedores de servicios en la cuenca; evaluar si la concentración de demanda genera presión sobre precios o plazos de contratación; seguir cobertura para detectar señales de política exterior o regulatoria vinculada a Malvinas
+Fuente: https://news.google.com/rss/articles/CBMi5gFBVV95cUxPOFFjZHRWdUpnZUdXczA1MnJkMlpCd040SklFZUxQeUphOUxhckg2ZUFCNC1Na1JrOW84OXY3WjdiSTdnUlpyQTl4M3lCMThVNFUxb0xEblZISTZ0cmRsTV9JaXBCMWlYdTQ0bjNfWHNneE9CQlRaUWM1UW50MnFDYWdMQWE1clZLSkRDZW1vbFhvVWExb0ROdW5ic0laNVlGZWtfZks2dkowSHAyc2xJOURzbGpSZm9HdC1uTEt3Q0t3V0dJVzZFcElrNWs3MUxfTFA3QkQ4bHZfc2dJUkFtYzVRRWxHQdIB7gFBVV95cUxQSkl2dTNuUW1jbnhNSnlTVEhEdTZzOVVYLXpreU9wdU1BRkpMT0w2My1Ya3FuS3NSUnBsUldSOXdCSDljR2FFY0VPRjJBbFBwWUJ2cGZQbndCZ1lnb0x1SC1td1VYcXVvdEtha0tYNVNRajRCcERZNnFnX2VQcS1zR0NuMXpqUU9DOFBueGVhMEJqRmFMX2hZUDRrM3FlZW9BRmNBNTU1TWtvOURNNHljZDNxUlJac2FJUkxaT0U5VHdTdHMtUnNnRkVPQVoyOTZhWllUWXRCSGpUcS1IMHREQ1labUdZc3p3bnVYeEdB?oc=5
+
+### NOTICIA · MARINA MERCANTE CABOTAJE — Reforma a la ley de cabotaje marítimo genera tensión con el sector naviero establecido
+_Ley de Cabotaje: una reforma clave que impacta en Misiones y choca al establishment naviero_
+Emisor: economis.com.ar · Impacto YPF: indirecto
+Cobertura de prensa (no texto oficial): Una iniciativa de reforma a la normativa de cabotaje marítimo argentino generaría cambios en las reglas de operación del transporte fluvial y costero, con impacto particular en la región de Misiones. La propuesta enfrenta resistencia del sector naviero tradicional, que vería afectados sus privilegios o posición dominante bajo el esquema vigente. Los detalles regulatorios específicos no surgen del resumen disponible.
+Acción: Monitorear el avance legislativo: evaluar si la reforma modifica condiciones de transporte fluvial de crudo, combustibles o GLP por vías navegables interiores que utiliza YPF; coordinar con área legal y flota
+Fuente: https://news.google.com/rss/articles/CBMitgFBVV95cUxNeXo5dVhhQ0VwUHI4R0psOHFaVXpTUUZodXkya1pQMDNIR3poX2NMa2UxRmVRemlCWnZIN3ByVkdJVFRzMGJCOWtSX3RKUHg4MkJ0cVFkci1TTmRTTjcwcTMwYk95SDlNdE5wbmRyRWI2MkZKb255dEF0a05HVmRPWmNRcVV1QU5JeWwxdmhMaHZCTXVEcVFza05hV1J4NFVBdlE2X1hqaHNtb3lpTGE2ZlBHWEFNUQ?oc=5
+
+## TIER 3
+### NOTICIA · VACA MUERTA — Proyecto Sea Lion (Malvinas): producción estimada equivale al 1% de Vaca Muerta
+_Sea Lion equivale a apenas el 1% de Vaca Muerta: el factor energético que la Argentina suma en la disputa por Malvinas_
+Emisor: Infobae · Impacto YPF: contexto
+Cobertura periodística de Infobae que contextualiza el potencial hidrocarburífero del proyecto offshore Sea Lion, en las proximidades de las Islas Malvinas, comparándolo con la escala de Vaca Muerta. El análisis enmarca el recurso energético como variable geopolítica en la disputa de soberanía con el Reino Unido, destacando que su magnitud es significativamente menor a la del shale argentino. La nota no refiere a normativa oficial sino a análisis de contexto estratégico-energético.
+Acción: Monitorear narrativa pública sobre recursos offshore en Malvinas; evaluar si el debate geopolítico reactiva discusiones sobre licencias o concesiones en el Atlántico Sur con eventual implicancia para YPF.
+Fuente: https://news.google.com/rss/articles/CBMi8wFBVV95cUxOTnMtWlYyclYyZUJrTW5Qc0JBTTJQMnIwZzNjbWNYb19id21WM3dwemhicEZVN3huUFBQQ0dVTndvWlhydjI2MU9RcFpaVTdjR01CX0FPY3NobllpVEs4VHBJZmNpcEdna1pHYy0xVDV6UV9tQ1VRSnZWa3U5cWhnaWNCTjdNdVJuOTB6N3ByX25aLWxkRmQxTzlkOFVwRVZmNDB4eUtvU0EzOWYzSk1kMGw1SmQ2R0VMRnhtU1dTbVduTTFlbVhDS0R1MHlvak9ZZU9IcDE1cW44c3duNVVCeTNtR3lfMFJfcUVLclMwd3FFeGvSAY4CQVVfeXFMTnNmaU8yazZ5S25YTEJiQkpZa1AxcHhrYUp2ZWJkbWNHZE9lQkRCNW9pcTQtN3dqNXVoOER5NnQ5WGk2dm94VldlLWNRVW5fWWpLQzFGUjlkYVRmVE14eDlHYXZZckhCSnhZRHFoZ1cxejFSbGtzaE9YOWsxcV84aDRCbm5ZcGJjSjl5NzlILVFMSmRIdHF0YVN5am1iX0tvdnQwZUVfM0N6STl1ZmRubXh5Y2hMamV5N0ZoV2ZucHFhUG15OXViQ3VncElKSEdlcm9TUGdlMmwxNjFuMDZrc25JaUxhc0hGSjE1UWlxVVNkaWFsQW1sZDNicFdvTEtGZkxkSE5ISnpmVFFtWi1n?oc=5
+
+### NOTICIA · SECRETARÍA DE ENERGÍA — Licitación parque solar General Pico (La Pampa): dos oferentes por USD 25 M+
+_Dos grupos empresarios ofertaron invertir más de USD 25 millones en el Parque Solar de General Pico._
+Emisor: APN La Pampa · Impacto YPF: contexto
+Según cobertura de prensa de APN La Pampa, dos grupos empresarios presentaron ofertas para desarrollar el Parque Solar de General Pico, con inversiones que superarían los USD 25 millones. El proyecto se enmarca en la expansión de generación renovable en la provincia, impulsada desde la Secretaría de Energía. No se dispone de texto oficial de la norma o acto licitatorio.
+Acción: Monitorear adjudicación y eventual impacto en matriz eléctrica regional; evaluar si afecta demanda industrial local o posicionamiento de YPF Luz en La Pampa.
+Fuente: https://news.google.com/rss/articles/CBMi4AFBVV95cUxPZVU3SXZLbzlpUGFCWHBmVmtFU2I1cC01UEJxT1VjdHpGZ1JjbnhXZm1DeXhuWnZIRWhkVTFvMlVPZ2NtTzVDWEVsQWlVTHRoSmhJRmpBby1rcFJnU2lqVG5YcDAzRzBYSEhKX2Q4N2tDSXVPY016VWVuRlQ5eGpEbTZnU09OS2RXdmp4QTBCMHdMNzFfWm54V2o0RE9IaGFnZ0ViM2tqOThuUjF0YUtXX0lHVzNVbFVTdnJRc3ZSSUdoazRrX2k1MUJiYkdFT3R4UjZUaS05QUMzaWVhVTBOdg?oc=5
+
